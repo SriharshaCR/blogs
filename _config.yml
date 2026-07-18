@@ -51,4 +51,4 @@ plugins:
   - jekyll-sitemap
 
 # GA4 — add your Measurement ID here
-google_analytics: ""
+google_analytics: "G-VMPTZXH89K"
