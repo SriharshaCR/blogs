@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="series-container">
+  <header class="series-header">
+    <div class="series-label">Blog Series</div>
+    <h1 class="series-title">{{ page.title }}</h1>
+    <p class="series-description">{{ page.description }}</p>
+    <div class="series-meta">
+      {% if page.total_posts %}{{ page.total_posts }} posts{% endif %}
+      {% if page.audience %} &middot; For {{ page.audience }}{% endif %}
+    </div>
+  </header>
+
+  <ol class="series-post-list">
+    {% assign series_posts = site[page.collection] | sort: "post_number" %}
+    {% for post in series_posts %}
+    <li class="series-post-item">
+      <a href="{{ post.url | relative_url }}" class="series-post-link">
+        <span class="series-post-number">{{ post.post_number }}</span>
+        <div class="series-post-info">
+          <span class="series-post-title">{{ post.title }}</span>
+          {% if post.description %}
+          <span class="series-post-desc">{{ post.description }}</span>
+          {% endif %}
+          <span class="series-post-audience">{{ post.audience }}</span>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>

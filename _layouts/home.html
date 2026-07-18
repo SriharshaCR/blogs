@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="home-container">
+  <header class="home-header">
+    <h1 class="home-title">Writing</h1>
+    <p class="home-subtitle">Practitioner notes on enterprise AI, cloud-native systems, and engineering leadership.</p>
+  </header>
+
+  <section class="series-section">
+    <h2 class="section-title">Series</h2>
+    <div class="series-grid">
+      <a href="{{ site.baseurl }}/enterprises-ai-playbook/" class="series-card">
+        <div class="series-card-label">Series · 12 posts</div>
+        <h3 class="series-card-title">The Enterprise AI Playbook</h3>
+        <p class="series-card-desc">From legacy to AI-ready — a practitioner's guide to transforming enterprise systems.</p>
+        <span class="series-card-cta">Read the series &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="recent-section">
+    <h2 class="section-title">Recent posts</h2>
+    <div class="post-list">
+      {% assign all_posts = site.enterprises-ai-playbook | sort: "post_number" | reverse %}
+      {% for post in all_posts limit: 6 %}
+      <a href="{{ post.url | relative_url }}" class="post-card">
+        <div class="post-card-meta">
+          {% if post.series_name %}<span class="post-card-series">{{ post.series_name }}</span>{% endif %}
+          {% if post.date %}<time>{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}
+        </div>
+        <h3 class="post-card-title">{{ post.title }}</h3>
+        {% if post.description %}<p class="post-card-desc">{{ post.description }}</p>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>

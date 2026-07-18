@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+  {% assign all_posts = site.enterprises-ai-playbook | sort: "post_number" %}
+  {% for post in all_posts %}
+  {
+    "id": "{{ post.url }}",
+    "title": {{ post.title | jsonify }},
+    "description": {{ post.description | default: "" | jsonify }},
+    "url": "{{ post.url | relative_url }}",
+    "content": {{ post.content | strip_html | truncatewords: 120 | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

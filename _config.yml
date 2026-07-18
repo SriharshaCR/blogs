@@ -1,0 +1,54 @@
+title: "Harsha's Blog"
+description: "Practitioner writing on enterprise AI, cloud-native systems, and engineering leadership."
+author: "Harsha"
+email: ""
+url: "https://sriharshacr.github.io"
+baseurl: "/blogs"
+twitter_username: ""
+github_username: "SriharshaCR"
+linkedin_username: "sriharshacr"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Collections
+collections:
+  enterprises-ai-playbook:
+    output: true
+    permalink: /enterprises-ai-playbook/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "enterprises-ai-playbook"
+    values:
+      layout: "post"
+      series: "enterprises-ai-playbook"
+      series_name: "The Enterprise AI Playbook"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# GA4 — add your Measurement ID here
+google_analytics: ""

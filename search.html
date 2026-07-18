@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Search"
+description: "Search all posts on Harsha's blog."
+permalink: /search/
+---
+<div class="search-container">
+  <h1 class="search-title">Search</h1>
+  <div class="search-form">
+    <input
+      type="search"
+      id="search-input"
+      placeholder="Search posts..."
+      autocomplete="off"
+      aria-label="Search posts"
+    >
+  </div>
+  <div id="search-results" class="search-results" role="region" aria-live="polite"></div>
+</div>
+
+<script src="https://unpkg.com/lunr/lunr.min.js"></script>
+<script>document.documentElement.dataset.baseurl = "{{ site.baseurl }}";</script>
+<script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>

@@ -1,0 +1,26 @@
+{% assign share_url = page.url | absolute_url %}
+{% assign share_title = page.title | url_encode %}
+<div class="share-section">
+  <p class="share-label">Share</p>
+  <div class="share-buttons">
+    <a
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url | url_encode }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="share-btn share-btn--linkedin"
+      aria-label="Share on LinkedIn"
+    >LinkedIn</a>
+    <a
+      href="https://twitter.com/intent/tweet?url={{ share_url | url_encode }}&text={{ share_title }}&hashtags=EnterpriseAIPlaybook"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="share-btn share-btn--twitter"
+      aria-label="Share on Twitter / X"
+    >Twitter / X</a>
+    <button
+      class="share-btn share-btn--copy"
+      onclick="navigator.clipboard.writeText('{{ share_url }}').then(function(){ this.textContent='Copied!'; }.bind(this))"
+      aria-label="Copy link"
+    >Copy link</button>
+  </div>
+</div>
