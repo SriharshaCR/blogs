@@ -20,7 +20,7 @@ layout: default
     {% if page.image %}
     <img
       src="{{ page.image | relative_url }}"
-      alt="{{ page.title }}"
+      alt="{{ page.image_alt | default: page.title }}"
       class="post-hero-image"
       loading="lazy"
       width="1200"

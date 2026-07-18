@@ -10,6 +10,8 @@ audience: "All audiences — series entry point"
 date: 2025-01-01
 tags: [enterprise-ai, series-introduction]
 permalink: /enterprises-ai-playbook/series-introduction/
+image: /assets/images/enterprises-ai-playbook/series-introduction/image-2.jpeg
+image_alt: "The Enterprise AI Playbook — From Legacy to AI-Ready"
 ---
 
 A few years ago I watched a well-funded enterprise AI initiative die quietly. Not from lack of effort — the team was sharp. Not from lack of budget — the organization had committed real money. Not from a bad model — the model performed well in every demo they ran.
