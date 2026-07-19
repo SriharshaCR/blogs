@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 12
 series_total: 13
 audience: "CTOs & All Audiences"
-date: 2025-03-26
-tags: [ai-native, ai-strategy, enterprise-ai, transformation]
+date: 2026-07-18
+tags: [ai-native, ai-strategy, ai-transformation]
 permalink: /enterprises-ai-playbook/what-ai-native-looks-like/
+image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.jpeg
+image_alt: "What AI-Native Actually Looks Like — five characteristics boundary diagram"
 ---
 
 Eleven posts into this series, we've covered the problems, the debt, the strategy, the platform gaps, the architecture decisions, the governance primitives, and the deployment tradeoffs. Every one of those conversations eventually circles back to the same unstated question: *what are we actually trying to become?*
@@ -68,6 +70,8 @@ If adding a new AI capability still requires the same multi-quarter procurement 
 
 A useful proxy: how long did your second AI capability take to ship compared to your first? If the answer is "about the same," the compounding hasn't started yet.
 
+![The five characteristics boundary diagram — five vertical columns each with a not-yet zone below the AI-native boundary line and a crossed zone above]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native boundary diagram with five characteristics — critical path, queryable data, production reasoning, governed workloads, compounding returns"}
+
 ---
 
 ## Using This as a Decision Lens
@@ -80,6 +84,8 @@ Three concrete applications:
 3. **Evaluating a capability build:** Would a team with compounding returns need to start from scratch here — or does the work build on infrastructure that's already earning its keep?
 
 The question isn't rhetorical. It's a calibration tool. When the answer keeps coming back "no" — when every new decision requires the same foundational work that should already be done — that's a signal about where you actually are on the boundary, not where the strategy deck says you are.
+
+![Decision lens card — three applications of "Would an AI-native organization build it this way?" across data model, deployment decision, and capability build]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native decision lens reference card with three concrete applications"}
 
 ---
 
@@ -100,3 +106,5 @@ That's the conversation worth having — and it's one where a clear definition o
 *If this series raised questions worth continuing, or if you're working through one of these problems and want to think out loud about it — find me on LinkedIn. The next chapter is already running — and the problems are getting more interesting.*
 
 *→ Share your own definition of AI-native. I want to know where you'd draw the line differently.*
+
+![The Enterprise AI Playbook series arc — 12 posts across five phases from Problem through Outcomes, with the final post highlighted]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Full series arc recap showing all 12 posts grouped across Problem, Assessment, Strategy, Execution, and Outcomes phases"}

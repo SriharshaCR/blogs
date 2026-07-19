@@ -4,7 +4,7 @@ author: "Harsha"
 email: ""
 url: "https://sriharshacr.github.io"
 baseurl: "/blogs"
-twitter_username: ""
+twitter_username: "sriharsha_cr"
 github_username: "SriharshaCR"
 linkedin_username: "sriharshacr"
 
@@ -49,6 +49,7 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 
 # GA4 — add your Measurement ID here
 google_analytics: "G-VMPTZXH89K"

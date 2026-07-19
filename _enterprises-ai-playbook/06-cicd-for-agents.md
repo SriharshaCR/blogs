@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 6
 series_total: 13
 audience: "DevOps & Platform Engineers"
-date: 2025-02-12
-tags: [cicd, platform-engineering, devops, agents, llmops]
+date: 2026-06-15
+tags: [cicd, agents, platform-engineering]
 permalink: /enterprises-ai-playbook/cicd-for-agents/
+image: /assets/images/enterprises-ai-playbook/cicd-for-agents/image-2.jpeg
+image_alt: "Your CI/CD Pipeline Is Not Ready for Agents — deterministic vs behavioral pipeline contrast"
 ---
 
 Post 5 laid out the strategy for bringing agents into production. Now someone has to own the infrastructure that carries them there. That's platform engineering — and the tooling you've spent years hardening was built for a fundamentally different problem.
@@ -48,6 +50,8 @@ assert evaluate(output, criteria=["accurate", "on_topic", "no_hallucination"]) >
 
 These are assertion frameworks, not equality checks. Tools like RAGAS (docs.ragas.io) and DeepEval (docs.confident-ai.com) exist for this — RAGAS targets RAG and agent evaluation specifically; DeepEval covers dozens of research-backed metrics including hallucination and faithfulness. For domain-specific deployments, your criteria will include domain-safe refusal and compliance-relevant edge cases (a healthcare agent needs to be tested for HIPAA-relevant refusals; a finance agent for hallucinated figures). These tools have to be integrated into your pipeline deliberately. They won't slot into your existing test runner without rethinking what a passing test means.
 
+![Traditional service vs agent workload comparison — four rows showing how testing, rollback, canary, and observability differ fundamentally]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Traditional CI/CD pipeline vs agent workload pipeline comparison table"}
+
 ### 2. Rollback
 
 In a stateless service, rollback means: redeploy the previous image. Done.
@@ -70,11 +74,15 @@ A runaway agent loop — a model that keeps calling tools, re-evaluating results
 
 You need token-level instrumentation: per-request input/output token counts, tool call frequency, cost attribution by agent, workflow, and user segment. Set alerts on token budget thresholds, not just infrastructure metrics. If a request regularly costs $0.03 and one cohort starts averaging $0.30, you want to know before the monthly invoice.
 
+![Token cost anomaly chart — CPU cost stays flat while token cost spikes sharply when an agent loop condition triggers]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Token cost anomaly chart showing standard alerts fire too late"}
+
 ### 5. Observability
 
 Traditional monitoring answers: is the service up? Latency normal? Error rate within SLA?
 
 For agents, none of that tells you if the system is *working*. An agent can be fully healthy by infrastructure metrics while quietly producing off-topic responses, hallucinating facts, or failing to complete tasks. You need a second observability layer: output quality monitoring. Sampling agent responses and scoring them in near-real-time, tracking quality metrics over time alongside infrastructure metrics, and treating output drift as a production incident — not a model fine-tuning ticket.
+
+![Observability gap dashboard — infrastructure monitoring showing all-green vs agent quality monitoring showing output quality, cost, and hallucination rate all in warning state]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Side-by-side dashboard showing healthy infrastructure metrics alongside failing agent quality metrics"}
 
 ---
 

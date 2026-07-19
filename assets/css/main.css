@@ -783,3 +783,176 @@ pre code {
   body { color: #000; background: #fff; }
   a { color: #000; }
 }
+
+/* ============================================================
+   Tag Chips — used on posts and tags page
+   ============================================================ */
+.tag-chip {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 0.775rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.tag-chip:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+.tag-chip--heading {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.85rem;
+}
+
+/* Tag row on post header */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ============================================================
+   Tags Page
+   ============================================================ */
+.tags-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.tags-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tags-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.tags-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Jump list — all tags at top for quick navigation */
+.tag-jump-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  padding: 1.25rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.tag-jump {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.tag-jump:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Each tag section */
+.tag-section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 72px;
+}
+
+.tag-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tag-section-count {
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  font-weight: 400;
+}
+
+.tag-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.tag-post-item { margin: 0; }
+
+.tag-post-link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-decoration: none;
+  background: var(--color-bg);
+  transition: border-color 0.15s, background 0.15s;
+}
+.tag-post-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-bg-secondary);
+  text-decoration: none;
+}
+
+.tag-post-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.tag-post-meta {
+  font-size: 0.775rem;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Inline post images */
+.post-inline-image {
+  border-radius: 8px;
+  margin: 1.75rem 0;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .tag-post-link { flex-direction: column; gap: 0.2rem; }
+  .tag-post-meta { align-self: flex-start; }
+}

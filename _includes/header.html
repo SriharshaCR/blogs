@@ -1,11 +1,12 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="{{ site.baseurl }}/" class="site-logo" aria-label="{{ site.title }} home">
-      Harsha<span class="logo-dot">.</span>
+      Harsha's Blog<span class="logo-dot">.</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' %}nav-link--active{% endif %}">Writing</a>
       <a href="{{ site.baseurl }}/enterprises-ai-playbook/" class="nav-link {% if page.series == 'enterprises-ai-playbook' %}nav-link--active{% endif %}">AI Playbook</a>
+      <a href="{{ site.baseurl }}/tags/" class="nav-link {% if page.url == '/tags/' %}nav-link--active{% endif %}">Tags</a>
       <a href="{{ site.baseurl }}/search/" class="nav-link" aria-label="Search">Search</a>
     </nav>
     <div class="header-actions">

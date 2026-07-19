@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 1
 series_total: 13
 audience: "CTOs & Decision Makers"
-date: 2025-01-08
-tags: [enterprise-ai, data-architecture, ai-strategy]
+date: 2026-05-19
+tags: [enterprise-ai, data-architecture]
 permalink: /enterprises-ai-playbook/why-ai-projects-fail/
+image: /assets/images/enterprises-ai-playbook/why-ai-projects-fail/image-2.jpeg
+image_alt: "Why Enterprise AI Projects Keep Failing — locked data architecture illustrated"
 ---
 
 Picture a team six months into an enterprise AI initiative. The model performs well in demos. The budget is real. Leadership is aligned. But the project is stalled — not because the AI can't reason, but because it can't reach the data it needs to reason over. Every integration attempt surfaces a wall: access restrictions, undocumented schemas, data locked inside systems that were never designed to be queried by anything except their own interfaces.
