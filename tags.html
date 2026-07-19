@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Tags"
+description: "Browse all posts by topic."
+permalink: /tags/
+---
+<div class="tags-container">
+  <header class="tags-header">
+    <h1 class="tags-title">Browse by topic</h1>
+    <p class="tags-subtitle">{{ site.enterprises-ai-playbook | size }} posts across {{ site.enterprises-ai-playbook | map: 'tags' | join: ',' | split: ',' | uniq | size }} topics.</p>
+  </header>
+
+  {% assign all_tags = site.enterprises-ai-playbook | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+
+  <div class="tag-jump-list">
+    {% for tag in all_tags %}
+      {% assign tag_clean = tag | strip %}
+      <a href="#{{ tag_clean }}" class="tag-jump">{{ tag_clean }}</a>
+    {% endfor %}
+  </div>
+
+  {% for tag in all_tags %}
+    {% assign tag_clean = tag | strip %}
+    {% assign tagged_posts = site.enterprises-ai-playbook | where_exp: "post", "post.tags contains tag_clean" | sort: "post_number" %}
+    {% if tagged_posts.size > 0 %}
+    <section class="tag-section" id="{{ tag_clean }}">
+      <h2 class="tag-section-title">
+        <span class="tag-chip tag-chip--heading">{{ tag_clean }}</span>
+        <span class="tag-section-count">{{ tagged_posts.size }} post{% if tagged_posts.size != 1 %}s{% endif %}</span>
+      </h2>
+      <ul class="tag-post-list">
+        {% for post in tagged_posts %}
+        <li class="tag-post-item">
+          <a href="{{ post.url | relative_url }}" class="tag-post-link">
+            <span class="tag-post-title">{{ post.title }}</span>
+            <span class="tag-post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  {% endfor %}
+</div>

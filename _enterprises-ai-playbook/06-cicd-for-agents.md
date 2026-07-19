@@ -8,7 +8,7 @@ post_number: 6
 series_total: 13
 audience: "DevOps & Platform Engineers"
 date: 2026-06-15
-tags: [cicd, platform-engineering, devops, agents, llmops]
+tags: [cicd, agents, platform-engineering]
 permalink: /enterprises-ai-playbook/cicd-for-agents/
 image: /assets/images/enterprises-ai-playbook/cicd-for-agents/image-2.jpeg
 image_alt: "Your CI/CD Pipeline Is Not Ready for Agents — deterministic vs behavioral pipeline contrast"

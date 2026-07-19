@@ -8,7 +8,7 @@ post_number: 3
 series_total: 13
 audience: "Solution Architects"
 date: 2026-05-30
-tags: [ai-readiness, architecture, diagnostic-framework]
+tags: [ai-readiness, architecture]
 permalink: /enterprises-ai-playbook/ai-readiness-questions/
 image: /assets/images/enterprises-ai-playbook/ai-readiness-questions/image-2.jpeg
 image_alt: "5 Questions That Reveal Whether Your System Is Actually Ready for AI"

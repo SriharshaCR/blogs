@@ -8,7 +8,7 @@ post_number: 12
 series_total: 13
 audience: "CTOs & All Audiences"
 date: 2026-07-18
-tags: [ai-native, ai-strategy, enterprise-ai, transformation]
+tags: [ai-native, ai-strategy, ai-transformation]
 permalink: /enterprises-ai-playbook/what-ai-native-looks-like/
 image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.jpeg
 image_alt: "What AI-Native Actually Looks Like — five characteristics boundary diagram"

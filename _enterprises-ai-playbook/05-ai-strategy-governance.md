@@ -8,7 +8,7 @@ post_number: 5
 series_total: 13
 audience: "CTOs & Decision Makers"
 date: 2026-06-10
-tags: [ai-governance, ai-bom, ai-strategy, multi-model]
+tags: [ai-governance, ai-bom, ai-strategy]
 permalink: /enterprises-ai-playbook/ai-strategy-governance/
 image: /assets/images/enterprises-ai-playbook/ai-strategy-governance/image-2.jpeg
 image_alt: "Building an AI Strategy That Governance Doesn't Kill — AI BOM and governance flow"

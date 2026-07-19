@@ -8,7 +8,7 @@ post_number: 2
 series_total: 13
 audience: "Developers"
 date: 2026-05-24
-tags: [cognitive-debt, ai-engineering, code-quality, vibe-coding]
+tags: [cognitive-debt, ai-engineering, code-quality]
 permalink: /enterprises-ai-playbook/cognitive-debt-crisis/
 image: /assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-2.jpeg
 image_alt: "The Cognitive Debt Crisis in AI-Augmented Codebases"

@@ -8,7 +8,7 @@ post_number: 4
 series_total: 13
 audience: "Engineering Managers & Product Owners"
 date: 2026-06-04
-tags: [ai-strategy, technical-debt, engineering-leadership]
+tags: [ai-strategy, engineering-leadership]
 permalink: /enterprises-ai-playbook/cost-of-waiting/
 image: /assets/images/enterprises-ai-playbook/cost-of-waiting/image-2.jpeg
 image_alt: "The AI Debt You're Accumulating Every Sprint You Wait — three compounding liabilities"

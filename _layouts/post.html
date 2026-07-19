@@ -17,6 +17,13 @@ layout: default
       {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% endif %}
       {% if page.read_time %}<span class="read-time">{{ page.read_time }} min read</span>{% endif %}
     </div>
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag | strip }}" class="tag-chip">{{ tag | strip }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if page.image %}
     <img
       src="{{ page.image | relative_url }}"

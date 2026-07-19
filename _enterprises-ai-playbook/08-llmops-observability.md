@@ -8,7 +8,7 @@ post_number: 8
 series_total: 13
 audience: "Developers"
 date: 2026-06-26
-tags: [llmops, observability, monitoring, ai-engineering]
+tags: [llmops, observability]
 permalink: /enterprises-ai-playbook/llmops-observability/
 image: /assets/images/enterprises-ai-playbook/llmops-observability/image-2.jpeg
 image_alt: "LLMOps Observability — UP vs RIGHT dashboard contrast"

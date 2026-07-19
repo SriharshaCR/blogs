@@ -8,7 +8,7 @@ post_number: 10
 series_total: 13
 audience: "Developers"
 date: 2026-07-07
-tags: [security, prompt-injection, mcp, trust-boundary, ai-security]
+tags: [security, agents, mcp]
 permalink: /enterprises-ai-playbook/prompt-injection-mcp/
 image: /assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-2.jpeg
 image_alt: "Prompt Injection and MCP Trust Boundary — indirect injection attack chain"

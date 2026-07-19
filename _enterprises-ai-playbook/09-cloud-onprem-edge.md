@@ -8,7 +8,7 @@ post_number: 9
 series_total: 13
 audience: "DevOps & Platform Engineers"
 date: 2026-07-02
-tags: [cloud, edge, on-prem, ai-infrastructure, deployment]
+tags: [deployment, architecture, platform-engineering]
 permalink: /enterprises-ai-playbook/cloud-onprem-edge/
 image: /assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-2.jpeg
 image_alt: "Cloud, On-Prem, or Edge — AI workload deployment decision framework"

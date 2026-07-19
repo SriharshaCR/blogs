@@ -8,7 +8,7 @@ post_number: 7
 series_total: 13
 audience: "Solution Architects"
 date: 2026-06-21
-tags: [agent-architecture, multi-agent, ai-engineering]
+tags: [agent-architecture, agents]
 permalink: /enterprises-ai-playbook/case-against-monolithic-agent/
 image: /assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-2.jpeg
 image_alt: "The Case Against the Monolithic Agent — monolith vs pipeline architecture"

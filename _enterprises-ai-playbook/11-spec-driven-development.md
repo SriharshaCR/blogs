@@ -8,7 +8,7 @@ post_number: 11
 series_total: 13
 audience: "Engineering Managers & Product Owners"
 date: 2026-07-13
-tags: [spec-driven-development, multi-agent, ai-engineering, testing]
+tags: [agents, testing, engineering-leadership]
 permalink: /enterprises-ai-playbook/spec-driven-development/
 image: /assets/images/enterprises-ai-playbook/spec-driven-development/image-2.jpeg
 image_alt: "Spec-Driven Development at Scale — multi-agent pipeline with system-level contract boundaries"

@@ -8,7 +8,7 @@ post_number: 0
 series_total: 13
 audience: "All audiences — series entry point"
 date: 2026-05-13
-tags: [enterprise-ai, series-introduction]
+tags: [enterprise-ai, ai-transformation]
 permalink: /enterprises-ai-playbook/series-introduction/
 image: /assets/images/enterprises-ai-playbook/series-introduction/image-2.jpeg
 image_alt: "The Enterprise AI Playbook — From Legacy to AI-Ready"
