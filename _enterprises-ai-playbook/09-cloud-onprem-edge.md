@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 9
 series_total: 13
 audience: "DevOps & Platform Engineers"
-date: 2025-03-05
+date: 2026-07-02
 tags: [cloud, edge, on-prem, ai-infrastructure, deployment]
 permalink: /enterprises-ai-playbook/cloud-onprem-edge/
+image: /assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-2.jpeg
+image_alt: "Cloud, On-Prem, or Edge — AI workload deployment decision framework"
 ---
 
 Post 8 got your observability layer in place — you can see what your agents are doing in production. Now comes the question every team hits eventually: where do you actually run the thing?
@@ -48,6 +50,8 @@ Data residency requirements, sovereignty mandates, and air-gap requirements are 
 
 If your AI workload touches data with those requirements, the deployment decision has already been made. Compliance surface area isn't a constraint to optimize around; it's the outer boundary that the rest of the architecture fits inside.
 
+![Three-variable decision matrix — data gravity, inference latency, and compliance surface area mapped to deployment recommendations]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI workload deployment decision matrix with three binding constraints"}
+
 ---
 
 ## Most enterprises are already hybrid — here's how to design it intentionally
@@ -60,9 +64,13 @@ If your AI footprint is going to span deployment models (and it will), design th
 
 Hybrid by design is tractable. Hybrid by accumulation is a year-two cleanup project.
 
+![Hybrid by design vs hybrid by accumulation — intentional topology with shared registry and observability vs deployment sprawl]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Intentional hybrid architecture vs deployment sprawl comparison"}
+
 ---
 
 ## Three scenarios where the framework plays out in practice
+
+![Scenario decision flowchart — three decision nodes leading to on-prem, edge, or cloud deployment recommendation]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Deployment decision flowchart for regulated financial data, real-time triggers, and knowledge work"}
 
 ### Scenario A: Regulated financial data
 

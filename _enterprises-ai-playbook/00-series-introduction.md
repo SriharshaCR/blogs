@@ -7,7 +7,7 @@ series_name: "The Enterprise AI Playbook"
 post_number: 0
 series_total: 13
 audience: "All audiences — series entry point"
-date: 2025-01-01
+date: 2026-05-13
 tags: [enterprise-ai, series-introduction]
 permalink: /enterprises-ai-playbook/series-introduction/
 image: /assets/images/enterprises-ai-playbook/series-introduction/image-2.jpeg

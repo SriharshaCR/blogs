@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 3
 series_total: 13
 audience: "Solution Architects"
-date: 2025-01-22
+date: 2026-05-30
 tags: [ai-readiness, architecture, diagnostic-framework]
 permalink: /enterprises-ai-playbook/ai-readiness-questions/
+image: /assets/images/enterprises-ai-playbook/ai-readiness-questions/image-2.jpeg
+image_alt: "5 Questions That Reveal Whether Your System Is Actually Ready for AI"
 ---
 
 Most AI readiness assessments are checklists. Do you have an API layer? A vector store? An LLM gateway? Check, check, check — and the system still fails three weeks into the pilot.
@@ -25,6 +27,8 @@ Post 2 of this series covered structural exposure — the cognitive debt hiding 
 These aren't survey questions. They're conversations — the kind that surface the 3–5 integration points that make or break an AI integration before the pilot starts.
 
 The question that consistently triggers the most pushback is Question 4. Teams with solid DevOps practices hear "can you tell if the AI is doing the right thing?" and immediately point to their dashboards — latency, error rates, uptime, all green. What they're describing is a healthy system. What they haven't answered is whether it's a credible one. Those are different questions. A system can be perfectly healthy while quietly giving users answers they can't trust. The monitoring infrastructure most teams have inherited was built to catch the system going down — not the system being wrong in ways that look right.
+
+![AI readiness radar chart — five axes showing strong and warning zones across Data Access, Process Clarity, Failure Recovery, Behavioral Observability, and Integration Surface]({{ '/assets/images/enterprises-ai-playbook/ai-readiness-questions/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI readiness radar chart with five diagnostic axes"}
 
 ---
 
@@ -84,6 +88,8 @@ Start here: *"How would we know if the AI started giving subtly wrong answers si
 
 The framing: *"If this AI produced plausible-but-wrong output for four hours, what would the state of the system look like?"* If the answer is "we're not sure" or "bad," the integration surface needs to shrink before the AI goes live.
 
+![Blast radius hub-and-spoke diagram — AI model at centre with downstream systems showing validated vs unvalidated handoffs]({{ '/assets/images/enterprises-ai-playbook/ai-readiness-questions/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Blast radius diagram showing integration surface area and failure propagation"}
+
 > **Note for publishing:** When an agent has a large integration surface *and* private data access *and* external communication capability simultaneously, the risk compounds significantly. Post 10 covers this combination in depth — the trust boundary problem and what practitioners call the lethal trifecta.
 
 ---
@@ -103,6 +109,8 @@ After running this diagnostic with the right people — not just the AI team, bu
 The value isn't in the answers. It's in what surfaces when you ask. Teams that can answer Question 1 quickly usually have data friction they've normalized. Teams that struggle with Question 3 usually have implicit risk assumptions nobody has made explicit. The conversation is the diagnostic.
 
 Wherever the room goes quiet or starts describing exceptions — that's the load-bearing weakness.
+
+![AI readiness 5 questions reference card — warning signs for each of the five structural questions]({{ '/assets/images/enterprises-ai-playbook/ai-readiness-questions/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI readiness quick reference card with five questions and warning signs"}
 
 ---
 

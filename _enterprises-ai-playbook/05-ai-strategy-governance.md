@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 5
 series_total: 13
 audience: "CTOs & Decision Makers"
-date: 2025-02-05
+date: 2026-06-10
 tags: [ai-governance, ai-bom, ai-strategy, multi-model]
 permalink: /enterprises-ai-playbook/ai-strategy-governance/
+image: /assets/images/enterprises-ai-playbook/ai-strategy-governance/image-2.jpeg
+image_alt: "Building an AI Strategy That Governance Doesn't Kill — AI BOM and governance flow"
 ---
 
 Post 4 made the case that deferring AI readiness has a real cost — compounding, measurable, and eventually unrecoverable. So let's say you're ready to move. You have leadership buy-in, a use case, and a team.
@@ -44,11 +46,15 @@ An AI BOM is a governance primitive. It's not a lengthy document. It's a structu
 - **Integration surface** — every downstream system that acts on model output
 - **Known failure modes and mitigations** — what can go wrong, what contains it
 
+![AI BOM component card — five structured rows covering model registry, data flows, agent topology, integration surface, and failure modes]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI Bill of Materials component reference card"}
+
 When a governance team can read this document and immediately understand the stack, the approval conversation changes. Instead of "we need to understand what this system does before we can approve it," the question becomes "is the data handling compliant?" — a much faster question to answer.
 
 The AI BOM flips the dynamic: it transfers the burden of explanation from a back-and-forth review process to a structured artifact the team produces upfront. Teams that do this consistently find that governance approvals accelerate — not because the bar dropped, but because reviewers now have context instead of anxiety.
 
 In my experience, the first time a team shows up to a governance review with a properly structured AI BOM, the dynamic shifts noticeably. The reviewer stops asking exploratory questions — "what data does this touch?", "what happens if it's wrong?" — because the document already answers them. The review becomes a verification conversation instead of a discovery one. That's not a faster rubber stamp. It's a faster yes because the work was done upfront.
+
+![Governance flow comparison — without AI BOM showing a slow 2-4 week review cycle vs with AI BOM showing a fast days-not-weeks approval path]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Governance review flow with and without AI BOM"}
 
 Treat the AI BOM as a first-class artifact. Version it. Update it when the stack changes. Store it alongside the deployment config. If an AI system is running in your production environment without one, you don't actually know what you're running.
 
@@ -70,13 +76,17 @@ A multi-model strategy means selecting different models for different tasks base
 | Legal or compliance text | Domain-tuned or general with RAG | Evaluate against your specific regulatory context before deciding |
 | Real-time user-facing interaction | Fast + cheap, latency-optimized | Perceived responsiveness matters more than marginal capability gain |
 
+![Multi-model task allocation map — three rows mapping reasoning-heavy to frontier, high-volume to small/fast, and specialized domains to domain-tuned models]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Multi-model strategy allocation diagram by task class"}
+
 This isn't just a cost optimization. It's architectural resilience. When a provider has an outage, raises prices, or deprecates a model version, a multi-model stack has options. A single-model stack has a crisis.
 
 The governance implication: your AI BOM should document which model handles which task class, with the rationale. That documentation is also your contingency plan. When you need to swap a model, the BOM tells you exactly what the change touches.
 
 ---
 
-## What a defensible AI strategy actually looks like A multi-model strategy without governance visibility is a liability — you have a complex stack that nobody can fully explain or audit. Governance without a multi-model strategy is brittle — you've made compliance easy but created a single-vendor dependency that governance itself should be worried about.
+## What a defensible AI strategy actually looks like
+
+A multi-model strategy without governance visibility is a liability — you have a complex stack that nobody can fully explain or audit. Governance without a multi-model strategy is brittle — you've made compliance easy but created a single-vendor dependency that governance itself should be worried about.
 
 Together, they form the foundation of a strategy that can move:
 

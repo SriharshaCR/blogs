@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 2
 series_total: 13
 audience: "Developers"
-date: 2025-01-15
+date: 2026-05-24
 tags: [cognitive-debt, ai-engineering, code-quality, vibe-coding]
 permalink: /enterprises-ai-playbook/cognitive-debt-crisis/
+image: /assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-2.jpeg
+image_alt: "The Cognitive Debt Crisis in AI-Augmented Codebases"
 ---
 
 Post 1 argued that closed data architecture is the silent killer of enterprise AI projects. But there's a second problem accumulating in parallel, and it lives inside your codebase — one function at a time.
@@ -22,9 +24,13 @@ You know technical debt. Work you deferred: the refactor you'll get to next spri
 
 Cognitive debt is different. It's not future work. It's current comprehension, already lost.
 
+![Technical debt vs cognitive debt — planned deferral on the left, invisible comprehension gap on the right]({{ '/assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Technical debt vs cognitive debt comparison"}
+
 The developer who used an AI assistant to generate a utility function — it passes tests, it ships, it runs in production — but can't fully explain what the edge case logic does? That's cognitive debt. It doesn't show up in your linter, your code coverage report, or your architecture review. It shows up six months later when something breaks in an unexpected way and nobody on the team can confidently reason about why.
 
 Vibe coding (a term coined by Andrej Karpathy) is the popular name for this pattern. Ship fast, trust the output, move on. It works — until it doesn't.
+
+![Vibe coding — developer confidently ships AI-generated code without understanding it]({{ '/assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Vibe coding illustration"}
 
 ---
 
@@ -56,6 +62,8 @@ Tests pass. The logic looks reasonable. But notice what was never examined:
 
 Nobody questioned this because the function looked right. That's cognitive debt — the gap between "tests pass" and "we understand what we shipped."
 
+![Annotated code snippet showing three silent bugs in an AI-generated function]({{ '/assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-6.png' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Annotated normalize_customer_record function with KeyError, silent default, and field precedence bugs highlighted"}
+
 ### 2. Generated tests that don't actually test the right thing
 
 AI-generated tests tend to validate the happy path the AI itself envisioned. They verify that the function does what the AI thought it should do — which is frequently not the same as what your system actually needs it to do.
@@ -67,6 +75,8 @@ The result is high test coverage that gives false confidence. You have 80% cover
 This is the subtlest one. When an AI suggests a data model, an API contract, or a caching strategy, that suggestion carries embedded architectural opinions. The developer implements it. The architecture is now in production. Nobody consciously made that decision — it was inherited from the AI's output.
 
 Over time, these inherited decisions accumulate. You end up with a codebase that was *designed* by nobody in particular, where the reasoning behind critical structural choices lives nowhere.
+
+![Cognitive debt accumulation loop — six-node cycle showing how AI-generated code silently compounds comprehension gaps]({{ '/assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Cognitive debt accumulation loop diagram"}
 
 ---
 

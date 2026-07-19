@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 11
 series_total: 13
 audience: "Engineering Managers & Product Owners"
-date: 2025-03-19
+date: 2026-07-13
 tags: [spec-driven-development, multi-agent, ai-engineering, testing]
 permalink: /enterprises-ai-playbook/spec-driven-development/
+image: /assets/images/enterprises-ai-playbook/spec-driven-development/image-2.jpeg
+image_alt: "Spec-Driven Development at Scale — multi-agent pipeline with system-level contract boundaries"
 ---
 
 Post 10 covered how security governs trust at agent boundaries — who can call what, and what gets through. This post is about what happens once that trust is established and the calls are flowing: how do you know the system is still doing what you designed?
@@ -59,6 +61,8 @@ Notice what this contract does not specify: which agent handled routing, what th
 
 You build a library of these contracts — covering your key user journeys, edge cases, and known failure modes. They become your regression suite. Every time any agent in the pipeline changes, you run the full contract suite against the system. Failures tell you which designed behaviors no longer hold.
 
+![Multi-agent pipeline with system-level contract boundaries — contract brackets at entry and exit, mutation marker on one agent showing downstream drift]({{ '/assets/images/enterprises-ai-playbook/spec-driven-development/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Multi-agent pipeline diagram showing system-level contracts and where drift is detected"}
+
 ---
 
 ## Pattern 2: Mutation testing for behavioral drift
@@ -80,6 +84,8 @@ This does two things. First, it tells you which parts of your spec need to be ti
 
 Teams that do this regularly stop being surprised by production incidents where "nothing changed but behavior shifted." The spec caught the drift before users did.
 
+![Mutation testing cycle — four-node clockwise loop: snapshot config, introduce mutation, run spec, tighten fragile contracts]({{ '/assets/images/enterprises-ai-playbook/spec-driven-development/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Behavioral mutation testing cycle for agent systems"}
+
 ---
 
 ## The question leadership will ask six months after launch — and how to answer it
@@ -91,6 +97,8 @@ Without a spec, the honest answer is "we think so." With a spec, the answer is: 
 That's the confidence gap that spec-driven development closes. Not for the engineers who built the system — they can usually tell. For the people accountable for what the system does — to customers, to regulators, to the board.
 
 The spec is the audit trail that connects design intent to running behavior. It's what you show when someone asks for proof.
+
+![Spec as bridge — design time artifacts on the left connected to runtime evidence on the right via the spec]({{ '/assets/images/enterprises-ai-playbook/spec-driven-development/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Spec as bridge between design intent and runtime behavior evidence"}
 
 ---
 

@@ -7,9 +7,11 @@ series_name: "The Enterprise AI Playbook"
 post_number: 4
 series_total: 13
 audience: "Engineering Managers & Product Owners"
-date: 2025-01-29
+date: 2026-06-04
 tags: [ai-strategy, technical-debt, engineering-leadership]
 permalink: /enterprises-ai-playbook/cost-of-waiting/
+image: /assets/images/enterprises-ai-playbook/cost-of-waiting/image-2.jpeg
+image_alt: "The AI Debt You're Accumulating Every Sprint You Wait — three compounding liabilities"
 ---
 
 Post 3 gave you a readiness assessment — five questions that reveal how exposed your organization actually is. Maybe the answers were uncomfortable. Maybe leadership looked at them and said, "We'll revisit this next quarter."
@@ -21,6 +23,8 @@ That decision to wait isn't neutral. It's a choice to accumulate debt. Three kin
 ## Debt isn't just technical
 
 When most engineers hear "debt," they think code. And yes, one kind of AI debt is technical. But the other two are quieter, more organizational — and they compound faster than most managers realize when they're making the case to hold off another quarter.
+
+![Three-lane debt accumulation chart — technical, organizational, and competitive debts all steepening after a decision to wait]({{ '/assets/images/enterprises-ai-playbook/cost-of-waiting/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Three compounding AI debt curves accelerating after deferral decision"}
 
 ---
 
@@ -72,6 +76,8 @@ What's not accounted for: technical decisions made this quarter that will need t
 
 None of those show up as line items. But they're real costs — they just land in future sprints, future quarters, under different budget headings.
 
+![Wait vs Act decision frame — what leadership thinks deferral means vs what three compounding debts actually start]({{ '/assets/images/enterprises-ai-playbook/cost-of-waiting/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Wait vs Act comparison showing hidden costs of deferral"}
+
 ---
 
 ## What a 6-month delay actually costs
@@ -101,6 +107,8 @@ That's the conversation worth having.
 > 👨‍💻 **Employee:** "I am using it *exactly* how you asked."
 >
 > *The real AI debt isn't on the credit card. It's in the strategy gap between "use AI more" and "here's how."*
+
+![AI debt meme — four-panel comic showing the gap between "use AI for everything" and what actually happens]({{ '/assets/images/enterprises-ai-playbook/cost-of-waiting/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Comic strip showing the strategy gap between AI-first mandate and actual team execution"}
 
 ---
 
