@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-2.jpeg
 image_alt: "The Cognitive Debt Crisis in AI-Augmented Codebases"
 ---
 
+> **Key Takeaways**
+> - **The problem:** AI-generated code ships fast and passes tests — but leaves comprehension gaps that compound silently until something breaks in ways nobody can reason about.
+> - **Why it matters:** Cognitive debt isn't future work owed like technical debt — it's current comprehension already lost, invisible in your linter, coverage report, and architecture review.
+> - **What you'll learn:** Three patterns that create cognitive debt in AI-augmented codebases, and three lightweight practices that keep velocity without losing the team's ability to understand what they've shipped.
+
 Post 1 argued that closed data architecture is the silent killer of enterprise AI projects. But there's a second problem accumulating in parallel, and it lives inside your codebase — one function at a time.
 
 ---
@@ -62,6 +67,8 @@ Tests pass. The logic looks reasonable. But notice what was never examined:
 
 Nobody questioned this because the function looked right. That's cognitive debt — the gap between "tests pass" and "we understand what we shipped."
 
+Standard logging won't show you when developers stop understanding their own codebase. You need execution tracing built for probabilistic, AI-generated code — the kind that captures reasoning steps and tool calls, not just HTTP 200s. [LLMOps in Practice: Observability That Doesn't Lie to You](/enterprises-ai-playbook/llmops-observability/) covers the instrumentation patterns that give you real signal.
+
 ![Annotated code snippet showing three silent bugs in an AI-generated function]({{ '/assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-6.png' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Annotated normalize_customer_record function with KeyError, silent default, and field precedence bugs highlighted"}
 
 ### 2. Generated tests that don't actually test the right thing
@@ -75,6 +82,8 @@ The result is high test coverage that gives false confidence. You have 80% cover
 This is the subtlest one. When an AI suggests a data model, an API contract, or a caching strategy, that suggestion carries embedded architectural opinions. The developer implements it. The architecture is now in production. Nobody consciously made that decision — it was inherited from the AI's output.
 
 Over time, these inherited decisions accumulate. You end up with a codebase that was *designed* by nobody in particular, where the reasoning behind critical structural choices lives nowhere.
+
+Cognitive debt compounds faster when AI agents have access to external tools without clear boundaries — the same codebase nobody fully understands can now call APIs, read files, or send requests autonomously. [Prompt Injection, MCP, and the Trust Boundary Problem](/enterprises-ai-playbook/prompt-injection-mcp/) covers how to secure that execution context before it becomes an attack surface.
 
 ![Cognitive debt accumulation loop — six-node cycle showing how AI-generated code silently compounds comprehension gaps]({{ '/assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Cognitive debt accumulation loop diagram"}
 

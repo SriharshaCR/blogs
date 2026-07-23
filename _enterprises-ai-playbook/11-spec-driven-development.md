@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "When You Have 10 Agents in Production: Spec-Driven Development at Scale"
-description: "Going from one agent to ten is a phase change. The shift that makes it manageable: stop asking 'does each agent work?' and start asking 'does the system still do what I designed?'"
+description: "Scaling AI agents in production with spec-driven development: stop asking 'does each agent work?' and start asking 'does the system still do what I designed?'"
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 11
@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/spec-driven-development/image-2.jp
 image_alt: "Spec-Driven Development at Scale — multi-agent pipeline with system-level contract boundaries"
 ---
 
+> **Key Takeaways**
+> - **The problem:** Going from one agent to ten is a phase change, not a linear increase. Each agent may work correctly in isolation while the composition drifts — silently, without errors, in ways no unit test catches.
+> - **Why it matters:** The contract between agents is what breaks at scale. Unit testing individual agents doesn't test that. You end up with support ticket volume climbing and a root cause nobody can pin down.
+> - **What you'll learn:** Two patterns for scaling AI agents in production with spec-driven development — testable system-level contracts and behavioral mutation testing — plus the leadership artifact that proves the system still does what you designed.
+
 Post 10 covered how security governs trust at agent boundaries — who can call what, and what gets through. This post is about what happens once that trust is established and the calls are flowing: how do you know the system is still doing what you designed?
 
 ---
@@ -25,6 +30,8 @@ With one agent, the failure surface is clear. You can read its outputs, write un
 At ten agents — routing, summarizing, classifying, retrieving, verifying, formatting, notifying — something different happens. Each agent may be performing correctly in isolation. But the composition drifts. An agent you updated last Tuesday introduced a subtle output format change. Three agents downstream consume that output. One of them handles the change gracefully. The other two silently degrade. Your monitoring shows no errors. Your users see outcomes that are vaguely wrong in ways no one can easily pin down.
 
 Unit testing individual agents doesn't catch this. The contract between agents is what breaks, and that's what you're not testing.
+
+Spec-driven development becomes necessary the moment you move past a single-prompt agent. If you're not already clear on why single monolithic agents break at scale, [The Case Against the Monolithic Agent](/enterprises-ai-playbook/case-against-monolithic-agent/) makes the structural case before you inherit the failure modes.
 
 Support ticket volume climbs. The root cause isn't a bug — it's drift across a system nobody has a complete picture of.
 
@@ -103,6 +110,8 @@ The spec is the audit trail that connects design intent to running behavior. It'
 ---
 
 Ten agents in production is achievable. What it requires is treating the system's designed behavior as a first-class artifact — something you test against, not something you hope hasn't changed.
+
+Shifting to specs keeps engineering velocity compounding rather than degrading into liabilities. The alternative — shipping AI capabilities sprint by sprint without this discipline — is how the debt from [The AI Debt You're Accumulating Every Sprint You Wait](/enterprises-ai-playbook/cost-of-waiting/) quietly becomes structural.
 
 ---
 

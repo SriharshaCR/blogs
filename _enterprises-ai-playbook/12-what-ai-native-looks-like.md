@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What AI-Native Actually Looks Like — A Working Definition"
-description: "Not a maturity model — a boundary condition. Five operational characteristics that separate an AI-native organization from one that's running AI experiments."
+description: "What AI-native architecture actually looks like: five operational characteristics that define a binary boundary — you've crossed it or you haven't."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 12
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/what-ai-native-looks-like/
 image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.jpeg
 image_alt: "What AI-Native Actually Looks Like — five characteristics boundary diagram"
 ---
+
+> **Key Takeaways**
+> - **The problem:** "AI-native" appears on strategy decks, job postings, and board updates — but nobody defines it. A vague destination is convenient because transformation never officially fails.
+> - **Why it matters:** The gap between running AI and being AI-native is almost never a model problem — it's a systems problem: data architecture, cognitive debt, platform assumptions, governance, agent design.
+> - **What you'll learn:** Five operational characteristics that define a binary boundary condition — not a maturity scale — separating an AI-native organization from one that's running AI experiments indefinitely.
 
 Eleven posts into this series, we've covered the problems, the debt, the strategy, the platform gaps, the architecture decisions, the governance primitives, and the deployment tradeoffs. Every one of those conversations eventually circles back to the same unstated question: *what are we actually trying to become?*
 
@@ -85,6 +90,8 @@ Three concrete applications:
 
 The question isn't rhetorical. It's a calibration tool. When the answer keeps coming back "no" — when every new decision requires the same foundational work that should already be done — that's a signal about where you actually are on the boundary, not where the strategy deck says you are.
 
+To ground your honest self-assessment, compare these five characteristics against the structural diagnostic from earlier in the series: [5 Questions That Reveal Whether Your System Is Actually Ready for AI](/enterprises-ai-playbook/ai-readiness-questions/). The questions are different, but they map to the same underlying gaps — and the answers tend to agree.
+
 ![Decision lens card — three applications of "Would an AI-native organization build it this way?" across data model, deployment decision, and capability build]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native decision lens reference card with three concrete applications"}
 
 ---
@@ -100,6 +107,8 @@ Every post in this series named one layer of that hard part. The point was never
 You're either AI-native or you're not yet. That's a more useful frame than a maturity model, because it forces a specific question: which of these five characteristics do you not have, and what would it actually take to get there?
 
 That's the conversation worth having — and it's one where a clear definition of the destination changes everything.
+
+Ready to review the full journey — from the original diagnosis to this finish line? [The Enterprise AI Playbook — Why I'm Writing This](/enterprises-ai-playbook/series-introduction/) is where the arc starts.
 
 ---
 

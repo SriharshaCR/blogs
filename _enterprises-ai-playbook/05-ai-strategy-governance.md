@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/ai-strategy-governance/image-2.jpe
 image_alt: "Building an AI Strategy That Governance Doesn't Kill — AI BOM and governance flow"
 ---
 
+> **Key Takeaways**
+> - **The problem:** Governance slows AI deployments not because reviewers are obstructive, but because the AI stack arrives without the structured information reviewers need to say yes quickly.
+> - **Why it matters:** Speed versus governance isn't a tension to manage — it's an architecture problem to solve. Making AI systems legible earns the trust that unlocks autonomy.
+> - **What you'll learn:** The AI Bill of Materials — a governance primitive that flips review from discovery to verification — plus a multi-model strategy that prevents vendor lock-in masquerading as AI strategy.
+
 Post 4 made the case that deferring AI readiness has a real cost — compounding, measurable, and eventually unrecoverable. So let's say you're ready to move. You have leadership buy-in, a use case, and a team.
 
 Then governance gets involved, and the project slows to a crawl.
@@ -82,6 +87,8 @@ This isn't just a cost optimization. It's architectural resilience. When a provi
 
 The governance implication: your AI BOM should document which model handles which task class, with the rationale. That documentation is also your contingency plan. When you need to swap a model, the BOM tells you exactly what the change touches.
 
+Governance policy only holds if the runtime architecture can actually enforce it. For the developer-level breakdown on what happens when agents call tools without hard boundaries — and what securing that looks like in code — see [Prompt Injection, MCP, and the Trust Boundary Problem](/enterprises-ai-playbook/prompt-injection-mcp/).
+
 ---
 
 ## What a defensible AI strategy actually looks like
@@ -96,6 +103,8 @@ Together, they form the foundation of a strategy that can move:
 4. Update the BOM when the stack changes. Treat a model swap the same as a schema migration — it has downstream effects that need to be tracked.
 
 The goal isn't to make governance faster by making it weaker. It's to make governance faster by making your AI systems legible. Legibility earns trust. Trust earns autonomy. Autonomy is what speed actually looks like at enterprise scale.
+
+A non-blocking governance model is one of the key operational prerequisites to becoming genuinely AI-native — not just running AI experiments. For the complete picture of what crossing that line actually looks like, see [What AI-Native Actually Looks Like — A Working Definition](/enterprises-ai-playbook/what-ai-native-looks-like/).
 
 ---
 

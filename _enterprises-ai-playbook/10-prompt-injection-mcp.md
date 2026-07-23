@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Prompt Injection, MCP, and the Trust Boundary Problem"
-description: "MCP standardizes how tools connect to agents — and how attackers reason about your system. The lethal trifecta, trust boundaries as an engineering primitive, and three code patterns."
+description: "MCP standardizes tool connections — and attack surfaces. Enterprise prompt injection via MCP starts with retrieved data. Trust boundaries as code, not policy."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 10
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/prompt-injection-mcp/
 image: /assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-2.jpeg
 image_alt: "Prompt Injection and MCP Trust Boundary — indirect injection attack chain"
 ---
+
+> **Key Takeaways**
+> - **The problem:** MCP standardizes how tools connect to agents — and how attackers reason about your system. The #1 attack vector in enterprise AI isn't credential theft; it's prompt injection via data your agent retrieves, not inputs your users type.
+> - **Why it matters:** When an agent combines private data access, untrusted content ingestion, and external communication, injected instructions have a path from retrieved content to sensitive data to the outside world.
+> - **What you'll learn:** The lethal trifecta that creates high-risk agent surfaces, trust boundaries as an engineering primitive rather than a security afterthought, and three code patterns that make those boundaries enforceable.
 
 Distributed agent deployments (Post 9) expand your attack surface. MCP gives that surface a standard shape — which is both the good news and the problem.
 
@@ -163,7 +168,11 @@ You're not logging inputs verbatim — that creates its own data exposure proble
 
 ---
 
+You shouldn't wait for production observability to catch a trust boundary violation. The patterns in this post — trust level enforcement, injection detection, audit logging — can and should be validated at build time. [Your CI/CD Pipeline Is Not Ready for Agents](/enterprises-ai-playbook/cicd-for-agents/) covers how to integrate that kind of behavioral checking before a single request reaches production.
+
 MCP didn't create the prompt injection problem. It just gave everyone a standard way to build systems that are exposed to it. The teams that adopt MCP and think through trust boundaries in the same breath will be fine. The ones that bolt security on afterward won't.
+
+To turn these runtime trust boundaries into enterprise-wide policy — model registry, data flow documentation, agent topology — incorporate them into your AI BOM and governance model. [Building an AI Strategy That Governance Doesn't Kill](/enterprises-ai-playbook/ai-strategy-governance/) shows how the governance primitive and the security layer reinforce each other.
 
 ---
 

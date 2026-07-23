@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/ai-readiness-questions/image-2.jpe
 image_alt: "5 Questions That Reveal Whether Your System Is Actually Ready for AI"
 ---
 
+> **Key Takeaways**
+> - **The problem:** AI readiness checklists measure features, not fitness — a system can have every modern component and still fail structurally when AI is wrong and the system can't catch, contain, or recover from it.
+> - **Why it matters:** The failures don't show up in setup. They show up in production — and by then, the load-bearing weaknesses were present from the start.
+> - **What you'll learn:** Five structural diagnostic questions for architects that surface exactly where AI will accelerate your system or collapse it — before the pilot starts.
+
 Most AI readiness assessments are checklists. Do you have an API layer? A vector store? An LLM gateway? Check, check, check — and the system still fails three weeks into the pilot.
 
 The checklist passes because it's measuring features, not fitness. A system can have every modern component and still be structurally unready for AI. The failures usually don't show up in setup. They show up when AI is wrong — and the system has no way to catch it, contain it, or recover from it.
@@ -51,6 +56,10 @@ The question to ask your team: *"If the AI needed three new data fields from a d
 **Strong answer:** The workflow has clear inputs, expected outputs, and defined edge cases. Exceptions have documented handling paths. Humans and AI have unambiguous roles: the AI does X, the human decides Y.
 
 **Warning sign:** The team describes the process as "it depends on judgment" or "the experienced people just know." That's not a limitation of the AI — it's a signal that the process itself isn't formalized enough to automate safely. Unstructured judgment isn't something you can hand to a model. You first have to extract and encode it. If you haven't done that work, the AI will interpolate — and nobody will be able to tell when it gets it wrong.
+
+If your diagnostic is also surfacing questions about where these models should actually run — data residency, latency floors, hosting constraints — don't let cost dominate that conversation. [Cloud, On-Prem, or Edge: The Real Decision Framework for AI Workloads](/enterprises-ai-playbook/cloud-onprem-edge/) walks through the three variables that actually make that call.
+
+If this diagnostic reveals a single massive agent prompt attempting to handle the entire workflow, that's worth stopping for. [The Case Against the Monolithic Agent](/enterprises-ai-playbook/case-against-monolithic-agent/) explains why that architecture breaks under load — and what the alternative looks like before you write another line of orchestration.
 
 ---
 

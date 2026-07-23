@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Enterprise AI Playbook — Why I'm Writing This"
-description: "Why most enterprise AI initiatives stall, and what this series is actually about."
+description: "A practitioner-led series on transforming enterprise systems into AI-native operations — from diagnosing what's broken to defining what done looks like."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 0
@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/series-introduction/image-2.jpeg
 image_alt: "The Enterprise AI Playbook — From Legacy to AI-Ready"
 ---
 
+> **Key Takeaways**
+> - **The problem:** Most enterprise AI initiatives stall not because the model is bad — but because the organizational and technical foundation was never built to support one.
+> - **Why it matters:** The hard part of enterprise AI isn't finding a capable model. It's the data architecture, platform assumptions, and governance decisions that determine whether that model can do anything useful.
+> - **What this series covers:** A 13-post transformation arc — from diagnosing what's broken to defining what AI-native actually looks like when you've built it.
+
 A few years ago I watched a well-funded enterprise AI initiative die quietly. Not from lack of effort — the team was sharp. Not from lack of budget — the organization had committed real money. Not from a bad model — the model performed well in every demo they ran.
 
 It stalled because every time the team tried to move from demo to production, they hit the same invisible wall: the systems that held all the relevant data weren't designed to be asked questions. They were designed to record transactions. Decades of operational data, locked inside architectures built for stability and compliance, suddenly became the thing standing between a capable AI and any real value.
@@ -21,6 +26,8 @@ It stalled because every time the team tried to move from demo to production, th
 The team spent six months trying to route around a data architecture problem they hadn't diagnosed. They blamed the model. Switched vendors. Added retrieval layers. Tuned prompts. None of it worked — because the model was never the problem.
 
 That pattern is not unusual. I've seen it play out differently across industries, systems, and teams — but the same root cause surfaces reliably: the hard part of enterprise AI isn't finding a capable model. It's building the organizational and technical foundation that lets a capable model do anything useful.
+
+If your team is already hitting that wall — good data buried in legacy systems, pipelines that weren't built for inference, teams debugging a model that was never the problem — [Why Enterprise AI Projects Keep Failing (And It's Not the Models)](/enterprises-ai-playbook/why-ai-projects-fail/) names the pattern in detail.
 
 ---
 
@@ -53,6 +60,8 @@ The series closes by answering the question most transformation roadmaps never g
 If you're a developer figuring out what AI-native development means beyond generating code and hoping it works — this is for you.
 
 If you're an architect making decisions about agent design, deployment topology, or data infrastructure that will be hard to reverse — this is for you.
+
+Before you design orchestration layers or start evaluating model APIs, there are five structural questions worth answering first. [5 Questions That Reveal Whether Your System Is Actually Ready for AI](/enterprises-ai-playbook/ai-readiness-questions/) is a diagnostic built for exactly this moment.
 
 If you're an engineering manager or CTO trying to understand why initiatives keep stalling and what a more reliable path looks like — this is for you.
 
