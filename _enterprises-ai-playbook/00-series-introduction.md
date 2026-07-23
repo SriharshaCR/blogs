@@ -27,7 +27,7 @@ The team spent six months trying to route around a data architecture problem the
 
 That pattern is not unusual. I've seen it play out differently across industries, systems, and teams — but the same root cause surfaces reliably: the hard part of enterprise AI isn't finding a capable model. It's building the organizational and technical foundation that lets a capable model do anything useful.
 
-If your team is already hitting that wall — good data buried in legacy systems, pipelines that weren't built for inference, teams debugging a model that was never the problem — [Why Enterprise AI Projects Keep Failing (And It's Not the Models)](/enterprises-ai-playbook/why-ai-projects-fail/) names the pattern in detail.
+If your team is already hitting that wall — good data buried in legacy systems, pipelines that weren't built for inference, teams debugging a model that was never the problem — [Why Enterprise AI Projects Keep Failing (And It's Not the Models)](/blogs/enterprises-ai-playbook/why-ai-projects-fail/) names the pattern in detail.
 
 ---
 
@@ -61,7 +61,7 @@ If you're a developer figuring out what AI-native development means beyond gener
 
 If you're an architect making decisions about agent design, deployment topology, or data infrastructure that will be hard to reverse — this is for you.
 
-Before you design orchestration layers or start evaluating model APIs, there are five structural questions worth answering first. [5 Questions That Reveal Whether Your System Is Actually Ready for AI](/enterprises-ai-playbook/ai-readiness-questions/) is a diagnostic built for exactly this moment.
+Before you design orchestration layers or start evaluating model APIs, there are five structural questions worth answering first. [5 Questions That Reveal Whether Your System Is Actually Ready for AI](/blogs/enterprises-ai-playbook/ai-readiness-questions/) is a diagnostic built for exactly this moment.
 
 If you're an engineering manager or CTO trying to understand why initiatives keep stalling and what a more reliable path looks like — this is for you.
 

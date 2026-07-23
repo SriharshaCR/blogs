@@ -31,7 +31,7 @@ At ten agents — routing, summarizing, classifying, retrieving, verifying, form
 
 Unit testing individual agents doesn't catch this. The contract between agents is what breaks, and that's what you're not testing.
 
-Spec-driven development becomes necessary the moment you move past a single-prompt agent. If you're not already clear on why single monolithic agents break at scale, [The Case Against the Monolithic Agent](/enterprises-ai-playbook/case-against-monolithic-agent/) makes the structural case before you inherit the failure modes.
+Spec-driven development becomes necessary the moment you move past a single-prompt agent. If you're not already clear on why single monolithic agents break at scale, [The Case Against the Monolithic Agent](/blogs/enterprises-ai-playbook/case-against-monolithic-agent/) makes the structural case before you inherit the failure modes.
 
 Support ticket volume climbs. The root cause isn't a bug — it's drift across a system nobody has a complete picture of.
 
@@ -111,7 +111,7 @@ The spec is the audit trail that connects design intent to running behavior. It'
 
 Ten agents in production is achievable. What it requires is treating the system's designed behavior as a first-class artifact — something you test against, not something you hope hasn't changed.
 
-Shifting to specs keeps engineering velocity compounding rather than degrading into liabilities. The alternative — shipping AI capabilities sprint by sprint without this discipline — is how the debt from [The AI Debt You're Accumulating Every Sprint You Wait](/enterprises-ai-playbook/cost-of-waiting/) quietly becomes structural.
+Shifting to specs keeps engineering velocity compounding rather than degrading into liabilities. The alternative — shipping AI capabilities sprint by sprint without this discipline — is how the debt from [The AI Debt You're Accumulating Every Sprint You Wait](/blogs/enterprises-ai-playbook/cost-of-waiting/) quietly becomes structural.
 
 ---
 

@@ -57,7 +57,7 @@ The gap between "teams actively building with AI" and "teams planning to build w
 
 This one rarely shows up in budget conversations. It should.
 
-One of the most dangerous hidden costs here is developer comprehension drift — the gap between code that runs and code the team can actually reason about. That gap widens every sprint AI-generated code ships without genuine understanding behind it. [The Cognitive Debt Crisis in AI-Augmented Codebases](/enterprises-ai-playbook/cognitive-debt-crisis/) breaks down exactly how that mechanism works.
+One of the most dangerous hidden costs here is developer comprehension drift — the gap between code that runs and code the team can actually reason about. That gap widens every sprint AI-generated code ships without genuine understanding behind it. [The Cognitive Debt Crisis in AI-Augmented Codebases](/blogs/enterprises-ai-playbook/cognitive-debt-crisis/) breaks down exactly how that mechanism works.
 
 ---
 
@@ -99,7 +99,7 @@ Walk through those three questions with your team before the next budget convers
 
 That's the conversation worth having.
 
-When you're ready to move from waiting to building — especially if you're managing a growing fleet of AI workflows — [When You Have 10 Agents in Production: Spec-Driven Development at Scale](/enterprises-ai-playbook/spec-driven-development/) shows how to keep engineering velocity compounding rather than accumulating into a new form of debt.
+When you're ready to move from waiting to building — especially if you're managing a growing fleet of AI workflows — [When You Have 10 Agents in Production: Spec-Driven Development at Scale](/blogs/enterprises-ai-playbook/spec-driven-development/) shows how to keep engineering velocity compounding rather than accumulating into a new form of debt.
 
 ---
 

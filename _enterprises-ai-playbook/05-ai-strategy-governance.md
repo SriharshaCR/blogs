@@ -87,7 +87,7 @@ This isn't just a cost optimization. It's architectural resilience. When a provi
 
 The governance implication: your AI BOM should document which model handles which task class, with the rationale. That documentation is also your contingency plan. When you need to swap a model, the BOM tells you exactly what the change touches.
 
-Governance policy only holds if the runtime architecture can actually enforce it. For the developer-level breakdown on what happens when agents call tools without hard boundaries — and what securing that looks like in code — see [Prompt Injection, MCP, and the Trust Boundary Problem](/enterprises-ai-playbook/prompt-injection-mcp/).
+Governance policy only holds if the runtime architecture can actually enforce it. For the developer-level breakdown on what happens when agents call tools without hard boundaries — and what securing that looks like in code — see [Prompt Injection, MCP, and the Trust Boundary Problem](/blogs/enterprises-ai-playbook/prompt-injection-mcp/).
 
 ---
 
@@ -104,7 +104,7 @@ Together, they form the foundation of a strategy that can move:
 
 The goal isn't to make governance faster by making it weaker. It's to make governance faster by making your AI systems legible. Legibility earns trust. Trust earns autonomy. Autonomy is what speed actually looks like at enterprise scale.
 
-A non-blocking governance model is one of the key operational prerequisites to becoming genuinely AI-native — not just running AI experiments. For the complete picture of what crossing that line actually looks like, see [What AI-Native Actually Looks Like — A Working Definition](/enterprises-ai-playbook/what-ai-native-looks-like/).
+A non-blocking governance model is one of the key operational prerequisites to becoming genuinely AI-native — not just running AI experiments. For the complete picture of what crossing that line actually looks like, see [What AI-Native Actually Looks Like — A Working Definition](/blogs/enterprises-ai-playbook/what-ai-native-looks-like/).
 
 ---
 
