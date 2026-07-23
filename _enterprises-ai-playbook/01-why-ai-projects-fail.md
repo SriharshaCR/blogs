@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Enterprise AI Projects Keep Failing (And It's Not the Models)"
-description: "Most enterprise AI initiatives stall not because the model is bad, but because the data it needs was never designed to be asked questions."
+description: "Most enterprise AI initiatives stall not because the model is bad, but because the data it needs was never designed to be asked questions. Here's why."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 1
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/why-ai-projects-fail/
 image: /assets/images/enterprises-ai-playbook/why-ai-projects-fail/image-2.jpeg
 image_alt: "Why Enterprise AI Projects Keep Failing — locked data architecture illustrated"
 ---
+
+> **Key Takeaways**
+> - **The problem:** Enterprise AI projects fail because operational data was designed to record transactions, not answer questions — and that's an architectural mismatch no amount of prompt tuning fixes.
+> - **Why it matters:** Wrong outputs are a symptom. The cause is that the model is reasoning over inaccessible, decontextualized, or structurally incomplete data.
+> - **What you'll learn:** The diagnostic questions that reveal whether your data infrastructure can actually support AI workloads — before the pilot stalls.
 
 Picture a team six months into an enterprise AI initiative. The model performs well in demos. The budget is real. Leadership is aligned. But the project is stalled — not because the AI can't reason, but because it can't reach the data it needs to reason over. Every integration attempt surfaces a wall: access restrictions, undocumented schemas, data locked inside systems that were never designed to be queried by anything except their own interfaces.
 

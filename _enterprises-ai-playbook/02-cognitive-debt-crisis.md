@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/cognitive-debt-crisis/image-2.jpeg
 image_alt: "The Cognitive Debt Crisis in AI-Augmented Codebases"
 ---
 
+> **Key Takeaways**
+> - **The problem:** AI-generated code ships fast and passes tests — but leaves comprehension gaps that compound silently until something breaks in ways nobody can reason about.
+> - **Why it matters:** Cognitive debt isn't future work owed like technical debt — it's current comprehension already lost, invisible in your linter, coverage report, and architecture review.
+> - **What you'll learn:** Three patterns that create cognitive debt in AI-augmented codebases, and three lightweight practices that keep velocity without losing the team's ability to understand what they've shipped.
+
 Post 1 argued that closed data architecture is the silent killer of enterprise AI projects. But there's a second problem accumulating in parallel, and it lives inside your codebase — one function at a time.
 
 ---

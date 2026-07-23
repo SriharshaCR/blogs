@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Your CI/CD Pipeline Is Not Ready for Agents"
-description: "Every CI/CD practice you know is built on determinism. Agents break that premise at the foundation. Here are the five gaps to close before production."
+description: "Testing non-deterministic AI agents in CI/CD exposes five gaps your pipeline wasn't built for. Here's what to close before agents reach production."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 6
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/cicd-for-agents/
 image: /assets/images/enterprises-ai-playbook/cicd-for-agents/image-2.jpeg
 image_alt: "Your CI/CD Pipeline Is Not Ready for Agents — deterministic vs behavioral pipeline contrast"
 ---
+
+> **Key Takeaways**
+> - **The problem:** Every CI/CD practice you have is built on determinism — agents don't deliver it, and the gaps don't show up until something breaks in production.
+> - **Why it matters:** You're not dealing with a deployment problem anymore. You're managing a behavioral distribution that has to stay inside acceptable bounds over time. That's a different job.
+> - **What you'll learn:** Five concrete gaps — testing non-deterministic AI agents in CI/CD, stateful rollback, canary evaluation for behavior changes, token cost instrumentation, and output quality observability — with what to build for each.
 
 Post 5 laid out the strategy for bringing agents into production. Now someone has to own the infrastructure that carries them there. That's platform engineering — and the tooling you've spent years hardening was built for a fundamentally different problem.
 

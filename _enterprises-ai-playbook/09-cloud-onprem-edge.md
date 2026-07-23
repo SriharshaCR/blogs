@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cloud, On-Prem, or Edge: The Real Decision Framework for AI Workloads"
-description: "Cost drives the debate. Cost is the wrong frame. Three variables actually decide where your AI workloads run — data gravity, inference latency, and compliance surface area."
+description: "Cost is the wrong frame for AI workload deployment. Three variables actually decide: data gravity, inference latency, and compliance surface area."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 9
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/cloud-onprem-edge/
 image: /assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-2.jpeg
 image_alt: "Cloud, On-Prem, or Edge — AI workload deployment decision framework"
 ---
+
+> **Key Takeaways**
+> - **The problem:** Cost drives most AI deployment debates — but in regulated enterprise environments, cost is the wrong frame. Three other variables make the actual decision.
+> - **Why it matters:** Data gravity, inference latency requirements, and compliance surface area are often non-negotiable constraints. Picking a deployment model without working through them first creates architecture you'll be unwinding later.
+> - **What you'll learn:** The three-variable decision framework for cloud, on-prem, and edge AI workloads — with three concrete scenarios showing how the framework plays out in practice.
 
 Post 8 got your observability layer in place — you can see what your agents are doing in production. Now comes the question every team hits eventually: where do you actually run the thing?
 

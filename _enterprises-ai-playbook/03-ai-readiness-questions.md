@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/ai-readiness-questions/image-2.jpe
 image_alt: "5 Questions That Reveal Whether Your System Is Actually Ready for AI"
 ---
 
+> **Key Takeaways**
+> - **The problem:** AI readiness checklists measure features, not fitness — a system can have every modern component and still fail structurally when AI is wrong and the system can't catch, contain, or recover from it.
+> - **Why it matters:** The failures don't show up in setup. They show up in production — and by then, the load-bearing weaknesses were present from the start.
+> - **What you'll learn:** Five structural diagnostic questions for architects that surface exactly where AI will accelerate your system or collapse it — before the pilot starts.
+
 Most AI readiness assessments are checklists. Do you have an API layer? A vector store? An LLM gateway? Check, check, check — and the system still fails three weeks into the pilot.
 
 The checklist passes because it's measuring features, not fitness. A system can have every modern component and still be structurally unready for AI. The failures usually don't show up in setup. They show up when AI is wrong — and the system has no way to catch it, contain it, or recover from it.
