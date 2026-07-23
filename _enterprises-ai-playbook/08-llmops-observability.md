@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LLMOps in Practice: Observability That Doesn't Lie to You"
-description: "Logging captures what happened. Observability lets you ask questions you didn't know you needed before the failure. Four patterns that give you real signal."
+description: "LLMOps observability patterns for production AI: four instrumentation approaches that tell you if the system is right — not just whether it's running."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 8
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/llmops-observability/
 image: /assets/images/enterprises-ai-playbook/llmops-observability/image-2.jpeg
 image_alt: "LLMOps Observability — UP vs RIGHT dashboard contrast"
 ---
+
+> **Key Takeaways**
+> - **The problem:** An agent can return HTTP 200 on every call — healthy by every infrastructure metric — while quietly producing wrong outputs for weeks before anyone notices.
+> - **Why it matters:** "The service is healthy" and "the system is right" are different questions. Traditional monitoring only answers the first one.
+> - **What you'll learn:** Four LLMOps observability patterns that give you real production signal — trace-level reasoning capture, cost attribution, output drift detection, and alerting that surfaces problems before users do.
 
 Post 7 designed the multi-agent architecture. Now you have to operate it. And this is where most teams learn a hard lesson: logging isn't observability.
 

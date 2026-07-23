@@ -27,6 +27,33 @@
 <!-- Canonical -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+{% if page.layout == 'post' %}
+<!-- Structured Data: TechArticle -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "author": {
+    "@type": "Person",
+    "name": "Sriharsha CR",
+    "url": "{{ site.url }}"
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "publisher": {
+    "@type": "Person",
+    "name": "Sriharsha CR"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "{{ page.series_name }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/enterprises-ai-playbook/"
+  }
+}
+</script>
+{% endif %}
+
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Enterprise AI Playbook — Why I'm Writing This"
-description: "Why most enterprise AI initiatives stall, and what this series is actually about."
+description: "A practitioner-led series on transforming enterprise systems into AI-native operations — from diagnosing what's broken to defining what done looks like."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 0
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/series-introduction/
 image: /assets/images/enterprises-ai-playbook/series-introduction/image-2.jpeg
 image_alt: "The Enterprise AI Playbook — From Legacy to AI-Ready"
 ---
+
+> **Key Takeaways**
+> - **The problem:** Most enterprise AI initiatives stall not because the model is bad — but because the organizational and technical foundation was never built to support one.
+> - **Why it matters:** The hard part of enterprise AI isn't finding a capable model. It's the data architecture, platform assumptions, and governance decisions that determine whether that model can do anything useful.
+> - **What this series covers:** A 13-post transformation arc — from diagnosing what's broken to defining what AI-native actually looks like when you've built it.
 
 A few years ago I watched a well-funded enterprise AI initiative die quietly. Not from lack of effort — the team was sharp. Not from lack of budget — the organization had committed real money. Not from a bad model — the model performed well in every demo they ran.
 

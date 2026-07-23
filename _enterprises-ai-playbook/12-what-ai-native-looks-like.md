@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What AI-Native Actually Looks Like — A Working Definition"
-description: "Not a maturity model — a boundary condition. Five operational characteristics that separate an AI-native organization from one that's running AI experiments."
+description: "What AI-native architecture actually looks like: five operational characteristics that define a binary boundary — you've crossed it or you haven't."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 12
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/what-ai-native-looks-like/
 image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.jpeg
 image_alt: "What AI-Native Actually Looks Like — five characteristics boundary diagram"
 ---
+
+> **Key Takeaways**
+> - **The problem:** "AI-native" appears on strategy decks, job postings, and board updates — but nobody defines it. A vague destination is convenient because transformation never officially fails.
+> - **Why it matters:** The gap between running AI and being AI-native is almost never a model problem — it's a systems problem: data architecture, cognitive debt, platform assumptions, governance, agent design.
+> - **What you'll learn:** Five operational characteristics that define a binary boundary condition — not a maturity scale — separating an AI-native organization from one that's running AI experiments indefinitely.
 
 Eleven posts into this series, we've covered the problems, the debt, the strategy, the platform gaps, the architecture decisions, the governance primitives, and the deployment tradeoffs. Every one of those conversations eventually circles back to the same unstated question: *what are we actually trying to become?*
 

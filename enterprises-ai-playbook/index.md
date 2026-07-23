@@ -1,9 +1,9 @@
 ---
 layout: series
 title: "The Enterprise AI Playbook"
-description: "A practitioner-led series on transforming existing enterprise systems into AI-native, future-ready operations — written by someone who has lived it."
+description: "A practitioner-led series on transforming enterprise systems into AI-native operations — covering data architecture, agent design, governance, LLMOps, and what AI-native actually means."
 collection: enterprises-ai-playbook
-total_posts: 12
+total_posts: 13
 audience: "CTOs, Developers, Architects, Engineering Managers, Platform Engineers"
 permalink: /enterprises-ai-playbook/
 ---

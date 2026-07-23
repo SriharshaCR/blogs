@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The AI Debt You're Accumulating Every Sprint You Wait"
-description: "Deferring AI readiness isn't a neutral decision. It creates three compounding liabilities — technical, organizational, and competitive — that most deferral arguments never account for."
+description: "Deferring AI readiness creates three compounding liabilities — technical, organizational, and competitive — that most deferral arguments never account for."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 4
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/cost-of-waiting/
 image: /assets/images/enterprises-ai-playbook/cost-of-waiting/image-2.jpeg
 image_alt: "The AI Debt You're Accumulating Every Sprint You Wait — three compounding liabilities"
 ---
+
+> **Key Takeaways**
+> - **The problem:** Deferring AI readiness is framed as "not spending now" — but it silently accumulates three compounding liabilities: technical, organizational, and competitive.
+> - **Why it matters:** The costs don't land as line items. They arrive in future sprints as architecture that needs unwinding, engineers who need retraining, and a product catch-up effort at exactly the moment the team is least ready.
+> - **What you'll learn:** How to frame all three debt types concretely — and the three questions that make the cost of waiting impossible to argue away in a budget conversation.
 
 Post 3 gave you a readiness assessment — five questions that reveal how exposed your organization actually is. Maybe the answers were uncomfortable. Maybe leadership looked at them and said, "We'll revisit this next quarter."
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Prompt Injection, MCP, and the Trust Boundary Problem"
-description: "MCP standardizes how tools connect to agents — and how attackers reason about your system. The lethal trifecta, trust boundaries as an engineering primitive, and three code patterns."
+description: "MCP standardizes tool connections — and attack surfaces. Enterprise prompt injection via MCP starts with retrieved data. Trust boundaries as code, not policy."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
 post_number: 10
@@ -13,6 +13,11 @@ permalink: /enterprises-ai-playbook/prompt-injection-mcp/
 image: /assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-2.jpeg
 image_alt: "Prompt Injection and MCP Trust Boundary — indirect injection attack chain"
 ---
+
+> **Key Takeaways**
+> - **The problem:** MCP standardizes how tools connect to agents — and how attackers reason about your system. The #1 attack vector in enterprise AI isn't credential theft; it's prompt injection via data your agent retrieves, not inputs your users type.
+> - **Why it matters:** When an agent combines private data access, untrusted content ingestion, and external communication, injected instructions have a path from retrieved content to sensitive data to the outside world.
+> - **What you'll learn:** The lethal trifecta that creates high-risk agent surfaces, trust boundaries as an engineering primitive rather than a security afterthought, and three code patterns that make those boundaries enforceable.
 
 Distributed agent deployments (Post 9) expand your attack surface. MCP gives that surface a standard shape — which is both the good news and the problem.
 

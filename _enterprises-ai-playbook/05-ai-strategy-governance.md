@@ -14,6 +14,11 @@ image: /assets/images/enterprises-ai-playbook/ai-strategy-governance/image-2.jpe
 image_alt: "Building an AI Strategy That Governance Doesn't Kill — AI BOM and governance flow"
 ---
 
+> **Key Takeaways**
+> - **The problem:** Governance slows AI deployments not because reviewers are obstructive, but because the AI stack arrives without the structured information reviewers need to say yes quickly.
+> - **Why it matters:** Speed versus governance isn't a tension to manage — it's an architecture problem to solve. Making AI systems legible earns the trust that unlocks autonomy.
+> - **What you'll learn:** The AI Bill of Materials — a governance primitive that flips review from discovery to verification — plus a multi-model strategy that prevents vendor lock-in masquerading as AI strategy.
+
 Post 4 made the case that deferring AI readiness has a real cost — compounding, measurable, and eventually unrecoverable. So let's say you're ready to move. You have leadership buy-in, a use case, and a team.
 
 Then governance gets involved, and the project slows to a crawl.
