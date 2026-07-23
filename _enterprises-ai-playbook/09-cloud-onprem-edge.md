@@ -32,6 +32,8 @@ Data gravity is simple: inference should run close to where the data already liv
 
 Ask this first: where does the data actually live today, and how often does inference need to touch it?
 
+Data gravity is also why most enterprise AI experiments die at the proof-of-concept stage. When operational data was never designed to be queried across system boundaries, the inference layer has nothing reliable to reason over. [Why Enterprise AI Projects Keep Failing (And It's Not the Models)](/enterprises-ai-playbook/why-ai-projects-fail/) goes deeper on that pattern — and why it's almost never a model problem.
+
 ### 2. Inference latency requirements
 
 Not all AI workloads have the same latency budget.
@@ -49,6 +51,8 @@ This is the one that often gets underweighted until someone in Legal or InfoSec 
 Data residency requirements, sovereignty mandates, and air-gap requirements are non-negotiable. They don't bend because the cloud provider has a data center in your region. They don't bend because you have encryption at rest. In heavily regulated industries — financial services, healthcare, defense, government — the compliance posture is often: the data does not leave a defined boundary, full stop.
 
 If your AI workload touches data with those requirements, the deployment decision has already been made. Compliance surface area isn't a constraint to optimize around; it's the outer boundary that the rest of the architecture fits inside.
+
+Workload placement is ultimately a compliance architecture problem. To align your hosting decisions with your enterprise risk posture — and avoid building an AI strategy your governance team will stall — see [Building an AI Strategy That Governance Doesn't Kill](/enterprises-ai-playbook/ai-strategy-governance/).
 
 ![Three-variable decision matrix — data gravity, inference latency, and compliance surface area mapped to deployment recommendations]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI workload deployment decision matrix with three binding constraints"}
 

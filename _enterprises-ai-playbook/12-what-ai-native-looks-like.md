@@ -85,6 +85,8 @@ Three concrete applications:
 
 The question isn't rhetorical. It's a calibration tool. When the answer keeps coming back "no" — when every new decision requires the same foundational work that should already be done — that's a signal about where you actually are on the boundary, not where the strategy deck says you are.
 
+To ground your honest self-assessment, compare these five characteristics against the structural diagnostic from earlier in the series: [5 Questions That Reveal Whether Your System Is Actually Ready for AI](/enterprises-ai-playbook/ai-readiness-questions/). The questions are different, but they map to the same underlying gaps — and the answers tend to agree.
+
 ![Decision lens card — three applications of "Would an AI-native organization build it this way?" across data model, deployment decision, and capability build]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native decision lens reference card with three concrete applications"}
 
 ---
@@ -100,6 +102,8 @@ Every post in this series named one layer of that hard part. The point was never
 You're either AI-native or you're not yet. That's a more useful frame than a maturity model, because it forces a specific question: which of these five characteristics do you not have, and what would it actually take to get there?
 
 That's the conversation worth having — and it's one where a clear definition of the destination changes everything.
+
+Ready to review the full journey — from the original diagnosis to this finish line? [The Enterprise AI Playbook — Why I'm Writing This](/enterprises-ai-playbook/series-introduction/) is where the arc starts.
 
 ---
 

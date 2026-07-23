@@ -163,7 +163,11 @@ You're not logging inputs verbatim — that creates its own data exposure proble
 
 ---
 
+You shouldn't wait for production observability to catch a trust boundary violation. The patterns in this post — trust level enforcement, injection detection, audit logging — can and should be validated at build time. [Your CI/CD Pipeline Is Not Ready for Agents](/enterprises-ai-playbook/cicd-for-agents/) covers how to integrate that kind of behavioral checking before a single request reaches production.
+
 MCP didn't create the prompt injection problem. It just gave everyone a standard way to build systems that are exposed to it. The teams that adopt MCP and think through trust boundaries in the same breath will be fine. The ones that bolt security on afterward won't.
+
+To turn these runtime trust boundaries into enterprise-wide policy — model registry, data flow documentation, agent topology — incorporate them into your AI BOM and governance model. [Building an AI Strategy That Governance Doesn't Kill](/enterprises-ai-playbook/ai-strategy-governance/) shows how the governance primitive and the security layer reinforce each other.
 
 ---
 

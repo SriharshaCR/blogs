@@ -65,11 +65,15 @@ Most enterprises haven't asked these questions yet. They're running AI initiativ
 
 The model was fine.
 
+Fixing the data layer is the right first move — but teams that wait to fix it are accumulating a compounding liability with every sprint. [The AI Debt You're Accumulating Every Sprint You Wait](/enterprises-ai-playbook/cost-of-waiting/) breaks down what that costs, technically and competitively.
+
 ---
 
 The organizations pulling ahead aren't starting with better models. They're starting with a harder question: *"What would we need to change about how we manage and expose our data before AI could reliably add value here?"*
 
 That question implicates systems, teams, and architectural decisions made years ago. But it's the right question — and it's the one that separates pilots that ship from pilots that stall.
+
+Once the data layer is unblocked, the next wall most teams hit is governance. [Building an AI Strategy That Governance Doesn't Kill](/enterprises-ai-playbook/ai-strategy-governance/) shows how to build a compliance framework that accelerates AI velocity instead of strangling it.
 
 ---
 

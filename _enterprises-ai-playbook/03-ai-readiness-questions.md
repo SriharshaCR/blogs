@@ -52,6 +52,10 @@ The question to ask your team: *"If the AI needed three new data fields from a d
 
 **Warning sign:** The team describes the process as "it depends on judgment" or "the experienced people just know." That's not a limitation of the AI — it's a signal that the process itself isn't formalized enough to automate safely. Unstructured judgment isn't something you can hand to a model. You first have to extract and encode it. If you haven't done that work, the AI will interpolate — and nobody will be able to tell when it gets it wrong.
 
+If your diagnostic is also surfacing questions about where these models should actually run — data residency, latency floors, hosting constraints — don't let cost dominate that conversation. [Cloud, On-Prem, or Edge: The Real Decision Framework for AI Workloads](/enterprises-ai-playbook/cloud-onprem-edge/) walks through the three variables that actually make that call.
+
+If this diagnostic reveals a single massive agent prompt attempting to handle the entire workflow, that's worth stopping for. [The Case Against the Monolithic Agent](/enterprises-ai-playbook/case-against-monolithic-agent/) explains why that architecture breaks under load — and what the alternative looks like before you write another line of orchestration.
+
 ---
 
 ### Question 3: What happens when AI is wrong, and can the system recover?

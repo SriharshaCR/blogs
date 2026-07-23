@@ -50,6 +50,8 @@ This is the difference between knowing your agent said something wrong and knowi
 
 OpenTelemetry-compatible tracing — with spans for each agent step, each tool call, and each model invocation — is the minimum viable structure. Store the intermediate states, not just the terminal output.
 
+Tracing also needs to extend to the protocol boundary. If an injected instruction in retrieved content tricks an agent into abusing a tool call, your traces need to surface that — not just log that a tool was invoked. [Prompt Injection, MCP, and the Trust Boundary Problem](/enterprises-ai-playbook/prompt-injection-mcp/) covers how to design for that class of failure before it reaches production.
+
 ### 2. Cost attribution
 
 Token spend has no natural ceiling. A runaway agent loop — model calls a tool, tool result triggers re-evaluation, re-evaluation calls another tool — won't trip a CPU alert. It will silently accumulate across hundreds of concurrent sessions before your billing dashboard shows anything unusual.
@@ -178,6 +180,8 @@ This wrapper gives you: per-call cost attribution by agent, workflow, and user c
 When you have these four patterns in place, incidents look different. Instead of "the agent is broken — page everyone," you get: "the retrieval agent in the invoicing workflow for enterprise accounts has had a 23% output quality drop over the last 6 hours, coinciding with a 3x cost increase per request." That's an actionable diagnosis before a user files a ticket.
 
 Observability is the difference between reacting to failures and finding them yourself. In production AI systems, that gap is measured in user trust.
+
+Capturing execution traces helps debug behavior — but there's a harder problem underneath: when developers stop understanding the AI-generated code they're shipping, no trace can reconstruct that lost comprehension. [The Cognitive Debt Crisis in AI-Augmented Codebases](/enterprises-ai-playbook/cognitive-debt-crisis/) covers the accumulation mechanism and what the minimum viable intervention looks like.
 
 ---
 

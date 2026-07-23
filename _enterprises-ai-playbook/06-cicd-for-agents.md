@@ -50,6 +50,8 @@ assert evaluate(output, criteria=["accurate", "on_topic", "no_hallucination"]) >
 
 These are assertion frameworks, not equality checks. Tools like RAGAS (docs.ragas.io) and DeepEval (docs.confident-ai.com) exist for this — RAGAS targets RAG and agent evaluation specifically; DeepEval covers dozens of research-backed metrics including hallucination and faithfulness. For domain-specific deployments, your criteria will include domain-safe refusal and compliance-relevant edge cases (a healthcare agent needs to be tested for HIPAA-relevant refusals; a finance agent for hallucinated figures). These tools have to be integrated into your pipeline deliberately. They won't slot into your existing test runner without rethinking what a passing test means.
 
+If your CI evaluation matrix is growing in complexity, the root cause is often agent design rather than test coverage. A single monolithic agent handling a multi-step workflow produces a combinatorial test surface that's nearly impossible to manage. [The Case Against the Monolithic Agent](/enterprises-ai-playbook/case-against-monolithic-agent/) explains why breaking that down into a pipeline of specialized agents makes the testing problem tractable.
+
 ![Traditional service vs agent workload comparison — four rows showing how testing, rollback, canary, and observability differ fundamentally]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Traditional CI/CD pipeline vs agent workload pipeline comparison table"}
 
 ### 2. Rollback
@@ -81,6 +83,8 @@ You need token-level instrumentation: per-request input/output token counts, too
 Traditional monitoring answers: is the service up? Latency normal? Error rate within SLA?
 
 For agents, none of that tells you if the system is *working*. An agent can be fully healthy by infrastructure metrics while quietly producing off-topic responses, hallucinating facts, or failing to complete tasks. You need a second observability layer: output quality monitoring. Sampling agent responses and scoring them in near-real-time, tracking quality metrics over time alongside infrastructure metrics, and treating output drift as a production incident — not a model fine-tuning ticket.
+
+Testing non-deterministic agents in CI is only half the battle. The other half is understanding failures once they reach staging — which tools to instrument, which signals to alert on, and what "working" actually means for an agent. [LLMOps in Practice: Observability That Doesn't Lie to You](/enterprises-ai-playbook/llmops-observability/) covers the four instrumentation patterns that give you real production signal.
 
 ![Observability gap dashboard — infrastructure monitoring showing all-green vs agent quality monitoring showing output quality, cost, and hallucination rate all in warning state]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Side-by-side dashboard showing healthy infrastructure metrics alongside failing agent quality metrics"}
 
