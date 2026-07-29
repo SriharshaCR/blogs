@@ -4,10 +4,18 @@
       Harsha's Blog<span class="logo-dot">.</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' %}nav-link--active{% endif %}">Writing</a>
-      <a href="{{ site.baseurl }}/enterprises-ai-playbook/" class="nav-link {% if page.series == 'enterprises-ai-playbook' %}nav-link--active{% endif %}">AI Playbook</a>
-      <a href="{{ site.baseurl }}/tags/" class="nav-link {% if page.url == '/tags/' %}nav-link--active{% endif %}">Tags</a>
-      <a href="{{ site.baseurl }}/search/" class="nav-link" aria-label="Search">Search</a>
+      <a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' %}nav-link--active{% endif %}" data-tooltip="Writing">
+        <svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        <span class="nav-label">Writing</span>
+      </a>
+      <a href="{{ site.baseurl }}/tags/" class="nav-link {% if page.url == '/tags/' %}nav-link--active{% endif %}" data-tooltip="Tags">
+        <svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        <span class="nav-label">Tags</span>
+      </a>
+      <a href="{{ site.baseurl }}/search/" class="nav-link {% if page.url == '/search/' %}nav-link--active{% endif %}" data-tooltip="Search">
+        <svg class="nav-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="nav-label">Search</span>
+      </a>
     </nav>
     <div class="header-actions">
       <button
@@ -22,3 +30,35 @@
     </div>
   </div>
 </header>
+
+<div class="nav-tooltip" id="nav-tooltip"></div>
+
+<script>
+  (function () {
+    var tooltip = document.getElementById('nav-tooltip');
+    var timer;
+
+    document.querySelectorAll('.site-nav .nav-link').forEach(function (link) {
+      link.addEventListener('touchstart', function () {
+        var label = link.getAttribute('data-tooltip');
+        timer = setTimeout(function () {
+          var rect = link.getBoundingClientRect();
+          tooltip.textContent = label;
+          tooltip.style.left = (rect.left + rect.width / 2) + 'px';
+          tooltip.style.top = (rect.bottom + 8) + 'px';
+          tooltip.classList.add('nav-tooltip--visible');
+        }, 500);
+      }, { passive: true });
+
+      link.addEventListener('touchend', function () {
+        clearTimeout(timer);
+        tooltip.classList.remove('nav-tooltip--visible');
+      });
+
+      link.addEventListener('touchmove', function () {
+        clearTimeout(timer);
+        tooltip.classList.remove('nav-tooltip--visible');
+      });
+    });
+  })();
+</script>
