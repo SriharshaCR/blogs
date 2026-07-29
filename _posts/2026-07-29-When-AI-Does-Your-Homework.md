@@ -89,7 +89,7 @@ The healthiest relationship between a student and AI is the same one I try to ha
 
 I don't ask AI what I think. I don't ask it to decide what matters. I ask it to help me say something better once I already know what I'm trying to say. That sequence — think first, then use AI to go further — is everything.
 
-![Two parallel paths showing AI as Crutch vs AI as Coach: the Crutch path goes Blank doc → Ask AI to write → Submit; the Coach path goes Attempt first → Write rough draft → Use AI for feedback → Defend reasoning → Submit](/assets/images/When-AI-Does-Your-Homework/sequence.jpeg)
+![Two parallel paths showing AI as Crutch vs AI as Coach: the Crutch path goes Blank doc → Ask AI to write → Submit; the Coach path goes Attempt first → Write rough draft → Use AI for feedback → Defend reasoning → Submit]({{ '/assets/images/When-AI-Does-Your-Homework/sequence.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Two parallel paths: AI as Crutch vs AI as Coach"}
 
 A student who writes a rough draft and then uses AI for feedback is learning. They're building the argument themselves, then getting a sharp editor. A student who opens a blank document and immediately asks AI to write it has skipped the entire point. The output might be excellent. But their brain did almost nothing, and nothing is exactly what stays with them.
 
