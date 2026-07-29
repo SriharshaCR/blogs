@@ -213,6 +213,11 @@ pre code {
   align-items: center;
   gap: 0.25rem;
 }
+.nav-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
 .nav-link {
   font-size: 0.9rem;
   color: var(--color-text-muted);
@@ -221,6 +226,9 @@ pre code {
   text-decoration: none;
   transition: color 0.15s, background 0.15s;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 .nav-link:hover,
 .nav-link--active {
@@ -623,6 +631,36 @@ pre code {
 
 .recent-section { }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.pagination button {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg);
+  color: var(--color-link);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.pagination button:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+.pagination button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.pagination span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
 .post-list {
   display: flex;
   flex-direction: column;
@@ -747,8 +785,9 @@ pre code {
 @media (max-width: 640px) {
   .header-inner { height: 52px; }
 
-  .site-nav .nav-link:not(.nav-link--active) { display: none; }
-  .site-nav .nav-link:last-child { display: inline-block; }
+  .site-nav .nav-link { display: flex; padding: 0.35rem 0.5rem; }
+  .site-nav .nav-label { display: none; }
+  .site-nav .nav-icon { width: 1.25rem; height: 1.25rem; }
 
   .series-nav-links { grid-template-columns: 1fr; }
   .series-nav-link--next { grid-column: 1; text-align: left; }
@@ -760,6 +799,23 @@ pre code {
 
   .series-post-link { flex-direction: column; gap: 0.5rem; }
 }
+
+.nav-tooltip {
+  position: fixed;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  pointer-events: none;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.nav-tooltip--visible { opacity: 1; }
 
 @media (min-width: 641px) and (max-width: 900px) {
   .site-nav .nav-link { font-size: 0.85rem; padding: 0.3rem 0.5rem; }
