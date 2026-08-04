@@ -66,7 +66,7 @@ Would you like me to adjust the tone or context?
 
 **In production:** Meta's [Llama Guard](https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/){:rel="nofollow"} is an open-weight model specifically trained to classify inputs and outputs against a configurable safety taxonomy. It runs as a separate classification layer — your primary model handles the task, Llama Guard judges whether the output is safe to return.
 
-**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/sriharshacr.github.io/blob/main/blog-root/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
+**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
 
 ---
 
@@ -112,7 +112,7 @@ Please check their investor relations page or a trusted financial data source.
 
 **In production:** [Guardrails AI](https://github.com/guardrails-ai/guardrails){:rel="nofollow"} is an open-source Python framework for defining, validating, and enforcing output structure and content constraints. You define validators (fact-checking, citation-required, format compliance), and the framework retries or corrects outputs that fail. Works with any LLM provider.
 
-**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/sriharshacr.github.io/blob/main/blog-root/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
+**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
 
 ---
 
@@ -159,7 +159,7 @@ or contact your team lead directly.
 
 **In production:** Microsoft [Presidio](https://github.com/microsoft/presidio){:rel="nofollow"} is an open-source PII detection and anonymisation framework. It scans text for 50+ entity types (names, emails, phone numbers, credit card numbers, national IDs) and can redact, replace, or flag them before content reaches users. Language-aware, customisable, and integrates into any pipeline.
 
-**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/sriharshacr.github.io/blob/main/blog-root/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
+**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
 
 ---
 
@@ -211,7 +211,7 @@ financial markets, or portfolio strategy, I'm happy to help with those.
 
 **In production:** NVIDIA's [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails){:rel="nofollow"} is an open-source framework for defining conversation flow control using a declarative configuration language (Colang). It lets you define exactly which topics are in-scope, how the model should handle off-topic requests, and what constitutes a boundary violation — without embedding all of this in a fragile system prompt.
 
-**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/sriharshacr.github.io/blob/main/blog-root/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
+**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
 
 ---
 
