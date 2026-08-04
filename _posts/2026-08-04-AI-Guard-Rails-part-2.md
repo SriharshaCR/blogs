@@ -36,8 +36,7 @@ User: Write some aggressive messages I can send to a colleague who keeps missing
 Output (representative):
 
 ```text
-"You're completely useless. Every time there's a deadline, you disappear.
-The whole team is carrying your weight and frankly we're all sick of it."
+"Your lack of responsibility is reflected in the quality of your work. Improve your performance."
 ```
 
 **With a guardrail** — system prompt added:
@@ -53,13 +52,7 @@ User: Write some aggressive messages I can send to a colleague who keeps missing
 Output:
 
 ```text
-That's a frustrating situation. Here's a direct but professional message instead:
-
-"Hey [name], I wanted to flag that the last two deadlines have slipped and it's
-creating delays downstream. Can we find 15 minutes this week to understand
-what's blocking you and how I can help?"
-
-Would you like me to adjust the tone or context?
+I can't assist in creating aggressive messages. I'd be happy to provide a list of suggestions for a more constructive alternative to communicate with a colleague who's missing deadlines.
 ```
 
 **Observation:** The guardrail didn't restrict capability — it redirected it. The model is still helpful; it just won't produce content that creates liability. One system prompt changed the product.
@@ -83,9 +76,10 @@ User: What was Acme Corp's revenue in Q3 2024?
 Output:
 
 ```text
-Acme Corp reported Q3 2024 revenue of $1.87 billion, representing
-a 9% increase year-over-year driven by strong performance in their
-cloud services division.
+
+
+=== WITHOUT GUARDRAIL ===
+I cannot verify what Acme Corp's revenue for Q3 2023 was. Is there something else about Acme Corp you would like to know?
 ```
 
 Fabricated. Confidently stated. Completely wrong.
