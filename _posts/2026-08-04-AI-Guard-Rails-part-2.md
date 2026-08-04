@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Guardrails in Action: 4 Experiments You Can Run"
+title: "AI Guardrails in Action: 4 Experiments You Can Run"
 date: 2026-08-04
 description: "See AI guardrails in action: 4 before/after experiments with real system prompts, plus the open-source production tools engineers actually use."
 image: /assets/images/AI-Guard-Rails/image-hero-part-2.jpeg
 image_alt: "Split lab bench showing chaotic vs controlled AI output"
 audience: "AI engineers and technical leads building or evaluating LLM-backed systems"
-tags: [ai-guardrails, llm-security, generative-ai, python, prompt-engineering]
+tags: [ai-guardrails, llm-security, generative-ai, python, prompt-engineering, prompt-injection]
 permalink: /ai-guardrails-in-action/
 ---
 
@@ -17,7 +17,7 @@ permalink: /ai-guardrails-in-action/
 
 ---
 
-If you've read [Part 1](/blogs/ai-guardrails-what-can-go-wrong/), you know the four failure modes and why they're expensive. This post is the engineering side of that story. Not theory — four experiments, each showing the same model with and without a guardrail, with the production tools you'd use if you were building this for real.
+If you've read [Part 1](/blogs/ai-guardrails-what-can-go-wrong/), you know the five failure modes and why they're expensive. This post is the engineering side of that story. Not theory — four experiments, each showing the same model with and without an LLM guardrail, with the production tools you'd use if you were building this for real.
 
 > **A note on AI outputs.** LLMs are probabilistic — running the same prompt twice can produce different results. If your output looks different from what's shown here, re-run it once or twice. If the "without guardrail" version refuses the harmful prompt on its own, that's the model's built-in safety layer activating. You just witnessed guardrails operating at the model level, not the system-prompt level. That's itself worth noting.
 
@@ -215,7 +215,7 @@ financial markets, or portfolio strategy, I'm happy to help with those.
 
 ---
 
-## Where to go deeper
+## Open-Source AI Guardrail Tools for Production
 
 These four experiments use system prompts — the most accessible entry point. In production, you will outgrow them quickly. Here's where the field actually lives:
 
