@@ -3,11 +3,12 @@ layout: post
 title: "AI Guardrails in Action: 4 Experiments You Can Run"
 date: 2026-08-04
 description: "See AI guardrails in action: 4 before/after experiments with real system prompts, plus the open-source production tools engineers actually use."
-image: /assets/images/AI-Guard-Rails/image-hero-part-2.jpeg
+image: /assets/images/AI-Guard-Rails/image-hero-part-2.webp
 image_alt: "Split lab bench showing chaotic vs controlled AI output"
 audience: "AI engineers and technical leads building or evaluating LLM-backed systems"
 tags: [ai-guardrails, llm-security, generative-ai, python, prompt-engineering, prompt-injection]
 permalink: /ai-guardrails-in-action/
+read_time: 7
 ---
 
 > **Key Takeaways**

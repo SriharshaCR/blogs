@@ -10,7 +10,8 @@ audience: "DevOps & Platform Engineers"
 date: 2026-06-15
 tags: [cicd, agents, platform-engineering]
 permalink: /enterprises-ai-playbook/cicd-for-agents/
-image: /assets/images/enterprises-ai-playbook/cicd-for-agents/image-2.jpeg
+read_time: 6
+image: /assets/images/enterprises-ai-playbook/cicd-for-agents/image-2.webp
 image_alt: "Your CI/CD Pipeline Is Not Ready for Agents — deterministic vs behavioral pipeline contrast"
 ---
 
@@ -57,7 +58,7 @@ These are assertion frameworks, not equality checks. Tools like RAGAS (docs.raga
 
 If your CI evaluation matrix is growing in complexity, the root cause is often agent design rather than test coverage. A single monolithic agent handling a multi-step workflow produces a combinatorial test surface that's nearly impossible to manage. [The Case Against the Monolithic Agent](/blogs/enterprises-ai-playbook/case-against-monolithic-agent/) explains why breaking that down into a pipeline of specialized agents makes the testing problem tractable.
 
-![Traditional service vs agent workload comparison — four rows showing how testing, rollback, canary, and observability differ fundamentally]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Traditional CI/CD pipeline vs agent workload pipeline comparison table"}
+![Traditional service vs agent workload comparison — four rows showing how testing, rollback, canary, and observability differ fundamentally]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Traditional CI/CD pipeline vs agent workload pipeline comparison table"}
 
 ### 2. Rollback
 
@@ -81,7 +82,7 @@ A runaway agent loop — a model that keeps calling tools, re-evaluating results
 
 You need token-level instrumentation: per-request input/output token counts, tool call frequency, cost attribution by agent, workflow, and user segment. Set alerts on token budget thresholds, not just infrastructure metrics. If a request regularly costs $0.03 and one cohort starts averaging $0.30, you want to know before the monthly invoice.
 
-![Token cost anomaly chart — CPU cost stays flat while token cost spikes sharply when an agent loop condition triggers]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Token cost anomaly chart showing standard alerts fire too late"}
+![Token cost anomaly chart — CPU cost stays flat while token cost spikes sharply when an agent loop condition triggers]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Token cost anomaly chart showing standard alerts fire too late"}
 
 ### 5. Observability
 
@@ -91,7 +92,7 @@ For agents, none of that tells you if the system is *working*. An agent can be f
 
 Testing non-deterministic agents in CI is only half the battle. The other half is understanding failures once they reach staging — which tools to instrument, which signals to alert on, and what "working" actually means for an agent. [LLMOps in Practice: Observability That Doesn't Lie to You](/blogs/enterprises-ai-playbook/llmops-observability/) covers the four instrumentation patterns that give you real production signal.
 
-![Observability gap dashboard — infrastructure monitoring showing all-green vs agent quality monitoring showing output quality, cost, and hallucination rate all in warning state]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Side-by-side dashboard showing healthy infrastructure metrics alongside failing agent quality metrics"}
+![Observability gap dashboard — infrastructure monitoring showing all-green vs agent quality monitoring showing output quality, cost, and hallucination rate all in warning state]({{ '/assets/images/enterprises-ai-playbook/cicd-for-agents/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Side-by-side dashboard showing healthy infrastructure metrics alongside failing agent quality metrics"}
 
 ---
 

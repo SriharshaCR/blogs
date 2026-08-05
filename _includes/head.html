@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<title>{% if page.title %}{{ page.title }} | CD{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
 <!-- Open Graph -->
@@ -35,24 +35,105 @@
   "@type": "TechArticle",
   "headline": "{{ page.title | escape }}",
   "description": "{{ page.description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
   "author": {
     "@type": "Person",
     "name": "Sriharsha CR",
     "url": "{{ site.url }}"
   },
   "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "publisher": {
     "@type": "Person",
     "name": "Sriharsha CR"
-  },
+  }{% if page.tags %},
+  "keywords": "{{ page.tags | join: ', ' }}"{% endif %}{% if page.series_name %},
   "isPartOf": {
     "@type": "CreativeWorkSeries",
-    "name": "{{ page.series_name }}",
-    "url": "{{ site.url }}{{ site.baseurl }}/enterprises-ai-playbook/"
-  }
+    "name": "{{ page.series_name | escape }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/{{ page.series }}/"
+  }{% endif %}
+}
+</script>
+
+<!-- Structured Data: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}{{ site.baseurl }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.title | escape }}",
+      "item": "{{ page.url | absolute_url }}"
+    }
+  ]
+}
+</script>
+
+{% if page.has_faq %}
+<!-- Structured Data: QAPage (FAQ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "QAPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are AI guardrails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI guardrails are controls that govern what an AI system is allowed to do — what it can say, what it must refuse, and what requires human approval before it acts. They sit between the model and the user, and between the model and downstream systems. Think of them the same way you'd think of rate limiters or input validation in any other software: not optional extras, but part of the architecture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are AI guardrails important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because capable and reliable are not the same thing. A model can generate fluent, confident output and still be wrong, harmful, or non-compliant. Guardrails are what close that gap — they make a model's capability usable in production, where the cost of a bad output is measured in rework hours, compliance exposure, or lost customer trust."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an example of an AI guardrail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A system prompt that says 'If you cannot verify a claim, say so' is a guardrail — it prevents hallucination by giving the model an explicit instruction to follow when it reaches the edge of what it knows. An output filter that scans for PII before a response reaches the user is a guardrail. A human-in-the-loop step that requires approval before an AI takes an irreversible action is a guardrail."
+      }
+    }
+  ]
 }
 </script>
 {% endif %}
+{% endif %}
+
+<!-- Structured Data: Person (site-wide author entity) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sriharsha CR",
+  "url": "{{ site.url }}",
+  "sameAs": [
+    "https://github.com/SriharshaCR",
+    "https://www.linkedin.com/in/sriharshacr",
+    "https://twitter.com/sriharsha_cr"
+  ]
+}
+</script>
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

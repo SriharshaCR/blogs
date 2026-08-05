@@ -555,6 +555,14 @@ pre code {
 .home-title {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.home-tagline {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 

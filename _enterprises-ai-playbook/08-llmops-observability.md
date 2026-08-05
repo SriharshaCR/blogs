@@ -10,7 +10,8 @@ audience: "Developers"
 date: 2026-06-26
 tags: [llmops, observability]
 permalink: /enterprises-ai-playbook/llmops-observability/
-image: /assets/images/enterprises-ai-playbook/llmops-observability/image-2.jpeg
+read_time: 5
+image: /assets/images/enterprises-ai-playbook/llmops-observability/image-2.webp
 image_alt: "LLMOps Observability — UP vs RIGHT dashboard contrast"
 ---
 
@@ -39,7 +40,7 @@ You need a different instrument. Not just a second dashboard — a second class 
 
 These are different problems.
 
-![UP vs RIGHT dashboard contrast — infrastructure monitoring all-green vs agent quality monitoring showing quality, cost, and hallucination in warning state]({{ '/assets/images/enterprises-ai-playbook/llmops-observability/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Side-by-side: healthy infrastructure dashboard vs failing agent quality dashboard"}
+![UP vs RIGHT dashboard contrast — infrastructure monitoring all-green vs agent quality monitoring showing quality, cost, and hallucination in warning state]({{ '/assets/images/enterprises-ai-playbook/llmops-observability/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Side-by-side: healthy infrastructure dashboard vs failing agent quality dashboard"}
 
 ---
 
@@ -67,7 +68,7 @@ Without that breakdown, you can see you're overspending. You can't see where. An
 
 Attribute costs at the request level. Aggregate by agent type, workflow stage, and user cohort. Alert on per-request anomalies before they become a monthly surprise.
 
-![Token cost anomaly chart — stable baseline then sudden spike when agent loop triggers, showing standard CPU alerts fire too late]({{ '/assets/images/enterprises-ai-playbook/llmops-observability/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Token cost anomaly chart with alert threshold line"}
+![Token cost anomaly chart — stable baseline then sudden spike when agent loop triggers, showing standard CPU alerts fire too late]({{ '/assets/images/enterprises-ai-playbook/llmops-observability/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Token cost anomaly chart with alert threshold line"}
 
 ### 3. Output drift detection
 
@@ -89,7 +90,7 @@ The signals that create noise: individual token counts without context, raw resp
 
 Alert on distributions and thresholds with context, not raw values.
 
-![Four instrumentation patterns flow — trace capture, cost attribution, output drift, and alert logic annotated on an agent request flow]({{ '/assets/images/enterprises-ai-playbook/llmops-observability/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Four LLMOps instrumentation patterns annotated on agent request flow diagram"}
+![Four instrumentation patterns flow — trace capture, cost attribution, output drift, and alert logic annotated on an agent request flow]({{ '/assets/images/enterprises-ai-playbook/llmops-observability/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Four LLMOps instrumentation patterns annotated on agent request flow diagram"}
 
 ---
 

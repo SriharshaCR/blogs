@@ -10,7 +10,8 @@ audience: "Developers"
 date: 2026-07-07
 tags: [security, agents, mcp]
 permalink: /enterprises-ai-playbook/prompt-injection-mcp/
-image: /assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-2.jpeg
+read_time: 6
+image: /assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-2.webp
 image_alt: "Prompt Injection and MCP Trust Boundary — indirect injection attack chain"
 ---
 
@@ -50,7 +51,7 @@ No user input was malicious. The attack lived inside the retrieved content. And 
 
 This attack class was first publicly demonstrated against Bing Chat in 2023 by Greshake et al. — hidden text embedded in a webpage silently redirected the model into extracting personal and payment information from users.¹ The same pattern applies directly to MCP-connected agents ingesting documents, web results, or API responses.
 
-![Indirect injection attack chain — five-node flow from document store through orchestrator agent to sub-agent to external exfiltration]({{ '/assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Indirect prompt injection attack chain in a multi-agent MCP system"}
+![Indirect injection attack chain — five-node flow from document store through orchestrator agent to sub-agent to external exfiltration]({{ '/assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Indirect prompt injection attack chain in a multi-agent MCP system"}
 
 ---
 
@@ -66,7 +67,7 @@ Any one of these alone is manageable. All three together in one agent means inje
 
 Audit your agents against this trifecta before they go to production. If an agent hits all three, it needs trust boundaries that are explicit, not assumed.
 
-![The lethal trifecta Venn diagram — three overlapping circles for private data access, untrusted content ingestion, and external communication with the critical intersection highlighted]({{ '/assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Lethal trifecta Venn diagram showing the high-risk intersection of three agent capabilities"}
+![The lethal trifecta Venn diagram — three overlapping circles for private data access, untrusted content ingestion, and external communication with the critical intersection highlighted]({{ '/assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Lethal trifecta Venn diagram showing the high-risk intersection of three agent capabilities"}
 
 ---
 
@@ -81,7 +82,7 @@ A trust boundary defines:
 
 Think of it like network segmentation for information flow. You wouldn't put your payment service on the same network segment as a public-facing web form. Apply the same logic to agent capabilities.
 
-![Trust boundary model for MCP — agents at different trust levels passing through a central enforcement layer to reach tools, with allowed vs blocked connections]({{ '/assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="MCP trust boundary architecture showing trust levels and enforcement layer"}
+![Trust boundary model for MCP — agents at different trust levels passing through a central enforcement layer to reach tools, with allowed vs blocked connections]({{ '/assets/images/enterprises-ai-playbook/prompt-injection-mcp/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="MCP trust boundary architecture showing trust levels and enforcement layer"}
 
 ---
 

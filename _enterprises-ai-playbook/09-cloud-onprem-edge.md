@@ -10,7 +10,8 @@ audience: "DevOps & Platform Engineers"
 date: 2026-07-02
 tags: [deployment, architecture, platform-engineering]
 permalink: /enterprises-ai-playbook/cloud-onprem-edge/
-image: /assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-2.jpeg
+read_time: 5
+image: /assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-2.webp
 image_alt: "Cloud, On-Prem, or Edge — AI workload deployment decision framework"
 ---
 
@@ -59,7 +60,7 @@ If your AI workload touches data with those requirements, the deployment decisio
 
 Workload placement is ultimately a compliance architecture problem. To align your hosting decisions with your enterprise risk posture — and avoid building an AI strategy your governance team will stall — see [Building an AI Strategy That Governance Doesn't Kill](/blogs/enterprises-ai-playbook/ai-strategy-governance/).
 
-![Three-variable decision matrix — data gravity, inference latency, and compliance surface area mapped to deployment recommendations]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI workload deployment decision matrix with three binding constraints"}
+![Three-variable decision matrix — data gravity, inference latency, and compliance surface area mapped to deployment recommendations]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI workload deployment decision matrix with three binding constraints"}
 
 ---
 
@@ -73,13 +74,13 @@ If your AI footprint is going to span deployment models (and it will), design th
 
 Hybrid by design is tractable. Hybrid by accumulation is a year-two cleanup project.
 
-![Hybrid by design vs hybrid by accumulation — intentional topology with shared registry and observability vs deployment sprawl]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Intentional hybrid architecture vs deployment sprawl comparison"}
+![Hybrid by design vs hybrid by accumulation — intentional topology with shared registry and observability vs deployment sprawl]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Intentional hybrid architecture vs deployment sprawl comparison"}
 
 ---
 
 ## Three scenarios where the framework plays out in practice
 
-![Scenario decision flowchart — three decision nodes leading to on-prem, edge, or cloud deployment recommendation]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Deployment decision flowchart for regulated financial data, real-time triggers, and knowledge work"}
+![Scenario decision flowchart — three decision nodes leading to on-prem, edge, or cloud deployment recommendation]({{ '/assets/images/enterprises-ai-playbook/cloud-onprem-edge/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Deployment decision flowchart for regulated financial data, real-time triggers, and knowledge work"}
 
 ### Scenario A: Regulated financial data
 

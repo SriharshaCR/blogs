@@ -3,11 +3,13 @@ layout: post
 title: "AI Without Guardrails: What Can Go Wrong"
 date: 2026-08-04
 description: "AI guardrails aren't restrictions — they're reliability engineering. Learn the 5 failure modes and 5 control layers every AI deployment needs."
-image: /assets/images/AI-Guard-Rails/image-hero-part-1.jpeg
+image: /assets/images/AI-Guard-Rails/image-hero-part-1.webp
 image_alt: "Five-layer AI guardrail control system illustration"
 audience: "CTOs, engineering managers, and students deploying or evaluating AI systems"
 tags: [ai-guardrails, llm-guardrails, enterprise-ai, ai-governance, llm, ai-reliability]
 permalink: /ai-guardrails-what-can-go-wrong/
+read_time: 6
+has_faq: true
 ---
 
 > **Key Takeaways**
@@ -81,7 +83,7 @@ Guardrails are not a single switch. They are a layered control system:
 | **4. Output** | What the model is allowed to return | PII leakage, policy violations | Compliance fines |
 | **5. Human oversight** | What requires human approval before acting | High-stakes automated actions | Accountability gap |
 
-![The five layers of AI guardrails — from input to human oversight]({{ "/assets/images/AI-Guard-Rails/image-inline-part-1.jpeg" | relative_url }})
+![The five layers of AI guardrails — from input to human oversight]({{ "/assets/images/AI-Guard-Rails/image-inline-part-1.webp" | relative_url }})
 
 Each layer addresses a different failure mode. Removing any one of them creates a gap. A robust AI system isn't one with a very good model — it's one where these five layers work together.
 
