@@ -10,7 +10,8 @@ audience: "Solution Architects"
 date: 2026-06-21
 tags: [agent-architecture, agents]
 permalink: /enterprises-ai-playbook/case-against-monolithic-agent/
-image: /assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-2.jpeg
+read_time: 6
+image: /assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-2.webp
 image_alt: "The Case Against the Monolithic Agent — monolith vs pipeline architecture"
 ---
 
@@ -77,7 +78,7 @@ A monolithic agent running a 10-step workflow accumulates everything in one cont
 
 A pipeline avoids this by design. Each specialized agent receives only the context relevant to its step. The window stays clean, and what gets passed between agents is a structured output — not a growing transcript.
 
-![Monolith vs pipeline architecture — failure at step 4 cascades through all remaining steps in a monolith, contained cleanly in a pipeline]({{ '/assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Monolithic agent vs pipeline of specialized agents — failure propagation comparison"}
+![Monolith vs pipeline architecture — failure at step 4 cascades through all remaining steps in a monolith, contained cleanly in a pipeline]({{ '/assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Monolithic agent vs pipeline of specialized agents — failure propagation comparison"}
 
 ---
 
@@ -101,7 +102,7 @@ This isn't an argument that agents should always be pipelines. Structural comple
 
 The decision rule is simple: if you'd require a multi-service architecture for the equivalent deterministic workflow, you need a pipeline for the agent version.
 
-![Decision tree — when to use a monolithic agent vs a pipeline of specialized agents]({{ '/assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Flowchart for choosing between monolithic agent and agent pipeline"}
+![Decision tree — when to use a monolithic agent vs a pipeline of specialized agents]({{ '/assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Flowchart for choosing between monolithic agent and agent pipeline"}
 
 ---
 
@@ -115,7 +116,7 @@ Each agent in the pipeline does one job and has a clear contract:
 - **Evaluation criteria** — how you know it's working correctly
 - **Resource budget** — token limit, max tool calls, timeout; without this, one runaway component drains the whole pipeline
 
-![Agent contract diagram — specialized agent with input schema, output schema, failure mode, evaluation criteria, and resource budget annotations]({{ '/assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Annotated agent contract showing the five required contract elements"}
+![Agent contract diagram — specialized agent with input schema, output schema, failure mode, evaluation criteria, and resource budget annotations]({{ '/assets/images/enterprises-ai-playbook/case-against-monolithic-agent/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Annotated agent contract showing the five required contract elements"}
 
 That contract is what lets you test it, monitor it, and replace it. Without it, you have reasoning happening in a black box at scale.
 

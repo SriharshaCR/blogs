@@ -1,0 +1,27 @@
+# Connecting Dots
+> AI and cloud-native engineering blog by Sriharsha CR — practitioner-led posts on enterprise AI adoption, LLMOps, agent architecture, and the patterns that actually matter in production.
+
+## Author
+Sriharsha CR — Cloud Native Developer and AI Engineer. GitHub: https://github.com/SriharshaCR
+
+## Standalone Posts
+- [AI Without Guardrails: What Can Go Wrong](https://sriharshacr.github.io/blogs/ai-guardrails-what-can-go-wrong/)
+- [AI Guardrails in Action: 4 Experiments You Can Run](https://sriharshacr.github.io/blogs/ai-guardrails-in-action/)
+- [When AI Does the Homework: What Happens to Human Creativity?](https://sriharshacr.github.io/blogs/when-ai-does-your-homework/)
+
+## Series: The Enterprise AI Playbook
+A 13-post practitioner series on transforming enterprise systems into AI-native operations.
+
+- [Series Introduction](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/series-introduction/)
+- [Why Enterprise AI Projects Keep Failing](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/why-ai-projects-fail/)
+- [The Cognitive Debt Crisis in AI-Augmented Codebases](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cognitive-debt-crisis/)
+- [5 Questions That Reveal Whether Your System Is Actually Ready for AI](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/ai-readiness-questions/)
+- [The AI Debt You're Accumulating Every Sprint You Wait](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cost-of-waiting/)
+- [Building an AI Strategy That Governance Doesn't Kill](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/ai-strategy-governance/)
+- [Your CI/CD Pipeline Is Not Ready for Agents](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cicd-for-agents/)
+- [The Case Against the Monolithic Agent](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/case-against-monolithic-agent/)
+- [LLMOps in Practice: Observability That Doesn't Lie to You](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/llmops-observability/)
+- [Cloud, On-Prem, or Edge: The Real Decision Framework for AI Workloads](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cloud-onprem-edge/)
+- [Prompt Injection, MCP, and the Trust Boundary Problem](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/prompt-injection-mcp/)
+- [When You Have 10 Agents in Production: Spec-Driven Development at Scale](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/spec-driven-development/)
+- [What AI-Native Actually Looks Like — A Working Definition](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/what-ai-native-looks-like/)

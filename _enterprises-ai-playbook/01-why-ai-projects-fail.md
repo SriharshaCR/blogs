@@ -10,7 +10,8 @@ audience: "CTOs & Decision Makers"
 date: 2026-05-19
 tags: [enterprise-ai, data-architecture]
 permalink: /enterprises-ai-playbook/why-ai-projects-fail/
-image: /assets/images/enterprises-ai-playbook/why-ai-projects-fail/image-2.jpeg
+read_time: 4
+image: /assets/images/enterprises-ai-playbook/why-ai-projects-fail/image-2.webp
 image_alt: "Why Enterprise AI Projects Keep Failing — locked data architecture illustrated"
 ---
 

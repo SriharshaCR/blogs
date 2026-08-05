@@ -10,7 +10,8 @@ audience: "CTOs & Decision Makers"
 date: 2026-06-10
 tags: [ai-governance, ai-bom, ai-strategy]
 permalink: /enterprises-ai-playbook/ai-strategy-governance/
-image: /assets/images/enterprises-ai-playbook/ai-strategy-governance/image-2.jpeg
+read_time: 5
+image: /assets/images/enterprises-ai-playbook/ai-strategy-governance/image-2.webp
 image_alt: "Building an AI Strategy That Governance Doesn't Kill — AI BOM and governance flow"
 ---
 
@@ -51,7 +52,7 @@ An AI BOM is a governance primitive. It's not a lengthy document. It's a structu
 - **Integration surface** — every downstream system that acts on model output
 - **Known failure modes and mitigations** — what can go wrong, what contains it
 
-![AI BOM component card — five structured rows covering model registry, data flows, agent topology, integration surface, and failure modes]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI Bill of Materials component reference card"}
+![AI BOM component card — five structured rows covering model registry, data flows, agent topology, integration surface, and failure modes]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI Bill of Materials component reference card"}
 
 When a governance team can read this document and immediately understand the stack, the approval conversation changes. Instead of "we need to understand what this system does before we can approve it," the question becomes "is the data handling compliant?" — a much faster question to answer.
 
@@ -59,7 +60,7 @@ The AI BOM flips the dynamic: it transfers the burden of explanation from a back
 
 In my experience, the first time a team shows up to a governance review with a properly structured AI BOM, the dynamic shifts noticeably. The reviewer stops asking exploratory questions — "what data does this touch?", "what happens if it's wrong?" — because the document already answers them. The review becomes a verification conversation instead of a discovery one. That's not a faster rubber stamp. It's a faster yes because the work was done upfront.
 
-![Governance flow comparison — without AI BOM showing a slow 2-4 week review cycle vs with AI BOM showing a fast days-not-weeks approval path]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Governance review flow with and without AI BOM"}
+![Governance flow comparison — without AI BOM showing a slow 2-4 week review cycle vs with AI BOM showing a fast days-not-weeks approval path]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Governance review flow with and without AI BOM"}
 
 Treat the AI BOM as a first-class artifact. Version it. Update it when the stack changes. Store it alongside the deployment config. If an AI system is running in your production environment without one, you don't actually know what you're running.
 
@@ -81,7 +82,7 @@ A multi-model strategy means selecting different models for different tasks base
 | Legal or compliance text | Domain-tuned or general with RAG | Evaluate against your specific regulatory context before deciding |
 | Real-time user-facing interaction | Fast + cheap, latency-optimized | Perceived responsiveness matters more than marginal capability gain |
 
-![Multi-model task allocation map — three rows mapping reasoning-heavy to frontier, high-volume to small/fast, and specialized domains to domain-tuned models]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Multi-model strategy allocation diagram by task class"}
+![Multi-model task allocation map — three rows mapping reasoning-heavy to frontier, high-volume to small/fast, and specialized domains to domain-tuned models]({{ '/assets/images/enterprises-ai-playbook/ai-strategy-governance/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Multi-model strategy allocation diagram by task class"}
 
 This isn't just a cost optimization. It's architectural resilience. When a provider has an outage, raises prices, or deprecates a model version, a multi-model stack has options. A single-model stack has a crisis.
 

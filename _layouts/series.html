@@ -1,6 +1,29 @@
 ---
 layout: default
 ---
+{% assign series_posts = site[page.collection] | sort: "post_number" %}
+<!-- Structured Data: CollectionPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Sriharsha CR",
+    "url": "{{ site.url }}"
+  },
+  "hasPart": [{% for post in series_posts %}
+    {
+      "@type": "TechArticle",
+      "name": "{{ post.title | escape }}",
+      "url": "{{ post.url | absolute_url }}"
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
 <div class="series-container">
   <header class="series-header">
     <div class="series-label">Blog Series</div>

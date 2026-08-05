@@ -10,7 +10,8 @@ audience: "CTOs & All Audiences"
 date: 2026-07-18
 tags: [ai-native, ai-strategy, ai-transformation]
 permalink: /enterprises-ai-playbook/what-ai-native-looks-like/
-image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.jpeg
+read_time: 6
+image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.webp
 image_alt: "What AI-Native Actually Looks Like — five characteristics boundary diagram"
 ---
 
@@ -75,7 +76,7 @@ If adding a new AI capability still requires the same multi-quarter procurement 
 
 A useful proxy: how long did your second AI capability take to ship compared to your first? If the answer is "about the same," the compounding hasn't started yet.
 
-![The five characteristics boundary diagram — five vertical columns each with a not-yet zone below the AI-native boundary line and a crossed zone above]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-3.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native boundary diagram with five characteristics — critical path, queryable data, production reasoning, governed workloads, compounding returns"}
+![The five characteristics boundary diagram — five vertical columns each with a not-yet zone below the AI-native boundary line and a crossed zone above]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-3.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native boundary diagram with five characteristics — critical path, queryable data, production reasoning, governed workloads, compounding returns"}
 
 ---
 
@@ -92,7 +93,7 @@ The question isn't rhetorical. It's a calibration tool. When the answer keeps co
 
 To ground your honest self-assessment, compare these five characteristics against the structural diagnostic from earlier in the series: [5 Questions That Reveal Whether Your System Is Actually Ready for AI](/blogs/enterprises-ai-playbook/ai-readiness-questions/). The questions are different, but they map to the same underlying gaps — and the answers tend to agree.
 
-![Decision lens card — three applications of "Would an AI-native organization build it this way?" across data model, deployment decision, and capability build]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-4.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native decision lens reference card with three concrete applications"}
+![Decision lens card — three applications of "Would an AI-native organization build it this way?" across data model, deployment decision, and capability build]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-4.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="AI-native decision lens reference card with three concrete applications"}
 
 ---
 
@@ -116,4 +117,4 @@ Ready to review the full journey — from the original diagnosis to this finish 
 
 *→ Share your own definition of AI-native. I want to know where you'd draw the line differently.*
 
-![The Enterprise AI Playbook series arc — 12 posts across five phases from Problem through Outcomes, with the final post highlighted]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-5.jpeg' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Full series arc recap showing all 12 posts grouped across Problem, Assessment, Strategy, Execution, and Outcomes phases"}
+![The Enterprise AI Playbook series arc — 12 posts across five phases from Problem through Outcomes, with the final post highlighted]({{ '/assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-5.webp' | relative_url }}){: loading="lazy" class="post-inline-image" alt="Full series arc recap showing all 12 posts grouped across Problem, Assessment, Strategy, Execution, and Outcomes phases"}
