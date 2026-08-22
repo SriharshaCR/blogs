@@ -1020,3 +1020,39 @@ pre code {
   .tag-post-link { flex-direction: column; gap: 0.2rem; }
   .tag-post-meta { align-self: flex-start; }
 }
+
+/* Author bio */
+.author-bio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.author-bio__photo {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-bio__text p {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.author-bio__text p:last-child {
+  margin-bottom: 0;
+}
+
+.author-bio__tagline {
+  color: var(--color-text-muted, #6b6b67);
+  font-style: italic;
+  font-size: 0.85rem;
+}
