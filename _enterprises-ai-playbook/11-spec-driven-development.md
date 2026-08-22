@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When You Have 10 Agents in Production: Spec-Driven Development at Scale"
+title: "10 Agents in Production: Spec-Driven Development at Scale"
 description: "Scaling AI agents in production with spec-driven development: stop asking 'does each agent work?' and start asking 'does the system still do what I designed?'"
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"

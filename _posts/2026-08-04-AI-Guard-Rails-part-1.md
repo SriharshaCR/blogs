@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI Without Guardrails: What Can Go Wrong"
+title: "AI Without Guardrails: 5 Failure Modes Every Team Hits First"
 date: 2026-08-04
 description: "AI guardrails aren't restrictions — they're reliability engineering. Learn the 5 failure modes and 5 control layers every AI deployment needs."
 image: /assets/images/AI-Guard-Rails/image-hero-part-1.webp
@@ -10,6 +10,13 @@ tags: [ai-guardrails, llm-guardrails, enterprise-ai, ai-governance, llm, ai-reli
 permalink: /ai-guardrails-what-can-go-wrong/
 read_time: 6
 has_faq: true
+faqs:
+  - q: "What are AI guardrails?"
+    a: "AI guardrails are controls that govern what an AI system is allowed to do — what it can say, what it must refuse, and what requires human approval before it acts. They sit between the model and the user, and between the model and downstream systems. Think of them the same way you'd think of rate limiters or input validation in any other software: not optional extras, but part of the architecture."
+  - q: "Why are AI guardrails important?"
+    a: "Because capable and reliable are not the same thing. A model can generate fluent, confident output and still be wrong, harmful, or non-compliant. Guardrails are what close that gap — they make a model's capability usable in production, where the cost of a bad output is measured in rework hours, compliance exposure, or lost customer trust."
+  - q: "What is an example of an AI guardrail?"
+    a: "A system prompt that says 'If you cannot verify a claim, say so' is a guardrail — it prevents hallucination by giving the model an explicit instruction to follow when it reaches the edge of what it knows. An output filter that scans for PII before a response reaches the user is a guardrail. A human-in-the-loop step that requires approval before an AI takes an irreversible action is a guardrail."
 ---
 
 > **Key Takeaways**

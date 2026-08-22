@@ -29,7 +29,7 @@ layout: default
       src="{{ page.image | relative_url }}"
       alt="{{ page.image_alt | default: page.title }}"
       class="post-hero-image"
-      loading="lazy"
+      fetchpriority="high"
       width="1200"
       height="630"
     >
@@ -41,6 +41,7 @@ layout: default
   </div>
 
   <footer class="post-footer">
+    {% include author-bio.html %}
     {% include share.html %}
     {% include series-nav.html %}
   </footer>

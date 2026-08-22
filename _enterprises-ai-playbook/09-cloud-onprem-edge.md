@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cloud, On-Prem, or Edge: The Real Decision Framework for AI Workloads"
+title: "Cloud, On-Prem, or Edge: How to Choose for AI Workloads"
 description: "Cost is the wrong frame for AI workload deployment. Three variables actually decide: data gravity, inference latency, and compliance surface area."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"

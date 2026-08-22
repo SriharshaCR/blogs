@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Your CI/CD Pipeline Is Not Ready for Agents"
+title: "CI/CD for AI Agents: 5 Pipeline Gaps to Close Before Launch"
 description: "Testing non-deterministic AI agents in CI/CD exposes five gaps your pipeline wasn't built for. Here's what to close before agents reach production."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
