@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "5 Questions That Reveal Whether Your System Is Actually Ready for AI"
+title: "5 Questions That Reveal Whether Your System Is Ready for AI"
 description: "A diagnostic framework for architects — five structural questions that surface where AI will accelerate your system and where it will collapse it."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
@@ -11,6 +11,14 @@ date: 2026-05-30
 tags: [ai-readiness, architecture]
 permalink: /enterprises-ai-playbook/ai-readiness-questions/
 read_time: 6
+has_faq: true
+faqs:
+  - q: "How do you assess AI readiness for an enterprise system?"
+    a: "Five structural questions reveal where AI will accelerate your system and where it will collapse it: Can your data be retrieved contextually? Is your system latency-tolerant? Can you explain a model decision to a regulator? Are your failure modes bounded? Can you measure whether the AI output is actually correct? A no on any of these is a readiness gap — not a model problem."
+  - q: "What does AI readiness actually mean for a software architect?"
+    a: "AI readiness is not about whether your team can call an LLM API. It is about whether your system's data architecture, latency profile, compliance surface, and observability infrastructure can support a model that produces probabilistic outputs rather than deterministic ones. Most systems that fail with AI were never ready at the infrastructure level."
+  - q: "What is the most common AI readiness gap in enterprise systems?"
+    a: "Observability. Most enterprise systems were instrumented to track whether code executed correctly — not whether the output was correct. AI systems require a different observability layer: one that can evaluate the quality of a model's response, not just whether it returned a 200 status code."
 image: /assets/images/enterprises-ai-playbook/ai-readiness-questions/image-2.webp
 image_alt: "5 Questions That Reveal Whether Your System Is Actually Ready for AI"
 ---

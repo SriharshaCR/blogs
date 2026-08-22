@@ -11,6 +11,14 @@ date: 2026-07-18
 tags: [ai-native, ai-strategy, ai-transformation]
 permalink: /enterprises-ai-playbook/what-ai-native-looks-like/
 read_time: 6
+has_faq: true
+faqs:
+  - q: "What does AI-native mean?"
+    a: "AI-native describes systems where AI is a structural component of how work gets done — not a feature added to existing workflows. An AI-native system retrieves context dynamically, reasons over uncertainty rather than routing to deterministic rules, acts through agents without requiring human-initiated steps, improves from feedback, and is observable at the output layer — not just at the infrastructure layer."
+  - q: "What is the difference between AI-augmented and AI-native?"
+    a: "An AI-augmented system adds AI capabilities to an existing architecture — a summarization feature here, a recommendation widget there. An AI-native system was designed around AI as the primary reasoning layer. The clearest test: remove the AI. In an AI-augmented system, the core system still functions. In an AI-native system, the core capability is gone."
+  - q: "How do you know if your architecture is AI-native?"
+    a: "The test is whether your system can operate at its intended capability level without a human in the loop for routine decisions. If every AI output requires a human to review or act on it before the system moves forward, you have AI assistance — not AI-native architecture. The boundary is defined by where the reasoning lives: in human judgment, or in the system itself."
 image: /assets/images/enterprises-ai-playbook/what-ai-native-looks-like/image-2.webp
 image_alt: "What AI-Native Actually Looks Like — five characteristics boundary diagram"
 ---

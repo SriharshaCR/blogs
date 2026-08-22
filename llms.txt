@@ -1,27 +1,34 @@
 # Connecting Dots
-> AI and cloud-native engineering blog by Sriharsha CR — practitioner-led posts on enterprise AI adoption, LLMOps, agent architecture, and the patterns that actually matter in production.
+> AI and cloud-native engineering blog by Harsha — practitioner-led posts on enterprise AI adoption, LLMOps, agent architecture, and the patterns that actually matter in production.
 
 ## Author
-Sriharsha CR — Cloud Native Developer and AI Engineer. GitHub: https://github.com/SriharshaCR
+Harsha — Cloud Native Developer and AI Engineer. About: https://sriharshacr.github.io/sriharshacr/
 
 ## Standalone Posts
-- [AI Without Guardrails: What Can Go Wrong](https://sriharshacr.github.io/blogs/ai-guardrails-what-can-go-wrong/)
+- [AI Without Guardrails: 5 Failure Modes Every Team Hits First](https://sriharshacr.github.io/blogs/ai-guardrails-what-can-go-wrong/)
 - [AI Guardrails in Action: 4 Experiments You Can Run](https://sriharshacr.github.io/blogs/ai-guardrails-in-action/)
 - [When AI Does the Homework: What Happens to Human Creativity?](https://sriharshacr.github.io/blogs/when-ai-does-your-homework/)
 
 ## Series: The Enterprise AI Playbook
 A 13-post practitioner series on transforming enterprise systems into AI-native operations.
 
-- [Series Introduction](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/series-introduction/)
-- [Why Enterprise AI Projects Keep Failing](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/why-ai-projects-fail/)
+- [The Enterprise AI Playbook: From Legacy Systems to AI-Native](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/series-introduction/)
+- [Why Enterprise AI Projects Keep Failing — It's Not the Models](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/why-ai-projects-fail/)
 - [The Cognitive Debt Crisis in AI-Augmented Codebases](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cognitive-debt-crisis/)
-- [5 Questions That Reveal Whether Your System Is Actually Ready for AI](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/ai-readiness-questions/)
+- [5 Questions That Reveal Whether Your System Is Ready for AI](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/ai-readiness-questions/)
 - [The AI Debt You're Accumulating Every Sprint You Wait](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cost-of-waiting/)
 - [Building an AI Strategy That Governance Doesn't Kill](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/ai-strategy-governance/)
-- [Your CI/CD Pipeline Is Not Ready for Agents](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cicd-for-agents/)
-- [The Case Against the Monolithic Agent](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/case-against-monolithic-agent/)
+- [CI/CD for AI Agents: 5 Pipeline Gaps to Close Before Launch](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cicd-for-agents/)
+- [Why Monolithic Agents Fail: The Case for Multi-Agent Design](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/case-against-monolithic-agent/)
 - [LLMOps in Practice: Observability That Doesn't Lie to You](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/llmops-observability/)
-- [Cloud, On-Prem, or Edge: The Real Decision Framework for AI Workloads](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cloud-onprem-edge/)
+- [Cloud, On-Prem, or Edge: How to Choose for AI Workloads](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/cloud-onprem-edge/)
 - [Prompt Injection, MCP, and the Trust Boundary Problem](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/prompt-injection-mcp/)
-- [When You Have 10 Agents in Production: Spec-Driven Development at Scale](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/spec-driven-development/)
+- [10 Agents in Production: Spec-Driven Development at Scale](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/spec-driven-development/)
 - [What AI-Native Actually Looks Like — A Working Definition](https://sriharshacr.github.io/blogs/enterprises-ai-playbook/what-ai-native-looks-like/)
+
+## License
+Content licensed for AI retrieval and citation with attribution.
+Training use: not permitted without explicit permission.
+
+## Citation
+Cite as: Sriharsha C R, "Connecting Dots", https://sriharshacr.github.io/blogs/

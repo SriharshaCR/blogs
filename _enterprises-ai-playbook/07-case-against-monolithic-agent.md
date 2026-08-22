@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Case Against the Monolithic Agent"
+title: "Why Monolithic Agents Fail: The Case for Multi-Agent Design"
 description: "Single agent vs multi-agent architecture in enterprise systems: the monolith fails the same way it always did — just faster, because agent errors compound."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"

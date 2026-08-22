@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why Enterprise AI Projects Keep Failing (And It's Not the Models)"
+title: "Why Enterprise AI Projects Keep Failing — It's Not the Models"
 description: "Most enterprise AI initiatives stall not because the model is bad, but because the data it needs was never designed to be asked questions. Here's why."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
@@ -11,6 +11,14 @@ date: 2026-05-19
 tags: [enterprise-ai, data-architecture]
 permalink: /enterprises-ai-playbook/why-ai-projects-fail/
 read_time: 4
+has_faq: true
+faqs:
+  - q: "Why do enterprise AI projects fail?"
+    a: "Most enterprise AI projects stall not because the model is bad, but because the data it needs was never designed to be asked questions. Operational systems were built to record transactions — not to answer the questions AI needs to answer. That architectural mismatch is the root cause, and no amount of model tuning compensates for it."
+  - q: "What is the main reason AI initiatives don't reach production?"
+    a: "The dominant failure pattern is data architecture. The systems that hold enterprise knowledge were designed for transactional reads and writes, not for the analytical, contextual queries AI models require. Teams diagnose it as a model problem and reach for a better model. The actual fix is upstream — in the data layer."
+  - q: "How can enterprises fix failing AI projects?"
+    a: "Start with a data audit before the model. Map where the data lives, how it was structured, and what questions it was designed to answer. If the data architecture doesn't support the question you're trying to answer with AI, the fix is in the data layer — not in model selection or prompt engineering."
 image: /assets/images/enterprises-ai-playbook/why-ai-projects-fail/image-2.webp
 image_alt: "Why Enterprise AI Projects Keep Failing — locked data architecture illustrated"
 ---

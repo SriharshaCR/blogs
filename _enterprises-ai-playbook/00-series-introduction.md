@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Enterprise AI Playbook — Why I'm Writing This"
+title: "The Enterprise AI Playbook: From Legacy Systems to AI-Native"
 description: "A practitioner-led series on transforming enterprise systems into AI-native operations — from diagnosing what's broken to defining what done looks like."
 series: enterprises-ai-playbook
 series_name: "The Enterprise AI Playbook"
