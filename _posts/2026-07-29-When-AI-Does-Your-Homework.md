@@ -108,7 +108,7 @@ And one more thing: students should be taught what AI actually is — where it's
 
 I work with AI every day. I've watched it transform how engineers work, how analysts think, how writers iterate. I've seen what happens when people use it well — and what happens when people use it as a crutch.
 
-The best use of AI is always the same: the human brings the judgment, the taste, the experience, the values — and AI amplifies execution. I've written about what this looks like in professional contexts in [What AI-Native Actually Looks Like](/enterprises-ai-playbook/what-ai-native-looks-like/) — the principle is the same whether you're building enterprise systems or teaching a classroom. The worst use is always the same too: the human outsources the thinking and rubber-stamps the output.
+The best use of AI is always the same: the human brings the judgment, the taste, the experience, the values — and AI amplifies execution. I've written about what this looks like in professional contexts in [What AI-Native Actually Looks Like](/enterprises-ai-playbook/what-ai-native-looks-like/) — the principle is the same whether you're building enterprise systems or teaching a classroom. I've also looked at how this same pattern plays out in the workplace — and why it risks turning professionals into AI operators rather than problem solvers — in [AI Eliminates One Kind of Monotony — and Quietly Introduces Another](/blogs/business-monotony/). The worst use is always the same too: the human outsources the thinking and rubber-stamps the output.
 
 Education's job is to develop humans who can do the former. To build the judgment, the taste, the experience — the things AI cannot provide and cannot replace.
 
