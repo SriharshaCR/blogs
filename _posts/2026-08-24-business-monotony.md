@@ -98,6 +98,6 @@ They'll be the ones that use it to *clear space* — and then actually fill that
 
 The uncomfortable question is whether most teams will. It's easier to ship AI output than to push back on it. Easier to accept the convergent answer than to fight for the contrarian one.
 
-AI will commoditize routine excellence. The question is what you'll do with the time that frees up.
+AI will commoditize routine excellence. The question is what you'll do with the time that frees up. That question has a practical dimension: [how you spend your AI sessions](/blogs/five-ways-to-spend-tokens/) — the context you load, the precision of your prompts — determines whether you're generating leverage or just more output.
 
 Use AI to kill operational monotony. Don't let it kill your distinctiveness in the process.
