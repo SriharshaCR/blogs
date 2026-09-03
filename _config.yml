@@ -26,6 +26,9 @@ collections:
   enterprises-ai-playbook:
     output: true
     permalink: /enterprises-ai-playbook/:slug/
+  ai-token-economics:
+    output: true
+    permalink: /ai-token-economics/:slug/
 
 # Defaults
 defaults:
@@ -36,6 +39,13 @@ defaults:
       layout: "post"
       series: "enterprises-ai-playbook"
       series_name: "The Enterprise AI Playbook"
+  - scope:
+      path: ""
+      type: "ai-token-economics"
+    values:
+      layout: "post"
+      series: "ai-token-economics"
+      series_name: "AI Token Economics"
 
 # Exclude from build
 exclude:
