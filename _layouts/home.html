@@ -10,20 +10,24 @@ layout: default
 
   <section class="series-section">
     <h2 class="section-title">Series</h2>
-    <div class="series-grid">
-      <a href="{{ site.baseurl }}/enterprises-ai-playbook/" class="series-card">
-        <div class="series-card-label">Series · 12 posts</div>
-        <h3 class="series-card-title">The Enterprise AI Playbook</h3>
-        <p class="series-card-desc">From legacy to AI-ready — a practitioner's guide to transforming enterprise systems.</p>
+    <div class="series-grid" id="series-grid">
+      {% assign all_series = site.pages | where: "layout", "series" | sort: "date" | reverse %}
+      {% for series in all_series %}
+      <a href="{{ series.url | relative_url }}" class="series-card" data-series-index="{{ forloop.index0 }}">
+        <div class="series-card-label">Series · {{ site[series.collection].size }} posts</div>
+        <h3 class="series-card-title">{{ series.title | split: " — " | first }}</h3>
+        <p class="series-card-desc">{{ series.description }}</p>
         <span class="series-card-cta">Read the series &rarr;</span>
       </a>
+      {% endfor %}
     </div>
+    <div class="pagination" id="series-pagination"></div>
   </section>
 
   <section class="recent-section">
     <h2 class="section-title">Recent posts</h2>
     <div class="post-list" id="post-list">
-      {% assign all_posts = site.enterprises-ai-playbook | concat: site.posts | sort: "date" | reverse %}
+      {% assign all_posts = site.enterprises-ai-playbook | concat: site.ai-token-economics | concat: site.posts | sort: "date" | reverse %}
       {% for post in all_posts %}
       <a href="{{ post.url | relative_url }}" class="post-card" data-post-index="{{ forloop.index0 }}">
         <div class="post-card-meta">
@@ -38,6 +42,49 @@ layout: default
     <div class="pagination" id="pagination"></div>
   </section>
 </div>
+
+<script>
+  (function () {
+    var PER_PAGE = 5;
+    var cards = Array.from(document.querySelectorAll('#series-grid .series-card'));
+    var total = cards.length;
+    var currentPage = 0;
+
+    function show(page) {
+      var start = page * PER_PAGE;
+      var end = start + PER_PAGE;
+      cards.forEach(function (card, i) {
+        card.style.display = (i >= start && i < end) ? '' : 'none';
+      });
+      renderPagination(page);
+    }
+
+    function renderPagination(page) {
+      var pages = Math.ceil(total / PER_PAGE);
+      if (pages <= 1) return;
+      var nav = document.getElementById('series-pagination');
+      nav.innerHTML = '';
+
+      var prev = document.createElement('button');
+      prev.textContent = '← Newer';
+      prev.disabled = page === 0;
+      prev.addEventListener('click', function () { show(page - 1); window.scrollTo(0, 0); });
+      nav.appendChild(prev);
+
+      var info = document.createElement('span');
+      info.textContent = (page + 1) + ' / ' + pages;
+      nav.appendChild(info);
+
+      var next = document.createElement('button');
+      next.textContent = 'Older →';
+      next.disabled = page === pages - 1;
+      next.addEventListener('click', function () { show(page + 1); window.scrollTo(0, 0); });
+      nav.appendChild(next);
+    }
+
+    if (total > PER_PAGE) show(0);
+  })();
+</script>
 
 <script>
   (function () {

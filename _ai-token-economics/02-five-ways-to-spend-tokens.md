@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Five Ways to Spend Your Tokens Like They Cost Something"
-date: 2026-09-02
+date: 2026-08-29
 description: "Five LLM token optimization strategies with failure modes: prompt compression, structured prompting, output control, and when each approach breaks down."
 image: /assets/images/ai-token-economics/02-five-ways-to-spend-tokens/image-hero.webp
 image_alt: "Abstract illustration of five converging paths representing distinct AI prompting strategies"
@@ -9,6 +9,10 @@ audience: "Engineers, developers, and tech-adjacent professionals building with 
 tags: [ai, llm, token-economics, prompt-optimization, ai-cost-optimization, generative-ai, prompt-engineering]
 permalink: /five-ways-to-spend-tokens/
 read_time: 6
+series: ai-token-economics
+series_name: "AI Token Economics"
+post_number: 2
+series_total: 3
 ---
 
 # Five Ways to Spend Your Tokens Like They Cost Something
@@ -28,32 +32,11 @@ read_time: 6
 
 Two tools to run alongside this post — both free, no API key needed.
 
-**For counting tokens:** Open [Google Colab](https://colab.research.google.com), paste this snippet, and run it on a few of your own prompts:
+**For counting tokens:** Open the [token counter notebook](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/ai-token-economics/02-five-ways-to-spend-tokens/counting_tokens.ipynb) and run it on a few of your own prompts — no API key needed.
 
-```python
-!pip install tiktoken -q
-import tiktoken
+The result often reveals that the biggest opportunity isn't making the question shorter — it's preventing an unnecessarily long response. Token counts vary by model and tokenizer; the notebook uses GPT-4o encoding as a reference estimate.
 
-MODEL = "gpt-4o"
-enc = tiktoken.encoding_for_model(MODEL)
-
-def token_count(text):
-    return len(enc.encode(text))
-
-broad_prompt   = "Tell me everything about machine learning"
-focused_prompt = ("What's the difference between classification and regression? "
-                  "Give one real-world example of each, under 100 words total.")
-
-print(f"Model: {MODEL}")
-print(f"Broad prompt:   {token_count(broad_prompt)} tokens")
-print(f"Focused prompt: {token_count(focused_prompt)} tokens")
-# The focused prompt likely has more input tokens — but prevents
-# hundreds of irrelevant output tokens in return.
-```
-
-The result often reveals that the biggest opportunity isn't making the question shorter — it's preventing an unnecessarily long response. Token counts vary by model and tokenizer; this snippet uses the GPT-4o encoding as a reference estimate.
-
-**For prompt compression:** That snippet tells you the count. For actually compressing content to a specific token budget — and seeing what semantic information gets lost — [TinyPress](https://sriharshacr.github.io/tiny-press/) is the playground for that. You give it a long piece of text, set a token budget (100–1,000 tokens), and it compresses the text down to fit. What makes it useful for learning is the quality score: cosine similarity between the original and compressed embeddings, 0 to 1. Think of it as a semantic warning signal — a high score suggests broad topical similarity; a sharply dropping score tells you to inspect the diff closely. Neither confirms that every fact, number, qualifier, or negation made it through intact. A word-level diff shows exactly what was dropped (red), rewritten (amber), or inserted (green). You can swap the compression model mid-session — Qwen, SmolLM2, Phi-3.5-mini, Llama — and independently swap the embedder used for scoring (MiniLM, BGE, mxbai) — so you can directly compare how different models trade off compression depth against meaning retention. TinyPress doesn't require a paid model API key. When self-installed, the models run on your own hardware — no data leaves your machine, which matters if you're compressing contracts, source code, or sensitive specs. The hosted Hugging Face Space and Colab options process on remote infrastructure, so use the local install for anything sensitive. The local setup needs around 4 GB of disk and 8 GB of RAM; a GPU helps with speed.
+**For prompt compression:** For actually compressing content to a specific token budget — and seeing what semantic information gets lost — [TinyPress](https://sriharshacr.github.io/tiny-press/) — built for a HuggingFace hackathon — is the playground for that. You give it a long piece of text, set a token budget (100–1,000 tokens), and it compresses the text down to fit. What makes it useful for learning is the quality score: cosine similarity between the original and compressed embeddings, 0 to 1. Think of it as a semantic warning signal — a high score suggests broad topical similarity; a sharply dropping score tells you to inspect the diff closely. Neither confirms that every fact, number, qualifier, or negation made it through intact. A word-level diff shows exactly what was dropped (red), rewritten (amber), or inserted (green). You can swap the compression model mid-session — Qwen, SmolLM2, Phi-3.5-mini, Llama — and independently swap the embedder used for scoring (MiniLM, BGE, mxbai) — so you can directly compare how different models trade off compression depth against meaning retention. TinyPress doesn't require a **paid model API key**. When self-installed, the models run on your own hardware — **no data leaves your machine**, which matters if you're compressing contracts, source code, or sensitive specs. The hosted Hugging Face Space and Colab options process on remote infrastructure, so use the local install for anything sensitive. The local setup needs around 4 GB of disk and 8 GB of RAM; a GPU helps with speed.
 
 ---
 

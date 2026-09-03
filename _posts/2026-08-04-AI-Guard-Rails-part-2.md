@@ -103,7 +103,7 @@ I don't have verified information on Acme Corp's Q3 2024 revenue.
 Please check their investor relations page or a trusted financial data source.
 ```
 
-**Observation:** A confident refusal is more useful than a confident lie. The guardrail doesn't make the model smarter — it makes it honest about the edges of what it knows. That's the difference between a tool you can trust and one you have to verify every time.
+**Observation:** A confident refusal is more useful than a confident lie. The guardrail doesn't make the model smarter — it makes it honest about the edges of what it knows. That's the difference between a tool you can trust and one you have to verify every time. Grounding takes this further — injecting verified context so the model can answer from known facts rather than just refuse. Whether that injection is cost-effective depends on how selectively you retrieve: [Does Grounding Reduce Token Usage?](/blogs/does-grounding-reduce-token-usage/) covers the three patterns.
 
 **In production:** [Guardrails AI](https://github.com/guardrails-ai/guardrails){:rel="nofollow"} is an open-source Python framework for defining, validating, and enforcing output structure and content constraints. You define validators (fact-checking, citation-required, format compliance), and the framework retries or corrects outputs that fail. Works with any LLM provider.
 

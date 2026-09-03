@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "You're Not Buying AI. You're Buying Tokens."
-date: 2026-09-02
+date: 2026-08-25
 description: "LLM token pricing explained: understand what you're actually paying for in AI inference, how the token meter works, and when AI cost optimization matters."
 image: /assets/images/ai-token-economics/01-you-are-buying-tokens/image-hero.webp
 image_alt: "Abstract factory-and-currency illustration representing AI inference billing by token"
@@ -9,6 +9,10 @@ audience: "Engineers, developers, and tech-adjacent professionals who use or bui
 tags: [ai, llm, token-economics, ai-cost-optimization, llm-pricing, generative-ai, ai-inference]
 permalink: /you-are-buying-tokens/
 read_time: 4
+series: ai-token-economics
+series_name: "AI Token Economics"
+post_number: 1
+series_total: 3
 ---
 
 # You're Not Buying AI. You're Buying Tokens.
