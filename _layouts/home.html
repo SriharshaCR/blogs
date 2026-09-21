@@ -27,7 +27,7 @@ layout: default
   <section class="recent-section">
     <h2 class="section-title">Recent posts</h2>
     <div class="post-list" id="post-list">
-      {% assign all_posts = site.enterprises-ai-playbook | concat: site.ai-token-economics | concat: site.posts | sort: "date" | reverse %}
+      {% assign all_posts = site.enterprises-ai-playbook | concat: site.ai-token-economics | concat: site.resourceful-ai-skill | concat: site.posts | sort: "date" | reverse %}
       {% for post in all_posts %}
       <a href="{{ post.url | relative_url }}" class="post-card" data-post-index="{{ forloop.index0 }}">
         <div class="post-card-meta">

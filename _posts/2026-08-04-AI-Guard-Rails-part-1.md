@@ -104,7 +104,7 @@ Most people hear "guardrails" and think restrictions — capabilities removed, m
 
 Guardrails are reliability engineering. The same discipline that gave us seat belts, circuit breakers, and rate limiters. They don't make a system less capable. They make it predictably, safely, and verifiably capable — which is the only kind of capable that matters in production.
 
-A capable model without guardrails is a powerful tool with no safety discipline. A capable model with guardrails is a product someone can trust.
+A capable model without guardrails is a powerful tool with no safety discipline. A capable model with guardrails is a product someone can trust. That enforcement-first principle extends one level deeper: the individual AI skills composing these systems need the same design — a skill without a capability contract [has the same gaps, just harder to see](/blogs/how-resourceful-is-your-ai-skill/).
 
 ---
 
