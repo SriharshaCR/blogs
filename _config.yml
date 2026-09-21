@@ -29,6 +29,9 @@ collections:
   ai-token-economics:
     output: true
     permalink: /ai-token-economics/:slug/
+  resourceful-ai-skill:
+    output: true
+    permalink: /resourceful-ai-skill/:slug/
 
 # Defaults
 defaults:
@@ -46,6 +49,13 @@ defaults:
       layout: "post"
       series: "ai-token-economics"
       series_name: "AI Token Economics"
+  - scope:
+      path: ""
+      type: "resourceful-ai-skill"
+    values:
+      layout: "post"
+      series: "resourceful-ai-skill"
+      series_name: "The Resourceful AI Skill"
 
 # Exclude from build
 exclude:
