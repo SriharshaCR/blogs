@@ -102,7 +102,7 @@ A stronger model improves reasoning. It does not fix unscoped tools, stale conte
 
 ---
 
-*In the next post: I build a config-driven harness from scratch — stateless, observable, and designed to prevent exactly these failures. [Building a Config-Driven Agentic Harness →](#)*
+*In the next post: I build a config-driven harness from scratch — stateless, observable, and designed to prevent exactly these failures. [Building a Config-Driven Agentic Harness →](/blogs/building-autonomee-config-driven-harness/)*
 
 [^1]: Anthropic, [*Building Effective Agents*](https://www.anthropic.com/engineering/building-effective-agents)
 [^2]: Andrew Ng, [*How Agents Can Improve LLM Performance*](https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/), deeplearning.ai
