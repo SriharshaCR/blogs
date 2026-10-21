@@ -3,7 +3,8 @@ layout: null
 permalink: /search.json
 ---
 [
-  {% assign all_posts = site.enterprises-ai-playbook | sort: "post_number" %}
+  {% assign ep = site.enterprises-ai-playbook | sort: "post_number" %}
+  {% assign all_posts = ep | concat: site.ai-token-economics | concat: site.resourceful-ai-skill | concat: site.posts | sort: "date" | reverse %}
   {% for post in all_posts %}
   {
     "id": "{{ post.url }}",

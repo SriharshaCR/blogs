@@ -72,7 +72,7 @@ These failures share one root cause: the model has capability, but no governance
 
 Real precedents exist. In February 2024, Air Canada was ordered to pay damages after its chatbot gave a customer incorrect information about bereavement fares and the airline tried to disclaim responsibility for its own AI.² In June 2023, two lawyers were sanctioned $5,000 by a US federal judge after submitting ChatGPT-fabricated case citations in a legal filing — the model had confidently invented cases that did not exist.³
 
-The cost of not having guardrails is not hypothetical.
+The cost of not having guardrails is not hypothetical. When these principles extend into multi-agent systems — where models orchestrate other models — the same governance gaps reappear at the orchestration layer. [Four production agent failures mapped to missing harness components](/blogs/ai-agent-scaffolding-four-failures/) takes that next step.
 
 ---
 
