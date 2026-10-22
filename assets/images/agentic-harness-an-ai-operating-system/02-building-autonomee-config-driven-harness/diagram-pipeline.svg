@@ -1,0 +1,87 @@
+<svg width="800" height="310" viewBox="0 0 800 310" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="310" fill="#F1F5F9" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="15" font-weight="700" fill="#1E293B">Autonomee: Config-Driven Three-Agent Pipeline</text>
+
+  <!-- ── CONFIG entry point ── -->
+  <rect x="18" y="118" width="84" height="74" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="60" y="143" text-anchor="middle" font-size="10" font-weight="700" fill="#1D4ED8">CONFIG</text>
+  <text x="60" y="161" text-anchor="middle" font-size="9.5" fill="#2563EB">topic: ...</text>
+  <text x="60" y="178" text-anchor="middle" font-size="8.5" fill="#93C5FD">entry point</text>
+
+  <!-- Arrow: CONFIG → RESEARCHER -->
+  <line x1="104" y1="155" x2="133" y2="155" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── RESEARCH AGENT ── -->
+  <rect x="135" y="78" width="158" height="162" rx="10" fill="#1E293B"/>
+  <line x1="135" y1="112" x2="293" y2="112" stroke="#334155" stroke-width="1"/>
+  <text x="214" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#94A3B8" letter-spacing="0.6">RESEARCH AGENT</text>
+  <!-- tool -->
+  <rect x="151" y="120" width="126" height="30" rx="5" fill="#0F172A"/>
+  <text x="214" y="132" text-anchor="middle" font-size="8.5" fill="#64748B">tool</text>
+  <text x="214" y="145" text-anchor="middle" font-size="12" font-weight="600" fill="#38BDF8">search</text>
+  <!-- input -->
+  <rect x="151" y="157" width="126" height="30" rx="5" fill="#0F172A"/>
+  <text x="214" y="169" text-anchor="middle" font-size="8.5" fill="#64748B">input source</text>
+  <text x="214" y="182" text-anchor="middle" font-size="11" font-weight="600" fill="#C084FC">config → topic</text>
+  <!-- approval -->
+  <rect x="151" y="194" width="126" height="28" rx="5" fill="#064E3B"/>
+  <text x="214" y="212" text-anchor="middle" font-size="9.5" font-weight="600" fill="#4ADE80">● no approval needed</text>
+
+  <!-- in-memory label above arrow -->
+  <text x="323" y="143" text-anchor="middle" font-size="8.5" fill="#94A3B8" font-style="italic">in-memory</text>
+
+  <!-- Arrow: RESEARCHER → WRITER -->
+  <line x1="295" y1="155" x2="328" y2="155" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── WRITER AGENT ── -->
+  <rect x="330" y="78" width="158" height="162" rx="10" fill="#1E293B"/>
+  <line x1="330" y1="112" x2="488" y2="112" stroke="#334155" stroke-width="1"/>
+  <text x="409" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#94A3B8" letter-spacing="0.6">WRITER AGENT</text>
+  <rect x="346" y="120" width="126" height="30" rx="5" fill="#0F172A"/>
+  <text x="409" y="132" text-anchor="middle" font-size="8.5" fill="#64748B">tool</text>
+  <text x="409" y="145" text-anchor="middle" font-size="12" font-weight="600" fill="#38BDF8">read</text>
+  <rect x="346" y="157" width="126" height="30" rx="5" fill="#0F172A"/>
+  <text x="409" y="169" text-anchor="middle" font-size="8.5" fill="#64748B">input source</text>
+  <text x="409" y="182" text-anchor="middle" font-size="11" font-weight="600" fill="#C084FC">results[researcher]</text>
+  <rect x="346" y="194" width="126" height="28" rx="5" fill="#064E3B"/>
+  <text x="409" y="212" text-anchor="middle" font-size="9.5" font-weight="600" fill="#4ADE80">● no approval needed</text>
+
+  <!-- in-memory label above arrow -->
+  <text x="519" y="143" text-anchor="middle" font-size="8.5" fill="#94A3B8" font-style="italic">in-memory</text>
+
+  <!-- Arrow: WRITER → GATE -->
+  <line x1="490" y1="155" x2="519" y2="155" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── APPROVAL GATE (diamond) centred at 560,155 ── -->
+  <polygon points="560,115 600,155 560,195 520,155" fill="#FFFBEB" stroke="#FBBF24" stroke-width="2.5"/>
+  <text x="560" y="150" text-anchor="middle" font-size="9" font-weight="700" fill="#78350F">HUMAN</text>
+  <text x="560" y="164" text-anchor="middle" font-size="9" font-weight="700" fill="#78350F">REVIEW</text>
+
+  <!-- Arrow: GATE → PUBLISHER -->
+  <line x1="602" y1="155" x2="631" y2="155" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── PUBLISHER AGENT ── -->
+  <rect x="633" y="78" width="150" height="162" rx="10" fill="#1E293B"/>
+  <line x1="633" y1="112" x2="783" y2="112" stroke="#334155" stroke-width="1"/>
+  <text x="708" y="100" text-anchor="middle" font-size="10" font-weight="600" fill="#94A3B8" letter-spacing="0.6">PUBLISHER AGENT</text>
+  <rect x="649" y="120" width="118" height="30" rx="5" fill="#0F172A"/>
+  <text x="708" y="132" text-anchor="middle" font-size="8.5" fill="#64748B">tool</text>
+  <text x="708" y="145" text-anchor="middle" font-size="12" font-weight="600" fill="#38BDF8">post</text>
+  <rect x="649" y="157" width="118" height="30" rx="5" fill="#0F172A"/>
+  <text x="708" y="169" text-anchor="middle" font-size="8.5" fill="#64748B">input source</text>
+  <text x="708" y="182" text-anchor="middle" font-size="11" font-weight="600" fill="#C084FC">results[writer]</text>
+  <rect x="649" y="194" width="118" height="28" rx="5" fill="#7F1D1D"/>
+  <text x="708" y="212" text-anchor="middle" font-size="9.5" font-weight="600" fill="#FCA5A5">● approval required</text>
+
+  <!-- Footer note -->
+  <text x="400" y="270" text-anchor="middle" font-size="9.5" fill="#94A3B8">Each agent receives only the tools it needs. Inputs flow via results[] — never read from disk between runs.</text>
+</svg>

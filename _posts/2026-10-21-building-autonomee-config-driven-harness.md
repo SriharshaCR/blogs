@@ -78,6 +78,10 @@ CONFIG = {
 }
 ```
 
+One `CONFIG` dict defines three agents: what tool each can use, where it reads its input, and whether a human needs to approve before it runs. Inputs travel in-memory from each agent to the next — no files written to disk between steps, no stale reads from a prior run. The publisher is the only agent that waits for a human signal; the other two run automatically once their upstream input is ready.
+
+![Autonomee three-agent pipeline: Research Agent (search), Writer Agent (read), and Publisher Agent (post) with human approval gate]({{ "/assets/images/agentic-harness-an-ai-operating-system/02-building-autonomee-config-driven-harness/diagram-pipeline.svg" | relative_url }})
+
 Each decision from the next section is enforced by a field in this config — not in the orchestration code.
 
 ---
