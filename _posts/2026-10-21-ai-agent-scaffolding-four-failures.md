@@ -100,6 +100,8 @@ A stronger model improves reasoning. It does not fix unscoped tools, stale conte
 2. If an agent in your organization called the wrong API today — misrouted, misscoped, undetected — how long before anyone would know?
 3. What is the difference between a CRON job that triggers your agent and a harness that runs it?
 
+If the harness is in place but agents still lose reasoning over time — [Decision Archaeology: Why Decisions Die and How a KBA Fixes That](/blogs/decision-archaeology-kba/) covers how reasoning capture fills that gap.
+
 ---
 
 *In the next post: I build a config-driven harness from scratch — stateless, observable, and designed to prevent exactly these failures. [Building a Config-Driven Agentic Harness →](/blogs/building-autonomee-config-driven-harness/)*

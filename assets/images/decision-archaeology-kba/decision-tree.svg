@@ -1,0 +1,128 @@
+<svg width="860" height="520" viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="520" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="430" y="18" font-family="system-ui,ui-sans-serif,sans-serif" font-size="12.5" font-weight="600" fill="#64748b" text-anchor="middle">Does this decision need to become a Counsellor Law?</text>
+
+  <!-- ── EDGES ── (drawn before nodes so nodes sit on top) -->
+
+  <!-- L1 → L2-L  Yes -->
+  <line x1="430" y1="75" x2="220" y2="130" stroke="#22c55e" stroke-width="2"/>
+  <!-- L1 → L2-R  No -->
+  <line x1="430" y1="75" x2="655" y2="130" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- L2-L → L3-L  Yes -->
+  <line x1="220" y1="180" x2="148" y2="240" stroke="#22c55e" stroke-width="2"/>
+  <!-- L2-L → "Code comment"  No -->
+  <line x1="220" y1="180" x2="358" y2="235" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- L2-R → "Document Lesson"  Yes -->
+  <line x1="655" y1="180" x2="622" y2="242" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- L2-R → "Safe to skip"  No -->
+  <line x1="655" y1="180" x2="768" y2="227" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- L3-L → L4-L  Yes -->
+  <line x1="148" y1="290" x2="103" y2="350" stroke="#22c55e" stroke-width="2"/>
+  <!-- L3-L → "Review Law"  No -->
+  <line x1="148" y1="290" x2="273" y2="347" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- L4-L → L5  Yes  (gold — final step) -->
+  <line x1="103" y1="400" x2="100" y2="448" stroke="#f59e0b" stroke-width="2.5"/>
+  <!-- L4-L → "GitHub Issue"  No -->
+  <line x1="103" y1="400" x2="262" y2="451" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- ── EDGE LABELS ── -->
+  <!-- L1 branches -->
+  <text x="325" y="100" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#22c55e" text-anchor="middle">Yes</text>
+  <text x="548" y="100" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">No</text>
+  <!-- L2-L branches -->
+  <text x="178" y="208" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#22c55e" text-anchor="middle">Yes</text>
+  <text x="296" y="204" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">No</text>
+  <!-- L2-R branches -->
+  <text x="641" y="210" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#22c55e" text-anchor="middle">Yes</text>
+  <text x="717" y="201" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">No</text>
+  <!-- L3-L branches -->
+  <text x="119" y="318" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#22c55e" text-anchor="middle">Yes</text>
+  <text x="217" y="316" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">No</text>
+  <!-- L4-L branches -->
+  <text x="85" y="423" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#f59e0b" text-anchor="middle">Yes</text>
+  <text x="188" y="424" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle">No</text>
+
+  <!-- ── DECISION NODES ── fill=#1e293b stroke=#3b82f6 -->
+
+  <!-- L1 -->
+  <rect x="350" y="25" width="160" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="430" y="46" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">Did this decision</text>
+  <text x="430" y="61" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">affect system behavior?</text>
+
+  <!-- L2-L -->
+  <rect x="140" y="130" width="160" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="220" y="151" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">Could forgetting WHY</text>
+  <text x="220" y="166" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">cause an incident?</text>
+
+  <!-- L2-R -->
+  <rect x="575" y="130" width="160" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="655" y="151" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">Will future engineers</text>
+  <text x="655" y="166" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">inherit this area?</text>
+
+  <!-- L3-L -->
+  <rect x="68" y="240" width="160" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="148" y="261" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">Is the reasoning</text>
+  <text x="148" y="276" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">not yet in a Law?</text>
+
+  <!-- L4-L -->
+  <rect x="23" y="350" width="160" height="50" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="103" y="371" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">Has this type of</text>
+  <text x="103" y="386" font-family="system-ui,sans-serif" font-size="11.5" fill="#e2e8f0" text-anchor="middle">decision recurred?</text>
+
+  <!-- ── OUTCOME NODES ── -->
+
+  <!-- "Code comment is enough"  (from L2-L No)  info-blue -->
+  <rect x="290" y="235" width="136" height="46" rx="6" fill="#172554" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="358" y="253" font-family="system-ui,sans-serif" font-size="11" fill="#bfdbfe" text-anchor="middle">Code comment</text>
+  <text x="358" y="268" font-family="system-ui,sans-serif" font-size="11" fill="#bfdbfe" text-anchor="middle">is enough</text>
+
+  <!-- "Safe to skip"  (from L2-R No)  grey -->
+  <rect x="700" y="227" width="136" height="46" rx="6" fill="#111827" stroke="#475569" stroke-width="1.5"/>
+  <text x="768" y="245" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Safe</text>
+  <text x="768" y="260" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">to skip</text>
+
+  <!-- "Document as a Lesson"  (from L2-R Yes)  amber -->
+  <rect x="554" y="242" width="136" height="46" rx="6" fill="#1c1917" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="622" y="260" font-family="system-ui,sans-serif" font-size="11" fill="#fde68a" text-anchor="middle">Document as</text>
+  <text x="622" y="275" font-family="system-ui,sans-serif" font-size="11" fill="#fde68a" text-anchor="middle">a Lesson</text>
+
+  <!-- "Review & update the Law"  (from L3-L No)  green -->
+  <rect x="205" y="347" width="136" height="46" rx="6" fill="#052e16" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="273" y="365" font-family="system-ui,sans-serif" font-size="11" fill="#bbf7d0" text-anchor="middle">Review &amp;</text>
+  <text x="273" y="380" font-family="system-ui,sans-serif" font-size="11" fill="#bbf7d0" text-anchor="middle">update the Law</text>
+
+  <!-- "Open a GitHub Issue"  (from L4-L No)  orange -->
+  <rect x="194" y="451" width="136" height="46" rx="6" fill="#2d1608" stroke="#f97316" stroke-width="1.5"/>
+  <text x="262" y="469" font-family="system-ui,sans-serif" font-size="11" fill="#fed7aa" text-anchor="middle">Open a GitHub</text>
+  <text x="262" y="484" font-family="system-ui,sans-serif" font-size="11" fill="#fed7aa" text-anchor="middle">Issue to review</text>
+
+  <!-- L5  "🧙‍♂️ Create a Counsellor Law"  HIGHLIGHTED  gold -->
+  <rect x="20" y="448" width="160" height="52" rx="9" fill="#2d1800" stroke="#f59e0b" stroke-width="2.5"/>
+  <!-- gold glow behind L5 -->
+  <rect x="0" y="428" width="200" height="92" rx="20" fill="url(#goldGlow)"/>
+  <rect x="20" y="448" width="160" height="52" rx="9" fill="#2d1800" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="100" y="469" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fef3c7" text-anchor="middle">🧙‍♂️ Create a</text>
+  <text x="100" y="486" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fef3c7" text-anchor="middle">Counsellor Law</text>
+
+  <!-- ── LEGEND ── bottom right -->
+  <line x1="660" y1="494" x2="685" y2="494" stroke="#22c55e" stroke-width="2"/>
+  <text x="690" y="498" font-family="system-ui,sans-serif" font-size="10" fill="#94a3b8">Yes — go deeper</text>
+  <line x1="755" y1="494" x2="780" y2="494" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="785" y="498" font-family="system-ui,sans-serif" font-size="10" fill="#94a3b8">No — outcome</text>
+
+</svg>
