@@ -62,7 +62,7 @@ You're left reading traces and guessing. Every test covers the whole agent or no
 
 Specialized agents operating in a pipeline can be tested at their boundaries. Input → output for each step. That's the same reason we write unit tests for functions — isolation makes reasoning about correctness tractable.
 
-But modular agents also mean your deployment pipeline needs to evolve alongside them — behavioral regression testing, canary evaluation, stateful rollback. That's a different job from what most CI/CD systems were built to do. [Your CI/CD Pipeline Is Not Ready for Agents](/blogs/enterprises-ai-playbook/cicd-for-agents/) covers what needs to change before you can run this reliably in production.
+But modular agents also mean your deployment pipeline needs to evolve alongside them — behavioral regression testing, canary evaluation, stateful rollback. That's a different job from what most CI/CD systems were built to do. [Your CI/CD Pipeline Is Not Ready for Agents](/blogs/enterprises-ai-playbook/cicd-for-agents/#five-gaps-that-will-find-you-in-production-if-you-dont-find-them-first) covers what needs to change before you can run this reliably in production.
 
 ### 3. Inability to swap components independently
 
@@ -70,7 +70,7 @@ Here's the one that hurts in practice: when a better model version ships, upgrad
 
 In a pipeline of specialized agents, you upgrade the retrieval agent independently from the synthesis agent. You run evaluation on the component being changed. You deploy the new version with confidence because you know its scope.
 
-Decentralizing agents solves single-point failure — but introduces system-level complexity that needs a different governance approach. Once you have 10 agents in production, the question shifts from "does each agent work?" to "does the system still do what I designed?" [Spec-Driven Development at Scale](/blogs/enterprises-ai-playbook/spec-driven-development/) is the engineering discipline that makes large multi-agent systems maintainable.
+Decentralizing agents solves single-point failure — but introduces system-level complexity that needs a different governance approach. Once you have 10 agents in production, the question shifts from "does each agent work?" to "does the system still do what I designed?" [Spec-Driven Development at Scale](/blogs/enterprises-ai-playbook/spec-driven-development/#pattern-1-writing-testable-agent-contracts) is the engineering discipline that makes large multi-agent systems maintainable.
 
 ### 4. Context window exhaustion
 

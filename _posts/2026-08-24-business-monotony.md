@@ -78,7 +78,7 @@ The real risk is becoming an AI operator rather than a problem solver.
 
 If your day becomes: ask AI → copy output → send result — you haven't escaped monotony. You've moved it one level up the stack.
 
-It's the same cognitive outsourcing I wrote about in [When AI Does the Homework](/blogs/when-ai-does-your-homework/) — just without the grade consequences.
+It's the same cognitive outsourcing I wrote about in [When AI Does the Homework](/blogs/when-ai-does-your-homework/#what-generative-ai-actually-does-to-student-learning) — just without the grade consequences.
 
 The professionals who compound value in an AI-augmented environment are the ones who:
 - Challenge AI outputs rather than rubber-stamp them
@@ -98,6 +98,6 @@ They'll be the ones that use it to *clear space* — and then actually fill that
 
 The uncomfortable question is whether most teams will. It's easier to ship AI output than to push back on it. Easier to accept the convergent answer than to fight for the contrarian one.
 
-AI will commoditize routine excellence. The question is what you'll do with the time that frees up. That question has a practical dimension: [how you spend your AI sessions](/blogs/five-ways-to-spend-tokens/) — the context you load, the precision of your prompts — determines whether you're generating leverage or just more output.
+AI will commoditize routine excellence. The question is what you'll do with the time that frees up. That question has a practical dimension: [how you spend your AI sessions](/blogs/five-ways-to-spend-tokens/#five-llm-token-optimization-strategies) — the context you load, the precision of your prompts — determines whether you're generating leverage or just more output.
 
 Use AI to kill operational monotony. Don't let it kill your distinctiveness in the process.

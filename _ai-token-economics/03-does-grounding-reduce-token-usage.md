@@ -17,7 +17,7 @@ series_total: 3
 
 # Does Grounding Reduce Token Usage? It Depends.
 
-*Part 3 of the AI and Token Economics series. [Part 1](/blogs/you-are-buying-tokens/) covered what you're actually paying for. [Part 2](/blogs/five-ways-to-spend-tokens/) covered five per-turn optimization techniques. This part addresses the most common follow-up question: does grounding the model keep it focused and reduce costs?*
+*Part 3 of the AI and Token Economics series. [Part 1](/blogs/you-are-buying-tokens/#the-ai-economy-in-three-layers) covered what you're actually paying for. [Part 2](/blogs/five-ways-to-spend-tokens/#five-llm-token-optimization-strategies) covered five per-turn optimization techniques. This part addresses the most common follow-up question: does grounding the model keep it focused and reduce costs?*
 
 The short answer: grounding typically improves accuracy — when the supplied context is relevant and trustworthy. Whether it reduces token usage depends entirely on how you implement it.
 
@@ -87,7 +87,7 @@ Inject only the relevant excerpt (200–500 tokens)
 LLM generates a grounded answer
 ```
 
-Compared to either (a) injecting the full document or (b) letting the model hallucinate and triggering follow-up [clarification turns](/blogs/ai-guardrails-what-can-go-wrong/), this pattern can meaningfully reduce total token consumption while maintaining accuracy. The savings come from two places: smaller input per call, and fewer correction rounds.
+Compared to either (a) injecting the full document or (b) letting the model hallucinate and triggering follow-up [clarification turns](/blogs/ai-guardrails-what-can-go-wrong/#five-failure-modes-and-what-they-cost), this pattern can meaningfully reduce total token consumption while maintaining accuracy. The savings come from two places: smaller input per call, and fewer correction rounds.
 
 This is the pattern worth building toward if you're running grounding at scale.
 
@@ -103,7 +103,7 @@ A different form of grounding — not about what context you inject, but what yo
 
 Instructions like these reduce output length and eliminate the hedging and over-explanation that an unconstrained model generates by default. Output tokens are usually more expensive than input, so this is often the highest-leverage grounding change available — especially when the context itself is small.
 
-The same output-constraint mechanism is what makes AI guardrails work: in [AI Guardrails in Action](/blogs/ai-guardrails-in-action/), output constraints enforce safe content policies and prevent hallucination — same pattern, different purpose.
+The same output-constraint mechanism is what makes AI guardrails work: in [AI Guardrails in Action](/blogs/ai-guardrails-in-action/#experiment-2-hallucination-reduction), output constraints enforce safe content policies and prevent hallucination — same pattern, different purpose.
 
 Two notebooks show output constraints at work: [Budget Variance Narrator](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/ai-token-economics/03-grounding-prompts/03_budget_variance_narrator.ipynb) — constrains financial commentary to named causes, not vague hedging — and [Change Communication Drafter](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/ai-token-economics/03-grounding-prompts/05_change_communication_drafter.ipynb) — constrains output to pre-emptive answers, not a generic announcement.
 

@@ -73,7 +73,7 @@ In my setup, KBAs are called **Laws**. Each Law names a constraint, documents th
 > **Human input required:** Shared library installations across profiles (e.g., email library installed under 2 profiles) — flagged for decision.
 > **Hard cap:** Overall memory utilization must not exceed 95%.
 
-Notice what this Law does that documentation never could: it governs active agent behavior. When memory hits 90%, `agent-memory-sniffer` doesn't guess — it acts according to the Law. Without that governance layer, agents operate with no constraints on what they can do or when — exactly the failure pattern described in [AI Agent Scaffolding: Four Failures and What Prevents Them](/blogs/ai-agent-scaffolding-four-failures/).
+Notice what this Law does that documentation never could: it governs active agent behavior. When memory hits 90%, `agent-memory-sniffer` doesn't guess — it acts according to the Law. Without that governance layer, agents operate with no constraints on what they can do or when — exactly the failure pattern described in [AI Agent Scaffolding: Four Failures and What Prevents Them](/blogs/ai-agent-scaffolding-four-failures/#4-the-capable-agent-that-did-the-wrong-thing).
 
 The email script incident would have been prevented by a Law of the same kind — one that stated email is the primary authentication identifier and that any update must invalidate existing sessions. The PR reviewer could have queried it. Nobody did, because the Law didn't exist yet.
 
@@ -99,7 +99,7 @@ Here's it running in production. On Nov 1, memory hit 91% — above the Law's 90
 
 The Law didn't just catch the problem. It governed how the problem was resolved — what happened automatically, what waited for human judgment, and what the success condition looked like. Without the Law, memory would have hit 95% silently, new learnings would have been rejected, and I would have noticed only when something failed.
 
-If you want to see this run end to end, there is a companion notebook that walks through the same scenario — memory hitting 91%, the sniffer firing, a GitHub Issue generated, cleanup applied. One dependency (`groq`), free API key, no local setup. The only interaction point is an approval flag you set before cleanup runs.
+If you want to see this run end to end, there is a companion notebook that walks through the same scenario — memory hitting 91%, the sniffer firing, a GitHub Issue generated, cleanup applied. One dependency (`openai`), free API key, no local setup. The only interaction point is an approval flag you set before cleanup runs. If you need to set up a Groq key or prefer HuggingFace, the [LLM setup guide](/blogs/guides/llm-free-apis/) covers both in under 5 minutes.
 
 → [Run the Counsellor POC on Colab](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_poc.ipynb)
 

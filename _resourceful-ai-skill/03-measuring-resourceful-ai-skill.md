@@ -28,7 +28,7 @@ series_total: 3
 
 ---
 
-Parts [1](/blogs/how-resourceful-is-your-ai-skill/) and [2](/blogs/ai-skill-engineering-contract/) made the argument. This post is the proof.
+Parts [1](/blogs/how-resourceful-is-your-ai-skill/#where-most-skills-actually-land) and [2](/blogs/ai-skill-engineering-contract/#what-no-contract-actually-means-at-runtime) made the argument. This post is the proof.
 
 The Colab notebook below takes a skill with no contract — call it a Level 0 skill — measures it against five operational dimensions, applies the engineering contract from Part 2, and measures again. The delta is the answer to the question: what is "resourceful" actually worth?
 
@@ -89,7 +89,7 @@ The same methodology applies to any skill. The five runner-up candidates — and
 
 **What we measure:** Data classification of what the skill reads, writes, and forwards — with a focus on what gets persisted to disk and under what policy.
 
-**Why it matters:** A skill that writes user data to disk without a declared schema, TTL, or access restriction is an unacknowledged security surface in any multi-skill workflow. The gap isn't intentional — it just was never stated. These are the same class of vulnerabilities that [AI guardrail frameworks exist to close at the system level](/blogs/ai-guardrails-what-can-go-wrong/).
+**Why it matters:** A skill that writes user data to disk without a declared schema, TTL, or access restriction is an unacknowledged security surface in any multi-skill workflow. The gap isn't intentional — it just was never stated. These are the same class of vulnerabilities that [AI guardrail frameworks exist to close at the system level](/blogs/ai-guardrails-what-can-go-wrong/#the-five-layers-that-prevent-them).
 
 **What the notebook shows:** `profile-bio` writes a `profile-brief.md` containing name, core beliefs, CTA, and links. The notebook shows the before state (untyped dict, no policy) against a typed dataclass with per-field sensitivity labels (PUBLIC / PRIVATE), a 30-day TTL, and an explicit no-forwarding rule. The change requires no API calls — it is a contract declaration. The gap closes by stating what was previously implicit.
 

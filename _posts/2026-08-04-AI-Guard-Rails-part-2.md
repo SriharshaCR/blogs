@@ -18,7 +18,7 @@ read_time: 7
 
 ---
 
-If you've read [Part 1](/blogs/ai-guardrails-what-can-go-wrong/), you know the five failure modes and why they're expensive. This post is the engineering side of that story. Not theory — four experiments, each showing the same model with and without an LLM guardrail, with the production tools you'd use if you were building this for real.
+If you've read [Part 1](/blogs/ai-guardrails-what-can-go-wrong/#five-failure-modes-and-what-they-cost), you know the five failure modes and why they're expensive. This post is the engineering side of that story. Not theory — four experiments, each showing the same model with and without an LLM guardrail, with the production tools you'd use if you were building this for real.
 
 > **A note on AI outputs.** LLMs are probabilistic — running the same prompt twice can produce different results. If your output looks different from what's shown here, re-run it once or twice. If the "without guardrail" version refuses the harmful prompt on its own, that's the model's built-in safety layer activating. You just witnessed guardrails operating at the model level, not the system-prompt level. That's itself worth noting.
 
@@ -60,7 +60,7 @@ I can't assist in creating aggressive messages. I'd be happy to provide a list o
 
 **In production:** Meta's [Llama Guard](https://ai.meta.com/research/publications/llama-guard-llm-based-input-output-safeguard-for-human-ai-conversations/){:rel="nofollow"} is an open-weight model specifically trained to classify inputs and outputs against a configurable safety taxonomy. It runs as a separate classification layer — your primary model handles the task, Llama Guard judges whether the output is safe to return.
 
-**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb)
+**Want to run this yourself?** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb) The notebook runs on Groq's free API — need to set up a key or switch to HuggingFace? The [LLM setup guide](/blogs/guides/llm-free-apis/) covers both in one place.
 
 ---
 
@@ -103,7 +103,7 @@ I don't have verified information on Acme Corp's Q3 2024 revenue.
 Please check their investor relations page or a trusted financial data source.
 ```
 
-**Observation:** A confident refusal is more useful than a confident lie. The guardrail doesn't make the model smarter — it makes it honest about the edges of what it knows. That's the difference between a tool you can trust and one you have to verify every time. Grounding takes this further — injecting verified context so the model can answer from known facts rather than just refuse. Whether that injection is cost-effective depends on how selectively you retrieve: [Does Grounding Reduce Token Usage?](/blogs/does-grounding-reduce-token-usage/) covers the three patterns.
+**Observation:** A confident refusal is more useful than a confident lie. The guardrail doesn't make the model smarter — it makes it honest about the edges of what it knows. That's the difference between a tool you can trust and one you have to verify every time. Grounding takes this further — injecting verified context so the model can answer from known facts rather than just refuse. Whether that injection is cost-effective depends on how selectively you retrieve: [Does Grounding Reduce Token Usage?](/blogs/does-grounding-reduce-token-usage/#three-scenarios) covers the three patterns.
 
 **In production:** [Guardrails AI](https://github.com/guardrails-ai/guardrails){:rel="nofollow"} is an open-source Python framework for defining, validating, and enforcing output structure and content constraints. You define validators (fact-checking, citation-required, format compliance), and the framework retries or corrects outputs that fail. Works with any LLM provider.
 
@@ -225,7 +225,7 @@ The pattern across all of these: guardrails are not a feature you add at the end
 
 **Reflect on this:** Which of these four guardrail patterns would you add to something you're building or maintaining right now — and what's actually stopping you from doing it this week? Not "we need to prioritise it" — specifically, what's the blocker?
 
-If the answer is "I didn't know where to start," the tools above are your starting point. If it's "the team doesn't see it as a priority," [Part 1 of this series](/blogs/ai-guardrails-what-can-go-wrong/) is what to share with them.
+If the answer is "I didn't know where to start," the tools above are your starting point. If it's "the team doesn't see it as a priority," [Part 1 of this series](/blogs/ai-guardrails-what-can-go-wrong/#why-ai-guardrails-are-reliability-engineering-not-restrictions) is what to share with them.
 
 ---
 
