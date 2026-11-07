@@ -115,7 +115,7 @@ Function design principles apply, but they have to be translated for a probabili
 
 `profile-bio` is a Level 1 skill. For personal use, that is appropriate. The moment it runs inside a composed workflow — a content creation pipeline, a publishing automation, an onboarding agent — it needs to be Level 2. It is not.
 
-Most published skills sit in the same position: honest Level 1, operating where Level 2 is required. That gap is the same distinction that [AI guardrails exist to close](/blogs/ai-guardrails-what-can-go-wrong/).
+Most published skills sit in the same position: honest Level 1, operating where Level 2 is required. That gap is the same distinction that [AI guardrails exist to close](/blogs/ai-guardrails-what-can-go-wrong/#five-failure-modes-and-what-they-cost).
 
 ---
 

@@ -28,7 +28,7 @@ series_total: 3
 
 ---
 
-In [Part 1](/blogs/how-resourceful-is-your-ai-skill/), the argument was simple: most AI skills are being operated at Level 0 or Level 1 of a maturity model that goes to Level 3. The gap is where failures originate.
+In [Part 1](/blogs/how-resourceful-is-your-ai-skill/#where-most-skills-actually-land), the argument was simple: most AI skills are being operated at Level 0 or Level 1 of a maturity model that goes to Level 3. The gap is where failures originate.
 
 This post is the engineering side of that argument. What does a production-grade skill actually need to have? Not aspirationally — concretely.
 
@@ -175,7 +175,7 @@ The `fork_of` field deserves attention. One of the biggest problems in skill reg
 
 This is worth saying plainly because the instinct is to solve constraint problems by adding more instructions. Better wording, clearer prohibitions, more examples. That instinct is wrong for security-critical constraints.
 
-A prompt guides. A contract enforces. The runtime, not the instructions file, must be the policy enforcement point for permissions, tool access, and side effects — the same principle behind [why AI guardrails need to be enforced, not just defined](/blogs/ai-guardrails-what-can-go-wrong/).
+A prompt guides. A contract enforces. The runtime, not the instructions file, must be the policy enforcement point for permissions, tool access, and side effects — the same principle behind [why AI guardrails need to be enforced, not just defined](/blogs/ai-guardrails-what-can-go-wrong/#the-five-layers-that-prevent-them).
 
 ---
 

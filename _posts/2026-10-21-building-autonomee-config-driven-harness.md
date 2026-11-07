@@ -16,7 +16,7 @@ read_time: 6
 > - **Why it matters:** The harness is where reliability is engineered. A config-driven design makes that reliability visible, portable, and changeable without touching code.
 > - **What you'll learn:** The architecture of Autonomee — a config-driven agentic harness built to prevent the four failures from Part 1, and how each design decision maps directly to a failure it eliminates.
 
-The previous post mapped four failures from a real three-agent pipeline to the specific harness components that were missing. This post describes what those components look like when they are built deliberately. If you haven't read it, [four production agent failures and what prevents them](/blogs/ai-agent-scaffolding-four-failures/) is the foundation — this post is the architecture response.
+The previous post mapped four failures from a real three-agent pipeline to the specific harness components that were missing. This post describes what those components look like when they are built deliberately. If you haven't read it, [four production agent failures and what prevents them](/blogs/ai-agent-scaffolding-four-failures/#four-failures-four-missing-components) is the foundation — this post is the architecture response.
 
 ---
 
@@ -168,7 +168,7 @@ def scope_tools(agent_cfg, all_tools):
 tools = scope_tools(agent_cfg, ALL_TOOLS)  # model only sees its declared tools
 ```
 
-Tool scope control is a specific form of guardrail — one that governs what an agent is allowed to *do*, not just what it is allowed to say. For the broader guardrails picture, [five production failure modes every AI deployment hits first](/blogs/ai-guardrails-what-can-go-wrong/) covers the surrounding layers.
+Tool scope control is a specific form of guardrail — one that governs what an agent is allowed to *do*, not just what it is allowed to say. For the broader guardrails picture, [five production failure modes every AI deployment hits first](/blogs/ai-guardrails-what-can-go-wrong/#five-failure-modes-and-what-they-cost) covers the surrounding layers.
 
 **Failure prevented:** Wrong Tool.
 
@@ -180,7 +180,7 @@ At runtime, Autonomee produces a structured log — every agent event, every too
 
 The config file is the specification. Reading it tells you the full topology of the pipeline: what runs, in what order, with what tools, on what model, and where a human must approve before the system proceeds.
 
-The full implementation is here, the [colab notebook](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/agentic-harness-an-ai-operating-system/02-building-autonomee-config-driven-harness/autonomee_harness_demo.ipynb) runs same pipeline two ways — raw and harness — so you can see the structural difference between the four decisions directly, using Groq's free inference tier.
+The full implementation is here, the [colab notebook](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/agentic-harness-an-ai-operating-system/02-building-autonomee-config-driven-harness/autonomee_harness_demo.ipynb) runs same pipeline two ways — raw and harness — so you can see the structural difference between the four decisions directly, using Groq's free inference tier. New to Groq? The [LLM setup guide](/blogs/guides/llm-free-apis/) has the key generation steps and a one-variable pattern to switch providers.
 
 I must say, this is just a working pattern, not a production framework. The next iteration adds retries with backoff, parallel agent execution, and a persistent event store. The architecture holds as those layers are added — because the foundation is stateless and config-driven.
 
@@ -194,7 +194,7 @@ I must say, this is just a working pattern, not a production framework. The next
 
 ---
 
-*[Part 1: Four production failures and the harness components that prevent them →](/blogs/ai-agent-scaffolding-four-failures/)*
+*[Part 1: Four production failures and the harness components that prevent them →](/blogs/ai-agent-scaffolding-four-failures/#four-failures-four-missing-components)*
 
 [^1]: Anthropic, [*Building Effective Agents*](https://www.anthropic.com/engineering/building-effective-agents)
 [^2]: OpenAI, [*New tools for building agents*](https://openai.com/index/new-tools-for-building-agents/)

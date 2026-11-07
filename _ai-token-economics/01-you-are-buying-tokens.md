@@ -90,7 +90,7 @@ So is any of this worth the cognitive overhead?
 
 **When it still matters significantly:**
 - *Frontier models* — Claude Opus, GPT-4o, Gemini Ultra are 10–100x more expensive per token than their smaller siblings. For work that genuinely requires their capability, context efficiency is still money.
-- *Production systems at volume* — a team running 50,000 daily API calls doesn't have a flat-fee buffer. Token costs scale directly with usage. Rate limits also mean token efficiency determines throughput. At that volume, token waste and [reliability failures](/blogs/ai-guardrails-what-can-go-wrong/) compound just as fast as cost.
+- *Production systems at volume* — a team running 50,000 daily API calls doesn't have a flat-fee buffer. Token costs scale directly with usage. Rate limits also mean token efficiency determines throughput. At that volume, token waste and [reliability failures](/blogs/ai-guardrails-what-can-go-wrong/#five-failure-modes-and-what-they-cost) compound just as fast as cost.
 - *Latency* — longer inputs generally increase processing time and time to first token; each output token is generated sequentially, so longer responses add directly to completion time. In real-time applications, bloated contexts create user-visible lag regardless of cost.
 - *Quality* — larger context isn't always better output. The "lost in the middle" problem is well-documented: models systematically underweight information in the centre of long contexts. This affects RAG pipelines especially — when retrieved chunks land mid-context, models often miss them entirely. More tokens can mean lower accuracy on the facts buried inside them.
 
@@ -108,4 +108,4 @@ Three questions worth sitting with:
 
 3. **Where is your cost hiding?** Think about a typical AI session you run regularly. Input, output, context reprocessing — which of the three is the biggest contributor, and did you know that before reading this?
 
-*In Part 2: five LLM token optimization strategies — prompt compression, progressive context loading, structured prompting, and more — each with the specific failure mode that tells you when not to use it. → [Part 2: Five Ways to Spend Your Tokens Like They Cost Something](/blogs/five-ways-to-spend-tokens/)*
+*In Part 2: five LLM token optimization strategies — prompt compression, progressive context loading, structured prompting, and more — each with the specific failure mode that tells you when not to use it. → [Part 2: Five Ways to Spend Your Tokens Like They Cost Something](/blogs/five-ways-to-spend-tokens/#five-llm-token-optimization-strategies)*

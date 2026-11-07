@@ -32,6 +32,9 @@ collections:
   resourceful-ai-skill:
     output: true
     permalink: /resourceful-ai-skill/:slug/
+  guides:
+    output: true
+    permalink: /guides/:slug/
 
 # Defaults
 defaults:
@@ -56,6 +59,11 @@ defaults:
       layout: "post"
       series: "resourceful-ai-skill"
       series_name: "The Resourceful AI Skill"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "post"
 
 # Exclude from build
 exclude:

@@ -171,7 +171,8 @@ pre code {
 .post-container,
 .series-container,
 .home-container,
-.search-container {
+.search-container,
+.guides-container {
   max-width: 760px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -339,6 +340,33 @@ pre code {
   line-height: 1.8;
 }
 .post-content > *:first-child { margin-top: 0; }
+
+/* ── Heading anchor links ── */
+.post-content h2[id],
+.post-content h3[id] {
+  position: relative;
+}
+.heading-anchor {
+  position: absolute;
+  left: -1.25em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.65em;
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  text-decoration: none;
+  transition: color 0.12s ease;
+  user-select: none;
+}
+.post-content h2:hover .heading-anchor,
+.post-content h3:hover .heading-anchor {
+  color: var(--color-text-faint);
+}
+.heading-anchor:hover {
+  color: var(--color-accent) !important;
+  text-decoration: none;
+}
 
 .post-footer {
   margin-top: 3.5rem;

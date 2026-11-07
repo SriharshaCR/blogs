@@ -66,13 +66,13 @@ These are not edge cases. They are the failure modes that appear most frequently
 | **Role drift** | System is manipulated into unauthorised behaviour via prompt injection | Security incident, liability, loss of user trust |
 | **Model misuse** | Expensive model used for tasks it was never meant for — a user prompts GPT-4 with "tell me a joke" | Unnecessary API cost that compounds silently at scale |
 
-That last one is worth pausing on. A guardrail isn't always about blocking harm — sometimes it's about routing the right query to the right tool. If your most capable (and most expensive) model is fielding prompts like "tell me a joke" or summarising a two-line email, you have a hole in a bucket. It works. It just drains the budget for no reason. At scale — thousands of requests a day — that's a line item your finance team will notice before your engineering team does. A routing guardrail that directs trivial requests to a smaller, cheaper model is not a safety feature. It's cost engineering. Understanding [how LLM token pricing works](/blogs/you-are-buying-tokens/) makes that routing decision concrete — the per-token spread between a frontier model and a smaller one is often 10–100x. Grounding is the companion question: whether you inject context into each call, and how much, directly shapes the per-call input token cost — [Does Grounding Reduce Token Usage?](/blogs/does-grounding-reduce-token-usage/) maps when it helps and when it hurts.
+That last one is worth pausing on. A guardrail isn't always about blocking harm — sometimes it's about routing the right query to the right tool. If your most capable (and most expensive) model is fielding prompts like "tell me a joke" or summarising a two-line email, you have a hole in a bucket. It works. It just drains the budget for no reason. At scale — thousands of requests a day — that's a line item your finance team will notice before your engineering team does. A routing guardrail that directs trivial requests to a smaller, cheaper model is not a safety feature. It's cost engineering. Understanding [how LLM token pricing works](/blogs/you-are-buying-tokens/#the-ai-economy-in-three-layers) makes that routing decision concrete — the per-token spread between a frontier model and a smaller one is often 10–100x. Grounding is the companion question: whether you inject context into each call, and how much, directly shapes the per-call input token cost — [Does Grounding Reduce Token Usage?](/blogs/does-grounding-reduce-token-usage/#the-practical-rule) maps when it helps and when it hurts.
 
 These failures share one root cause: the model has capability, but no governance layer telling it what it's allowed to do, what it must refuse, and what requires human approval before it acts.
 
 Real precedents exist. In February 2024, Air Canada was ordered to pay damages after its chatbot gave a customer incorrect information about bereavement fares and the airline tried to disclaim responsibility for its own AI.² In June 2023, two lawyers were sanctioned $5,000 by a US federal judge after submitting ChatGPT-fabricated case citations in a legal filing — the model had confidently invented cases that did not exist.³
 
-The cost of not having guardrails is not hypothetical. When these principles extend into multi-agent systems — where models orchestrate other models — the same governance gaps reappear at the orchestration layer. [Four production agent failures mapped to missing harness components](/blogs/ai-agent-scaffolding-four-failures/) takes that next step. The architecture that closes those gaps — including tool scope enforcement built directly into the harness — is in [Autonomee: A Config-Driven AI Agent Harness](/blogs/building-autonomee-config-driven-harness/).
+The cost of not having guardrails is not hypothetical. When these principles extend into multi-agent systems — where models orchestrate other models — the same governance gaps reappear at the orchestration layer. [Four production agent failures mapped to missing harness components](/blogs/ai-agent-scaffolding-four-failures/#four-failures-four-missing-components) takes that next step. The architecture that closes those gaps — including tool scope enforcement built directly into the harness — is in [Autonomee: A Config-Driven AI Agent Harness](/blogs/building-autonomee-config-driven-harness/#what-autonomee-is).
 
 ---
 
@@ -104,13 +104,13 @@ Most people hear "guardrails" and think restrictions — capabilities removed, m
 
 Guardrails are reliability engineering. The same discipline that gave us seat belts, circuit breakers, and rate limiters. They don't make a system less capable. They make it predictably, safely, and verifiably capable — which is the only kind of capable that matters in production.
 
-A capable model without guardrails is a powerful tool with no safety discipline. A capable model with guardrails is a product someone can trust. That enforcement-first principle extends one level deeper: the individual AI skills composing these systems need the same design — a skill without a capability contract [has the same gaps, just harder to see](/blogs/how-resourceful-is-your-ai-skill/).
+A capable model without guardrails is a powerful tool with no safety discipline. A capable model with guardrails is a product someone can trust. That enforcement-first principle extends one level deeper: the individual AI skills composing these systems need the same design — a skill without a capability contract [has the same gaps, just harder to see](/blogs/how-resourceful-is-your-ai-skill/#three-gaps-i-found-in-my-own-work).
 
 ---
 
 ## Before you read Part 2
 
-[Part 2 of this series](/blogs/ai-guardrails-in-action/) is written for engineers and technical leads. It takes four of these failure modes and demonstrates them live — same prompt, with and without a guardrail, runnable in a free Colab notebook. If you want to see the difference, not just read about it, that's where to go next.
+[Part 2 of this series](/blogs/ai-guardrails-in-action/#experiment-1-toxic-prompt-handling) is written for engineers and technical leads. It takes four of these failure modes and demonstrates them live — same prompt, with and without a guardrail, runnable in a free Colab notebook. If you want to see the difference, not just read about it, that's where to go next.
 
 ---
 

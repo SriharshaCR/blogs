@@ -17,7 +17,7 @@ series_total: 3
 
 # Five Ways to Spend Your Tokens Like They Cost Something
 
-*Part 2 of the AI and Token Economics series. If you haven't read [Part 1 — You're Not Buying AI. You're Buying Tokens](/blogs/you-are-buying-tokens/) — start there. It builds the mental model this post assumes.*
+*Part 2 of the AI and Token Economics series. If you haven't read [Part 1 — You're Not Buying AI. You're Buying Tokens](/blogs/you-are-buying-tokens/#the-ai-economy-in-three-layers) — start there. It builds the mental model this post assumes.*
 
 *These techniques are most valuable when you pay for API usage, operate at scale, or care about latency. On a flat-rate consumer subscription, the bigger wins are focus, less drift, and sharper answers — not a lower bill.*
 
@@ -129,7 +129,7 @@ The trap most teams fall into when measuring generative AI costs: tracking how m
 
 The right question: **how much value was produced per token?**
 
-10,000 tokens that saved 4 hours of engineering work is excellent AI ROI. 50,000 tokens that generated a document nobody read is waste. Note that **prompt caching** — supported by Anthropic, OpenAI, and Google — lets you store frequently-reused context (system prompts, document chunks, few-shot examples) at a fraction of normal input cost. Cache reads can be as cheap as 10% of the standard rate, though exact discounts, cache-write costs, TTLs, and storage charges vary by provider and model. In production systems where large stable prefixes repeat across thousands of calls, the savings can be substantial. In systems dominated by unique inputs or long outputs, the impact is more modest. Focus AI spend where it creates leverage — design decisions, learning acceleration, architecture reviews — not on repeated reformats or broad questions you could have narrowed with one more second of thought. The same principle applies beyond cost: as I wrote in [AI Eliminates One Kind of Monotony](/blogs/business-monotony/), what matters isn't the hours AI saves you — it's what you do with the space it creates.
+10,000 tokens that saved 4 hours of engineering work is excellent AI ROI. 50,000 tokens that generated a document nobody read is waste. Note that **prompt caching** — supported by Anthropic, OpenAI, and Google — lets you store frequently-reused context (system prompts, document chunks, few-shot examples) at a fraction of normal input cost. Cache reads can be as cheap as 10% of the standard rate, though exact discounts, cache-write costs, TTLs, and storage charges vary by provider and model. In production systems where large stable prefixes repeat across thousands of calls, the savings can be substantial. In systems dominated by unique inputs or long outputs, the impact is more modest. Focus AI spend where it creates leverage — design decisions, learning acceleration, architecture reviews — not on repeated reformats or broad questions you could have narrowed with one more second of thought. The same principle applies beyond cost: as I wrote in [AI Eliminates One Kind of Monotony](/blogs/business-monotony/#co-pilot-not-autopilot), what matters isn't the hours AI saves you — it's what you do with the space it creates.
 
 ---
 

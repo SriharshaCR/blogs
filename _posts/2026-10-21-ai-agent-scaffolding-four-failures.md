@@ -78,7 +78,7 @@ The cost per call was small — approximately six times more expensive than the 
 
 The concern is this: none of it appeared in any log until I pulled API traces manually, an hour later. A single misconfigured agent, in a single run, in a small personal system. Extend that to hundreds of agents running thousands of tasks per day — systematic tool misrouting that nobody detects until a manual audit is a governance failure, not a cost line.
 
-The model performed correctly. The system had no guardrails. Tool scope control is a specific form of guardrail — one that governs what an agent is allowed to *do*, not just what it is allowed to say. If you are new to the broader guardrails landscape, [five production failure modes every AI deployment hits first](/blogs/ai-guardrails-what-can-go-wrong/) is a useful companion read.
+The model performed correctly. The system had no guardrails. Tool scope control is a specific form of guardrail — one that governs what an agent is allowed to *do*, not just what it is allowed to say. If you are new to the broader guardrails landscape, [five production failure modes every AI deployment hits first](/blogs/ai-guardrails-what-can-go-wrong/#five-failure-modes-and-what-they-cost) is a useful companion read.
 
 **Missing component:** Tool scope control per agent.
 
@@ -100,9 +100,11 @@ A stronger model improves reasoning. It does not fix unscoped tools, stale conte
 2. If an agent in your organization called the wrong API today — misrouted, misscoped, undetected — how long before anyone would know?
 3. What is the difference between a CRON job that triggers your agent and a harness that runs it?
 
+If the harness is in place but agents still lose reasoning over time — [Decision Archaeology: Why Decisions Die and How a KBA Fixes That](/blogs/decision-archaeology-kba/#what-a-kba-actually-is-the-laws-model) covers how reasoning capture fills that gap.
+
 ---
 
-*In the next post: I build a config-driven harness from scratch — stateless, observable, and designed to prevent exactly these failures. [Building a Config-Driven Agentic Harness →](/blogs/building-autonomee-config-driven-harness/)*
+*In the next post: I build a config-driven harness from scratch — stateless, observable, and designed to prevent exactly these failures. [Building a Config-Driven Agentic Harness →](/blogs/building-autonomee-config-driven-harness/#what-autonomee-is)*
 
 [^1]: Anthropic, [*Building Effective Agents*](https://www.anthropic.com/engineering/building-effective-agents)
 [^2]: Andrew Ng, [*How Agents Can Improve LLM Performance*](https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance/), deeplearning.ai
