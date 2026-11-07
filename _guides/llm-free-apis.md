@@ -204,6 +204,7 @@ These notebooks use the one-variable swap pattern above. You can run them on the
 | Notebook | Post | What it does |
 |---|---|---|
 | [Counsellor POC](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_poc.ipynb) | [Decision Archaeology](/blogs/decision-archaeology-kba/#personal-proof-meet-counsellor) | Memory analysis with structured JSON output |
+| [Counsellor in Action](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_in_action.ipynb) | [Decision Archaeology](/blogs/decision-archaeology-kba/#personal-proof-meet-counsellor) | Same story with real GitHub Laws + real Issue creation |
 | [Autonomee Harness Demo](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/agentic-harness-an-ai-operating-system/02-building-autonomee-config-driven-harness/autonomee_harness_demo.ipynb) | [Config-Driven Harness](/blogs/building-autonomee-config-driven-harness/#what-autonomee-is) | Agent pipeline with and without a harness |
 | [AI Guardrails in Action](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/AI-Guard-Rails/part-2-guardrails-in-action.ipynb) | [AI Guardrails](/blogs/ai-guardrails-in-action/#experiment-1-toxic-prompt-handling) | Four live before/after guardrail experiments |
 

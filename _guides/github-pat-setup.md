@@ -118,7 +118,7 @@ print(f"Issue created: {issue.html_url}")
 
 | Notebook | Post |
 |---|---|
-| Counsellor in Action *(coming soon)* | [Decision Archaeology](/blogs/decision-archaeology-kba/#personal-proof-meet-counsellor) |
+| [Counsellor in Action](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_in_action.ipynb) | [Decision Archaeology](/blogs/decision-archaeology-kba/#personal-proof-meet-counsellor) |
 
 ---
 

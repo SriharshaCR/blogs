@@ -22,9 +22,9 @@ read_time: 5
 
 ---
 
-A script to update user emails was approved, deployed, and broke login in production.
+A script to update user emails was approved, deployed, and broke login in production. Every active session was invalidated — users mid-workflow, users nowhere near a re-login screen, all signed out at once. The rollback was fast — under an hour — but by then the damage was done. The fix was easy once someone understood the cause. The cause itself took time to reconstruct.
 
-The postmortem wasn't hard. Root cause was clear within an hour. What nobody could answer was: *why was the original email logic built that way?* The person who made that call had moved on. The constraints they were working under — whatever they were protecting against — existed nowhere except their memory.
+What the postmortem could not answer was: *why was the original email logic built that way?* The person who made that call had moved on. The constraints they were working under — whatever they were protecting against — existed nowhere except their memory.
 
 The code survived. The reasoning didn't.
 
@@ -32,7 +32,7 @@ The code survived. The reasoning didn't.
 
 ## This Isn't a Documentation Problem
 
-Call it decision archaeology — the work of reconstructing why something was built the way it was, after the people who knew are gone.
+**Decision archaeology** is the work of reconstructing why something was built the way it was, after the people who knew are gone.
 
 Traditional documentation captures the *what*. Architecture diagrams show what connects to what. READMEs explain how to run the thing. None of them answer: *what were we protecting against when we made this call?*
 
@@ -56,15 +56,15 @@ And even when docs exist: they're written after the decision, by the person who 
 
 Architecture Decision Records (ADRs) are the closest existing tool — Markdown files committed to a repo, capturing a decision's status, context, and consequences at a point in time. If your team uses them, they're valuable.
 
-A decision-focused KBA goes further in three ways: it's curated by an agent, not written by an engineer after the fact; it's structured for LLM retrieval, not human reading; and it's a living record — it evolves as the project evolves. The most important difference: it gets *consulted before decisions are made*, not referenced after they go wrong.
+A decision-focused KBA goes further in three ways: it's curated by an LLM agent, not written by an engineer after the fact; it's structured for LLM retrieval, not human reading; and it's a living record — it evolves as the project evolves. The most important difference: it gets *consulted before decisions are made*, not referenced after they go wrong. ([Martin Fowler's ADR overview](https://martinfowler.com/bliki/ArchitecturalDecisionRecord.html) covers the canonical format if you want the baseline the industry starts from.)
 
 ---
 
 ## What a KBA Actually Is — The Laws Model
 
-A Knowledge Base Article, as most teams use the term, is a FAQ entry — a static answer to a known question. That's not what I mean here.
+In my system, a KBA is called a **Law** — a named constraint with documented reasoning, queryable by humans and LLM agents alike. Each Law governs what an agent can do, and when.
 
-In my setup, KBAs are called **Laws**. Each Law names a constraint, documents the reasoning behind it, and makes it queryable — by humans and agents alike. Here's a real one from my system:
+That is different from what most teams mean by "knowledge base article" — a FAQ entry, a static answer to a known question. A Law is active, not archival. Here is a real one from my system:
 
 > **🧙‍♂️ Law of Memory Management**
 > **Trigger:** When memory consumption per profile exceeds 90%, activate `agent-memory-sniffer`.
@@ -101,15 +101,36 @@ The Law didn't just catch the problem. It governed how the problem was resolved 
 
 If you want to see this run end to end, there is a companion notebook that walks through the same scenario — memory hitting 91%, the sniffer firing, a GitHub Issue generated, cleanup applied. One dependency (`openai`), free API key, no local setup. The only interaction point is an approval flag you set before cleanup runs. If you need to set up a Groq key or prefer HuggingFace, the [LLM setup guide](/blogs/guides/llm-free-apis/) covers both in under 5 minutes.
 
-→ [Run the Counsellor POC on Colab](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_poc.ipynb)
+→ [Run the Counsellor POC on Colab](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_poc.ipynb) — simulated Laws, one dependency, no GitHub setup required
+
+→ [Run the Counsellor in Action on Colab](https://colab.research.google.com/github/SriharshaCR/blogs/blob/main/assets/notebooks/decision-archaeology-kba/counsellor_in_action.ipynb) — Laws fetched live from your GitHub repo, real Issues created. Needs a free Groq key and a [fine-grained GitHub PAT](/blogs/guides/github-pat-setup/).
+
+**Experiment: change the Law, see what changes**
+
+The in-action notebook fetches Laws from a YAML file you own. Edit it between runs:
+
+| Parameter | Default | Try | Effect |
+|---|---|---|---|
+| Trigger threshold | `0.90` | `0.70` | Law fires earlier — more frequent cleanup cycles |
+| Auto-remove age | `> 15 days` | `> 30 days` | Stricter bar — more entries escalate to your review |
+| Auto-remove relevance | `< 7 days` | `< 14 days` | Wider net — `flag_for_human` does more work |
+| Cleanup target | `0.80` | `0.60` | Tighter footprint — more aggressive post-cleanup threshold |
+
+The sniffer's recommendations change with every variation. The notebook code does not. That is the only signal worth watching when evaluating any governance model: does changing the rule change the behaviour, without touching the code?
 
 ---
 
 ## Who It Helps Beyond the Individual
 
-The same pattern scales to a team. A new engineer joins and wonders why the email update logic is written the way it is. Instead of pinging a senior dev (who may not be available, or may not remember), they ask Counsellor. Counsellor surfaces the Law of Email Template. The constraint is understood in thirty seconds.
+The same pattern scales to a team.
 
-Onboarding stops being dependent on tribal knowledge. It becomes a query.
+**New engineer onboarding.** Someone joins and wonders why the email update logic is written the way it is. Instead of pinging a senior dev (who may not be available, or may not remember), they ask Counsellor — an LLM agent with access to every Law ever written for that system. The constraint is understood in thirty seconds. That question never has to be answered by a human again.
+
+**PR reviews.** A reviewer is looking at a change that touches the authentication layer. Without a Law, the review is limited to whether the code is correct. With a Law in place, the reviewer can verify whether the change respects constraints the team previously committed to as non-negotiable. This is the review that catches the email script problem before it reaches production — not because the reviewer happened to remember the history, but because the system surfaced it.
+
+**Incident postmortems.** A production issue surfaces. The postmortem now asks a sharper question: was there a Law that should have prevented this? If yes — why didn't the agent enforce it? Was the Law ambiguous, or was coverage incomplete? If no — what does this incident make obvious that needs to become a Law? Either way, the system gets smarter. The archaeology happens in real time instead of months later when the team that built it has moved on.
+
+Onboarding stops depending on who you know. Code reviews stop depending on who happens to remember. Incidents stop requiring archaeology after the fact.
 
 ---
 
