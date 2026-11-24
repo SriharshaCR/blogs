@@ -192,6 +192,8 @@ I must say, this is just a working pattern, not a production framework. The next
 2. If one agent in your pipeline failed right now, how many steps would it take to find it in your logs — and how many minutes?
 3. What would it take to swap the model on your most expensive agent to something cheaper — one config value, or a code change?
 
+For the inverse failure — when an orchestrator agent takes on all subtasks alone and disappears into 8 hours of silence — [When the Agent Goes Silent, Nothing Is Happening](/blogs/silent-failure-in-agentic-system/#the-role-confusion) is a companion read on what this harness pattern structurally prevents.
+
 ---
 
 *[Part 1: Four production failures and the harness components that prevent them →](/blogs/ai-agent-scaffolding-four-failures/#four-failures-four-missing-components)*

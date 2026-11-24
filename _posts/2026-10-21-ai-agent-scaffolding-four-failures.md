@@ -102,6 +102,8 @@ A stronger model improves reasoning. It does not fix unscoped tools, stale conte
 
 If the harness is in place but agents still lose reasoning over time — [Decision Archaeology: Why Decisions Die and How a KBA Fixes That](/blogs/decision-archaeology-kba/#what-a-kba-actually-is-the-laws-model) covers how reasoning capture fills that gap.
 
+For a specific in-the-wild example of the Silent Cascade pattern — where an orchestrator agent disappears for 8 hours and produces nothing — [When the Agent Goes Silent, Nothing Is Happening](/blogs/silent-failure-in-agentic-system/#the-8-hour-wall) documents the incident and the Rule #6 decomposition fix.
+
 ---
 
 *In the next post: I build a config-driven harness from scratch — stateless, observable, and designed to prevent exactly these failures. [Building a Config-Driven Agentic Harness →](/blogs/building-autonomee-config-driven-harness/#what-autonomee-is)*
